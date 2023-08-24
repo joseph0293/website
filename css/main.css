@@ -1,0 +1,352 @@
+:root {
+    --californiagold: #FDB515;
+    --cinnabar: #E94F37;
+    --berkeleyblue: #003262;
+}
+
+
+* {
+    font-family: 'Montserrat';
+}
+
+.outlinebutton:hover,
+.outlinebutton:focus,
+.outlinebutton:active {
+    background-color: var(--berkeleyblue) !important;
+    border: 2px solid var(--berkeleyblue) !important;
+    color: white !important;
+}
+
+.outlinebuttonfooter {
+    border-radius: 100px;
+}
+
+.outlinebuttonfooter:hover,
+.outlinebuttonfooter:active,
+.outlinebuttonfooter:focus {
+    background-color: white;
+    color: var(--berkeleyblue) !important;
+}
+
+
+/* Set colour to orange for category */
+h3 {
+    color: var(--cinnabar);
+}
+
+
+
+/* Set font everywhere */
+
+body {
+    font-family: "Montserrat";
+}
+
+/* Styling nav & nav items */
+
+.navresume {
+    background-color: var(--californiagold);
+    color: white;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.navresume:hover,
+.navresume:active {
+    background-color: var(--berkeleyblue);
+}
+
+.navabout:hover,
+.navabout:active {
+    border: 2px solid var(--berkeleyblue);
+}
+
+.navwork,
+.navabout {
+    transition: 0.3s;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+
+.workitems {
+    border: none;
+    background: none;
+}
+
+/* Styling hamburger into the X */
+
+/* Defining shape and color of the hamburger lines (span tags) */
+.navbar-toggler span {
+    display: block;
+    background-color: var(--berkeleyblue);
+    height: 5px;
+    width: 33px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    transform-origin: center left;
+    background-color: var(--berkeleyblue);
+}
+
+/* padding for top line */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/* Animate collapse into X */
+
+/* rotate top line by 45 degrees, move it up and closer to the center of the X of the button, change colour to orange */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+    background-color: var(--cinnabar);
+}
+
+/* make centre line transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+/* rotate bottmo line 45 degrees  in, and closer to center of the X of the button, change colour to orange  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
+    background-color: var(--cinnabar);
+}
+
+
+/* Animate collapse open into hamburger menu */
+
+/* top line moves back to first positionwith blue */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+    background-color: var(--berkeleyblue);
+}
+
+/* middle line goes back to opacity 100% */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+/* bottom line goes back to first position with blue */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+    background-color: var(--berkeleyblue);
+}
+
+/* Removing the border and outline for hamburger */
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Animation for nav items */
+
+.hover-forward {
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hover-forward:hover {
+    transform: translateX(8px);
+}
+
+
+
+
+/* Remove the hover */
+.navphotography:hover,
+.navphotography:active,
+.navphotography:focus,
+.navuxdesign:hover,
+.navuxdesign:active,
+.navuxdesign:focus,
+.navartdirection:hover,
+.navartdirection:active,
+.navartdirection:focus {
+    background: white;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+
+}
+
+
+/* Set text colour to blue */
+
+.outlinebutton {
+    transition: 0.3s;
+}
+
+.card,
+.outlinebutton,
+.navworkblue,
+.navworkblue:hover,
+.navaboutblue,
+.navaboutblue:hover,
+.textberkeley {
+    color: var(--berkeleyblue) !important;
+}
+
+/* Set background colours to brand blue */
+
+footer,
+.showreel {
+    background-color: var(--berkeleyblue);
+}
+
+/* Set border to blue */
+
+.outlinebutton,
+.outlinebutton:focus,
+.outlinebutton:active,
+.navwork:hover,
+.navwork:active,
+.inputborderberkely {
+    border: 2px solid var(--berkeleyblue);
+}
+
+/* Orange background style the social icons */
+.bg-cinnabar {
+    background-color: var(--cinnabar);
+}
+
+/* Breadcrumb hover styling */
+.breadcrumbstyling {
+    text-decoration: none;
+    color: var(--berkeleyblue);
+}
+
+.breadcrumbstyling:hover {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+    color: var(--cinnabar);
+}
+
+.breadcrumbactive {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+}
+
+.inputborderberkely {
+    width: 100%;
+}
+
+/* Making project cards move up on hover */
+
+.projectcard {
+    transition: 0.3s;
+}
+
+.projectcard:hover {
+    transform: translateY(-15px);
+}
+
+/* Style icons for uneven icon dimensions on About Page */
+
+.smicons {
+    transition: 0.3s;
+    padding: 10px 14px;
+    background-color: var(--cinnabar);
+    border-radius: 60px;
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
+.smicons:hover,
+.smicons:focus,
+.smicons:active {
+    background-color: var(--berkeleyblue);
+}
+
+
+/* Styling skiplink */
+
+.skiplink {
+    text-decoration: none;
+    z-index: 999;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 50px;
+    border: 2px solid var(--berkeleyblue) !important;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transform: translateY(-200px);
+    background-color: var(--cinnabar);
+    position: absolute;
+    transition: 0.4s;
+}
+
+
+.skiplink:focus-visible {
+    transform: translateY(100px);
+    position: absolute;
+}
+
+/* Accessible visually */
+
+/* Active States */
+.activepage {
+    border: dashed;
+    border: 2px dashed var(--berkeleyblue) !important;
+}
+
+.activesubpage {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+}
+
+/* Set focus */
+
+.navworkblue:focus-visible,
+.navaboutblue:focus-visible,
+.navresumecolor:focus-visible {
+    border: none;
+    outline: 2px solid var(--cinnabar);
+    border-radius: 50px;
+
+}
+
+.projectcard:focus-visible,
+.text-decoration-none:focus-visible,
+.card a:focus-visible,
+.navbar-brand:focus-visible,
+.breadcrumbstyling:focus-visible,
+footer a:focus-visible,
+.form-control:focus-visible,
+.message:focus-visible,
+.form button:focus-visible,
+.navphotography:focus-visible,
+.navuxdesign:focus-visible,
+.navartdirection:focus-visible,
+.navbar-toggler:focus-visible {
+    border: none;
+    outline: 2px solid var(--cinnabar);
+    border-radius: 32px;
+    box-shadow: 0px 0px 10px rgb(180, 180, 180);
+}
+
+/* Form Validation */
+
+input:invalid {
+    background-color: var(--cinnabar);
+    box-shadow: 0px 0px 5px rgb(180, 180, 180);
+}
+
+
+/* Styling Modal */
+
+.modalstyle {
+    border: 2px solid var(--berkeleyblue);
+}
