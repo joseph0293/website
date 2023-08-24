@@ -173,8 +173,122 @@
         </div>
 
 
+        <!-- EMBED CONTACT FORM -->
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+        <iframe id="JotFormIFrame-232357362839060" title="Get in touch!" onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera"
+            src="https://form.jotform.com/232357362839060" frameborder="0"
+            style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
+        </iframe>
+        <script type="text/javascript">
+            var ifr = document.getElementById("JotFormIFrame-232357362839060");
+            if (ifr) {
+                var src = ifr.src;
+                var iframeParams = [];
+                if (window.location.href && window.location.href.indexOf("?") > -1) {
+                    iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") +
+                        1).split('&'));
+                }
+                if (src && src.indexOf("?") > -1) {
+                    iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                    src = src.substr(0, src.indexOf("?"))
+                }
+                iframeParams.push("isIframeEmbed=1");
+                ifr.src = src + "?" + iframeParams.join('&');
+            }
+            window.handleIFrameMessage = function (e) {
+                if (typeof e.data === 'object') {
+                    return;
+                }
+                var args = e.data.split(":");
+                if (args.length > 2) {
+                    iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]);
+                } else {
+                    iframe = document.getElementById("JotFormIFrame");
+                }
+                if (!iframe) {
+                    return;
+                }
+                switch (args[0]) {
+                    case "scrollIntoView":
+                        iframe.scrollIntoView();
+                        break;
+                    case "setHeight":
+                        iframe.style.height = args[1] + "px";
+                        if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+                            iframe.style.minHeight = args[1] + "px";
+                        }
+                        break;
+                    case "collapseErrorPage":
+                        if (iframe.clientHeight > window.innerHeight) {
+                            iframe.style.height = window.innerHeight + "px";
+                        }
+                        break;
+                    case "reloadPage":
+                        window.location.reload();
+                        break;
+                    case "loadScript":
+                        if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) {
+                            break;
+                        }
+                        var src = args[1];
+                        if (args.length > 3) {
+                            src = args[1] + ':' + args[2];
+                        }
+                        var script = document.createElement('script');
+                        script.src = src;
+                        script.type = 'text/javascript';
+                        document.body.appendChild(script);
+                        break;
+                    case "exitFullscreen":
+                        if (window.document.exitFullscreen) window.document.exitFullscreen();
+                        else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+                        else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+                        else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+                        else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+                        break;
+                }
+                var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                    var urls = {
+                        "docurl": encodeURIComponent(document.URL),
+                        "referrer": encodeURIComponent(document.referrer)
+                    };
+                    iframe.contentWindow.postMessage(JSON.stringify({
+                        "type": "urls",
+                        "value": urls
+                    }), "*");
+                }
+            };
+            window.isPermitted = function (originUrl, whitelisted_domains) {
+                var url = document.createElement('a');
+                url.href = originUrl;
+                var hostname = url.hostname;
+                var result = false;
+                if (typeof hostname !== 'undefined') {
+                    whitelisted_domains.forEach(function (element) {
+                        if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||
+                            hostname === element) {
+                            result = true;
+                        }
+                    });
+                    return result;
+                }
+            };
+            if (window.addEventListener) {
+                window.addEventListener("message", handleIFrameMessage, false);
+            } else if (window.attachEvent) {
+                window.attachEvent("onmessage", handleIFrameMessage);
+            }
+        </script>
+
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
         <!-- Contact Form -->
-        <div role="complementary" class="contactme p-4 mb-5 container-lg">
+        <!-- <div role="complementary" class="contactme p-4 mb-5 container-lg">
             <div>
                 <h2 class="textberkeley display-5 lh-1 fw-semibold mb-5">
                     Ready to give wings to your project? Get in touch!
@@ -184,16 +298,17 @@
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <label for="fname" class="form-label textberkeley fw-medium fs-5">First Name</label>
-                        <input data-toggle="tooltip" data-placement="top" title="What everyone calls you (only letters please)" aria-required="true"
+                        <input data-toggle="tooltip" data-placement="top"
+                            title="What everyone calls you (only letters please)" aria-required="true"
                             placeholder="First Name" type="text" id="fname"
                             class="form-control rounded-5 textberkeley inputborderberkely fs-4 p-2 px-3"
                             aria-label="First name" pattern="[A-Za-z]{1,50}">
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="lname" class="form-label fw-medium fs-5">Last Name</label>
-                        <input data-toggle="tooltip" data-placement="top" title="Family Name or Initial (only letters please)"
-                            placeholder="Last Name" type="text" id="lname"
-                            class="form-control rounded-5 textberkeley inputborderberkely fs-4 p-2 px-3"
+                        <input data-toggle="tooltip" data-placement="top"
+                            title="Family Name or Initial (only letters please)" placeholder="Last Name" type="text"
+                            id="lname" class="form-control rounded-5 textberkeley inputborderberkely fs-4 p-2 px-3"
                             aria-label="Last name" pattern="[A-Za-z]{1,50}">
                     </div>
                 </div>
@@ -210,10 +325,10 @@
                         rows="7"></textarea>
                 </div>
                 <button id="liveToastBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="outlinebutton btn rounded-5 px-4 py-2 fs-4 fw-medium">Send</button>
+                    class="outlinebutton btn rounded-5 px-4 py-2 fs-4 fw-medium">Send</button> -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered textberkeley">
                         <div class="modal-content rounded-5 modalstyle">
@@ -230,7 +345,7 @@
                 </div>
 
             </form>
-        </div>
+        </div> -->
 
     </main>
 
