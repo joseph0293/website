@@ -29,6 +29,8 @@ I've used this image as a placeholder for now, but hope to replace it with an im
 
 [Change logo when clicking on Hamburger](https://stackoverflow.com/questions/58625458/how-to-change-logo-src-when-clicked-on-hamburger-menu)
 
+[Typewriter Animation](https://github.com/kubowania/typewriter)
+
 ## Libraries used:
 
 1. Bootstrap Icons & Font Awesome for Icons

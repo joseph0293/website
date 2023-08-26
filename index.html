@@ -116,8 +116,7 @@
                     <!-- RESUME -->
                     <div class="navresume border-0 nav-item my-3">
                         <a class="navresumecolor nav-link active fs-3 p-3 px-5 fw-semibold" aria-current="page"
-                            aria-label="opens in new tab" target="_blank"
-                            href="https://www.dropbox.com/scl/fi/l3lwlzy48x57yh7ndb9th/Resume-test.pdf?rlkey=ggzcfbgfz8tlrncumady8gcn5">Resume
+                            aria-label="opens in new tab" target="_blank" href="docs/resume-rebrand.pdf">Resume
                         </a>
                     </div>
                 </div>
@@ -151,11 +150,10 @@
             </picture>
             <div class="card-img-overlay pt-5 pt-xxl-5 pt-lg-5 mt-lg-5 pt-md-5">
                 <div class="container">
-                    <h1 role="heading" aria-level="1" class="card-title text-white display-6 fw-medium">Hello, I'm Sunit!</h1>
-                    <p role="heading" aria-level="2" id="aboutme" class="text-white card-text display-1 lh-1 fw-bold">I design brands,
-                        visuals,
-                        &#x003C;code&#x003E; & motion.
-                    </p>
+                    <h1 role="heading" aria-level="1" class="card-title text-white display-6 fw-medium">Hello, I'm
+                        Sunit.</h1>
+                        <p class="card-title text-white display-6 fw-medium"> I design</p>
+                    <p role="heading" aria-level="2" class="text-white card-text display-1 lh-1 fw-bold" id="text"></p>
                 </div>
             </div>
         </div>
@@ -166,7 +164,8 @@
             <div class="vid">
                 <div class="showreelvideo">
                     <!-- Put the video here! -->
-                    <video class="rounded-5 text-center w-75" alt="Showreel video of all my work" src="videos/showreel.mp4" autoplay loop muted></video>
+                    <video class="rounded-5 text-center w-75" alt="Showreel video of all my work"
+                        src="videos/showreel.mp4" autoplay loop muted></video>
                 </div>
                 <div class="videowhite"></div>
             </div>
@@ -324,6 +323,57 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+    <!-- Typewriter WORKS HERE -->
+    <script>
+        const textDisplay = document.getElementById('text')
+        const phrases = ['brand identities', 'user experiences', 'front-end code', 'motion graphics']
+        let i = 0
+        let j = 0
+        let currentPhrase = []
+        let isDeleting = false
+        let isEnd = false
+
+        function loop() {
+            isEnd = false
+            textDisplay.innerHTML = currentPhrase.join('')
+
+            if (i < phrases.length) {
+
+                if (!isDeleting && j <= phrases[i].length) {
+                    currentPhrase.push(phrases[i][j])
+                    j++
+                    textDisplay.innerHTML = currentPhrase.join('')
+                }
+
+                if (isDeleting && j <= phrases[i].length) {
+                    currentPhrase.pop(phrases[i][j])
+                    j--
+                    textDisplay.innerHTML = currentPhrase.join('')
+                }
+
+                if (j == phrases[i].length) {
+                    isEnd = true
+                    isDeleting = true
+                }
+
+                if (isDeleting && j === 0) {
+                    currentPhrase = []
+                    isDeleting = false
+                    i++
+                    if (i === phrases.length) {
+                        i = 0
+                    }
+                }
+            }
+            const spedUp = Math.random() * (40 - 20) + 20
+            const normalSpeed = Math.random() * (200 - 100) + 100
+            const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed
+            setTimeout(loop, time)
+        }
+
+        loop()
     </script>
 
     <!-- Make the logo wink when nav is toggled -->

@@ -350,3 +350,9 @@ input:invalid {
 .modalstyle {
     border: 2px solid var(--berkeleyblue);
 }
+
+/* Style typewriter text */
+
+/* #text {
+    font-size: calc(100% + 1vh + 1vh);
+} */
