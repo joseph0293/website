@@ -353,6 +353,7 @@ input:invalid {
 
 /* Style typewriter text */
 
-/* #text {
-    font-size: calc(100% + 1vh + 1vh);
-} */
+#text {
+    font-size: calc(10vw + 1vh);
+    letter-spacing: -3px;
+}
