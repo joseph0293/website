@@ -205,7 +205,8 @@ footer,
 .outlinebutton:active,
 .navwork:hover,
 .navwork:active,
-.inputborderberkely {
+.inputborderberkely,
+.videoborderberkeley {
     border: 2px solid var(--berkeleyblue);
 }
 
