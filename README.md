@@ -15,6 +15,8 @@ I couldn't get the entire "Work" dropdown to have a single border like on mobile
 
 This also made it easier for me to add another image tag for javascript to change the logo: On 'tap' for mobile, and on 'hover' for desktop.
 
+October 11th: Added Animate On Scroll Library to make content appear on page while scrolling down to content.
+
 
 ## SOURCE & CREDITS
 
@@ -31,8 +33,11 @@ I've used this image as a placeholder for now, but hope to replace it with an im
 
 [Typewriter Animation](https://github.com/kubowania/typewriter)
 
+[Animate On Scroll Library](https://michalsnik.github.io/aos/)
+
 ## Libraries used:
 
 1. Bootstrap Icons & Font Awesome for Icons
 2. Bootstrap (of course)
 3. Google Fonts
+4. Animate On Scroll
