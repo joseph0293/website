@@ -381,5 +381,21 @@ body {
 }
 
 
-/* TRY */
+/* Style project buttons image overlay */
+
+.outlinebuttonwhite {
+    border: 2px solid white;
+    color: white;
+    transition: 0.3s;
+}
+
+.outlinebuttonwhite:hover,
+.outlinebuttonwhite:focus,
+.outlinebuttonwhite:active {
+    background-color: white;
+    border: 2px solid white;
+    color: var(--berkeleyblue);
+} 
+
+
 
