@@ -35,6 +35,8 @@ I've used this image as a placeholder for now, but hope to replace it with an im
 
 [Animate On Scroll Library](https://michalsnik.github.io/aos/)
 
+[Beautiful mockups to make portfolio much better, thanks to Mockups-Design](https://mockups-design.com/)
+
 ## Libraries used:
 
 1. Bootstrap Icons & Font Awesome for Icons
