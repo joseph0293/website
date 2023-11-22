@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sunday Portrait</title>
+    <title>Bagel Cheat Sheet</title>
 
     <!-- Reset CSS may not be necessary but anyway -->
     <link rel="stylesheet" href="css/reset.css">
@@ -32,6 +32,7 @@
 </head>
 
 <body>
+
     <!-- NAVIGATION -->
     <header role="banner">
         <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
@@ -69,11 +70,11 @@
                                         href="artdirection.html">Art
                                         Direction <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li>
+                                <li class="activesubpage">
                                     <a class="textberkeley navuxdesign dropdown-item py-4" href="uxdesign.html">UX
                                         Design <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="activesubpage">
+                                <li>
                                     <a class="textberkeley navphotography dropdown-item py-4"
                                         href="photography.html">Photography <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -93,11 +94,11 @@
                                         href="artdirection.html">Art Direction <i
                                             class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="px-4">
+                                <li class="px-4 activesubpage">
                                     <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
                                         href="uxdesign.html">UX Design <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="hover-forward px-4 activesubpage">
+                                <li class="hover-forward px-4">
                                     <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
                                         href="photography.html">Photography <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -118,11 +119,13 @@
                 </div>
             </div>
         </nav>
+
         <!-- DIV to give space between nav bar and the banner, so banner doesn't get covered by nav bar -->
         <div class="py-5 my-3"></div>
 
     </header>
     <!-- ****************************************** NAVIGATION ENDS ****************************************** -->
+
 
 
     <main role="main" class="container">
@@ -137,104 +140,141 @@
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbstyling" href="photography.html">Photography</a>
+                    <a itemprop="item" class="breadcrumbstyling" href="uxdesign.html">UX Design</a>
                 </li>
+
                 <li>
                     <i class="bi bi-arrow-right-short"></i>
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="portrait.html">Sunday Portrait</a>
+                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="bagelsheet.html">Bagel Cheat
+                        Sheet</a>
                 </li>
             </ul>
         </nav>
 
-
-        <!-- LANGFORD TITLE & DESCRIPTION -->
         <section role="region">
 
-            <div class="introhead p-4">
+            <!-- PORTFOLIO WEBSITE TITLE & DESCRIPTION -->
+
+            <div class="introhead p-4 pb-0">
                 <h1 class="textberkeley display-4 fw-bold">
-                    Sunday Portrait
+                    Bagel Cheat Sheet
                 </h1>
                 <p class="textberkeley fs-4">
-                    For a class portrait assignment, I decided to photograph a friend who likes heavy makeup and dressing up. Instead, I aimed
-                    to capture her natural beauty on a relaxed Sunday morning.
+                    While working as a team member for Kettleman's Bagel, one of the responsibilities are to work the
+                    Deli Line to create Kettleman’s popular Bagel Sandwiches. For a newbie, it requires a lot of time to
+                    learn what goes in all 21 sandwiches.
                 </p>
                 <p class="textberkeley fs-4">
-                    I planned the shoot with moodboards and poses and used natural sunlight from her home's windows
-                    creating a geometric frame on the wall.
+                    Knowing what deli meat and products go into the Egg Cooker or the Oven requires lots of experience
+                    and practice. Handling multiple orders while working the Deli line for a new team member can be
+                    stressful, overwhelming and could lead to mistakes.
                 </p>
             </div>
+            <p class="textberkeley fs-4 p-4 pb-0">
+                The current sandwich guide for team members is long and ambiguous:
+            </p>
+            <!-- KVx4 -->
+            <div class="row row-cols-1 row-cols-lg-3 g-4 p-4 pb-4">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/menu1.jpg" class="card-img-top rounded-5" alt="Key Visual">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/menu2.jpg" class="card-img-top rounded-5" alt="Key Visual">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/menu3.jpg" class="card-img-top rounded-5" alt="Key Visual">
+                    </div>
+                </div>
+            </div>
+            <p class="textberkeley fs-4 p-4">
+                To solve, I’ve created a Cheat Sheet that will allow anyone to create any Kettleman’s Sandwiches
+                efficiently with minimal guidance.
+            </p>
 
-            <!-- Content -->
-
-            <!-- IMAGES x8  -->
-            <h2 class="textberkeley display-6 fw-semibold p-4">
-                Photography Worksheet
-            </h2>
-
+            <!-- Title Image + Both Sheets Mockup -->
             <div class="px-4">
-                <img src="images/pw1.png" class="card-img-top rounded-5 my-4 outlinebutton" alt="Worksheet">
-                <img src="images/pw2.png" class="card-img-top rounded-5 my-4 card outlinebutton" alt="Worksheet">
-                <img src="images/pw3.png" class="card-img-top rounded-5 my-4 card outlinebutton" alt="Worksheet">
-                <img src="images/pw4.png" class="card-img-top rounded-5 my-4 card outlinebutton" alt="Worksheet">
+                <img src="images/bageltitle.jpg" class="card-img-top rounded-5 mb-4"
+                    alt="Title: The Ultimate Bagel Sandwich Cheat Sheet">
+                <img src="images/bagelposters.jpg" class="card-img-top rounded-5 mb-4" alt="Cheat Sheet Mockup">
             </div>
-
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Final Photographs
-            </h2>
-
-            <div class="p-4 pb-0">
-                <img src="images/p1.jpg" class="card-img-top rounded-5" alt="Portrait">
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pb-0">
+            <!-- Closeups x2 -->
+            <div class="row row-cols-1 row-cols-lg-2 g-4 px-4">
                 <div class="col">
                     <div class="card border-0">
-                        <img src="images/p2.jpg" class="card-img-top rounded-5" alt="Portrait">
+                        <img src="images/bagelcloseup1.jpg" class="card-img-top rounded-5" alt="Mockup CLoseup">
                     </div>
                 </div>
                 <div class="col">
                     <div class="card border-0">
-                        <img src="images/p3.jpg" class="card-img-top rounded-5" alt="Portrait">
+                        <img src="images/bagelcloseup2.jpg" class="card-img-top rounded-5" alt="Mockup CLoseup">
                     </div>
                 </div>
             </div>
 
+            <p class="textberkeley fs-4 p-4 pb-0 mt-4">
+                <strong>Features:</strong>
+            </p>
+
+            <!-- Card 1 Explain -->
+            <div class="py-4">
+                <div class="row px-4 g-5">
+                    <div class="col-lg-7 order-1 order-lg-0">
+                        <img src="images/bagelcard1.jpg" class="img-fluid rounded-5" id="order" alt="Explanation Card">
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card-body">
+                            <p class="textberkeley fs-4">
+                                The sandwiches in the Cheat Sheet are deconstructed and portrayed in the order it’s
+                                meant to be built in.
+                            </p>
+                            <p class="textberkeley fs-4">
+                                This helps team members follow the right order, track their progression in the build, as
+                                well as clarify the amount of Swiss Cheese, Tomatoes, Cucumbers, Bacon, etc. required
+                                for each
+                                sandwich.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 Explain -->
+            <div class="py-4">
+
+                <div class="row px-4 g-5">
+                    <div class="col-lg-7 order-1 order-lg-1">
+                        <img src="images/bagelcard2.jpg" class="img-fluid rounded-5" alt="Explanation Card">
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card-body">
+                            <p class="textberkeley fs-4">
+                                Deli items in sandwiches that need to go into the Egg Cooker or the Oven are highlighted
+                                so that team members know what items to prioritize before they start slicing the bagel
+                                or building the sandwich.
+                            </p>
+                            <p class="textberkeley fs-4 pb-4">
+                                The time taken for items to cook in the Egg Cooker are also mentioned in the corner of the highlighted item.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="p-4">
-                <img src="images/p4.jpg" class="card-img-top rounded-5" alt="Portrait">
+                <img src="images/bagel-mockup-end.jpg" alt="Mockup of Cheat Sheet on table" class="img-fluid rounded-5">
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/p5.jpg" class="card-img-top rounded-5" alt="Crows flying">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/p6.jpg" class="card-img-top rounded-5" alt="Parrot on branch">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/p7.jpg" class="card-img-top rounded-5" alt="Moon">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/p8.jpg" class="card-img-top rounded-5" alt="Squirrel on branch">
-                    </div>
-                </div>
-            </div>
         </section>
-
         <!-- THANK YOU TEXT + BUTTON -->
-        <div role="region" class="scroll text-center my-5">
+
+        <div role="region" class="scroll text-center my-5 pb-5">
             <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
             <div class="textberkeley">
                 <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
@@ -243,12 +283,14 @@
         </div>
 
     </main>
+
     <!-- FOOTER -->
     <footer role="contentinfo" class="p-5 pb-2">
         <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-3 fw-semibold pb-3">
             Bring your project to life, let's connect!
         </h2>
-        <a data-aos="fade-up" data-aos-duration="1000" class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
             href="mailto:sunitjjo@gmail.com">
             Email me
         </a>
@@ -317,6 +359,7 @@
             img.src = "images/logo.svg"
         }
     </script>
+
 
     <!-- Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
