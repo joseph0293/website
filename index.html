@@ -137,7 +137,7 @@
         <!-- ****************************************** NAVIGATION ENDS ****************************************** -->
 
         <!-- BANNER IMAGE + TITLE/INTRODUCTION -->
-        <div class="card text-bg-dark border-0 rounded-0">
+        <div class="card border-0 rounded-0 remove-text-bg">
 
             <!-- Used picture tag to show the right image on desktop, tablet and mobile depending on device and display resolution -->
             <picture>
@@ -153,23 +153,30 @@
                                 images/banner-mobile-1000w.jpg 2x,
                                 images/banner-mobile-1500w.jpg 3x" media="(max-width: 767px)" />
 
-                <img class="opacity-50 card-img rounded-0" src="img/art/square/lego_square_960.png"
+                <img class="card-img rounded-0" src="img/art/square/lego_square_960.png"
                     alt="Banner image of myself working on a computer">
             </picture>
-            <div class="card-img-overlay pt-5 pt-xxl-5 pt-lg-5 mt-lg-2 pt-md-5">
-                <div data-aos="fade-up" data-aos-duration="1000" class="container">
-                    <h1 role="heading" aria-level="1" class="card-title text-white display-6 fw-medium">Hello, I'm
-                        Sunit!</h1>
-                    <p class="card-title text-white display-6 fw-medium"> I design</p>
-                    <p role="heading" aria-level="2" class="text-white display-1 lh-1 fw-bold" id="text"></p>
+            <div class="card-img-overlay pt-5 pt-xxl-5 pt-lg-5 mt-lg-2 pt-md-5 d-flex flex-column flex-md-row pt-4 justify-content-end">
+                <div data-aos="fade-up" data-aos-duration="1000" class="container d-flex flex-column flex-md-row pt-4">
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <h1 role="heading" aria-level="1" class="card-title text-white fs-1 fw-bold">Hey there!</h1>
+                        <!-- <p class="card-title text-white display-6 fw-medium"> Welcome to my website!</p> -->
+                        <p role="heading" aria-level="2" class="text-white display-5 fw-medium">I'm
+                            Sunit, an ad guy who designs and develops.</p>
+                        <!-- <p role="heading" aria-level="2" class="text-white display-1 fw-bold" id="typetext"></p> -->
+                        <p class="text-white fs-4 fw-medium"><i class="fa-solid fa-location-dot"></i> Ottawa, Ontario</p>
+                    </div>
                     <!-- <small class="text-white fw-medium">Sorry, this website is still a work in progress. For my full
-                        portfolio, please visit <a class="text-white fw-bold" href="https://www.behance.net/sunitj">My
-                            Behance Page</a> </small> -->
+                                portfolio, please visit <a class="text-white fw-bold" href="https://www.behance.net/sunitj">My
+                                    Behance Page</a> </small> -->
                 </div>
             </div>
         </div>
         <!-- SHOWREEL -->
-        <div class="showreel text-center py-5">
+        <!-- <div class="showreel text-center py-5">
             <p data-aos="fade-up" data-aos-duration="1000" class="text-center mb-0 text-white fs-2 fw-medium lh-sm">
                 Watch my (Work in progress)</p>
             <h2 data-aos="fade-up" data-aos-duration="1000"
@@ -181,14 +188,14 @@
                 </div>
                 <div class="videowhite"></div>
             </div>
-        </div>
+        </div> -->
     </header>
     <main id="skipcontent" role="main" class="container-xxl">
         <!-- HIGHLIGHTED PROJECTS -->
         <div role="region" class="mt-5 projects">
             <h2 data-aos="fade-up" data-aos-duration="1000"
                 class="textberkeley m-4 pb-4 text-center display-5 lh-1 fw-semibold">
-                Here are some ways my skills can help you…
+                Here's how my skills can help you:
             </h2>
 
             <!-- CARD 1 -->
@@ -201,6 +208,22 @@
                             <!-- Adds rounded-5 to div outside the active carousel -->
                             <div class="carousel-inner rounded-5">
                                 <div class="carousel-item active">
+                                    <a href="nac.html">
+                                        <picture class="d-block w-100">
+                                            <source srcset="images/nac-wide-1000.jpg 1x,
+                                                            images/nac-wide-2000.jpg 2x"
+                                                media="(min-width: 768px)" />
+
+                                            <source srcset="images/nac-mobile-500.jpg 1x,
+                                                            images/nac-mobile-1000.jpg 2x"
+                                                media="(max-width: 767px)" />
+
+                                            <img class="img-fluid w-100" src="images/nac-wide-1000.jpg"
+                                                alt="Advertising Imagery">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
                                     <a href="tvsracexp.html">
                                         <picture class="d-block w-100">
                                             <source srcset="images/racexp-wide-1000.jpg 1x,
@@ -257,7 +280,7 @@
                                 on a variety of brands from fashion, FMCG, automobile, beauty, personal care & jewelry.
                                 I can make anything you throw at me look damn good!
                             </p>
-                            <a href="artdirection.html" class="outlinebutton btn btn-white rounded-5 fs-5">All 
+                            <a href="artdirection.html" class="outlinebutton btn btn-white rounded-5 fs-5">All
                                 <strong>Advertising</strong> work &#9654;</a>
                         </div>
                     </div>
@@ -321,7 +344,7 @@
                             Currently upgrading my tech knowledge at college, I can design interfaces, solve design
                             problems as well as dabble in a fair amount of front-end code.
                         </p>
-                        <a href="uxdesign.html" class="outlinebutton btn btn-white rounded-5 fs-5">All 
+                        <a href="uxdesign.html" class="outlinebutton btn btn-white rounded-5 fs-5">All
                             <strong>UX Design</strong> work &#9654;</a>
                     </div>
                 </div>
@@ -392,7 +415,7 @@
                                     photoshoots. I also excel in editing images to their best potential, thanks to years
                                     of image manipulation experience.
                                 </p>
-                                <a href="photography.html" class="outlinebutton btn btn-white rounded-5 fs-5">All 
+                                <a href="photography.html" class="outlinebutton btn btn-white rounded-5 fs-5">All
                                     <strong>Photography</strong> work &#9654;</a>
                             </div>
                         </div>
@@ -454,7 +477,7 @@
 
     <!-- Typewriter WORKS HERE -->
     <script>
-        const textDisplay = document.getElementById('text')
+        const textDisplay = document.getElementById('typetext')
         const phrases = ['brands...', 'visuals...', 'experiences...', 'code...', 'motion...']
         let i = 0
         let j = 0

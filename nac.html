@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>National Arts Centre</title>
+
+    <!-- Reset CSS may not be necessary but anyway -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Bootstrap, for well... bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Google Fonts for Montserrat fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome & Bootstrap Icons for Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header role="banner">
+        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
+            <div class="container javanav">
+                <a class="d-lg-none navbar-brand ps-3 ps-sm-0" href="index.html">
+                    <img class="logo1" src="images/logo.svg" alt="logo" width="200" height="102">
+                </a>
+                <!-- Change span to 3 empty spans for custom hamburger to X -->
+                <button class="navbar-toggler collapsed border-0 d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navigationdrop" aria-controls="navigationdrop" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-between text-center" id="navigationdrop">
+                    <!-- Logo for desktop only (Please check Readme file)-->
+                    <div>
+                        <a class="d-none d-lg-block navbar-brand" href="index.html">
+                            <img id="logodesktop" src="images/logo.svg" alt="logo" width="200" height="102"
+                                onmouseover="hover(this);" onmouseout="hoverOut(this)">
+                        </a>
+                    </div>
+                    <!-- WORK -->
+                    <ul class="navbar-nav py-3 d-lg-none">
+                        <!-- Padding to give enough space -->
+                        <li class="navwork nav-item dropdown bg-white activepage">
+                            <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-3 p-3 px-5 fw-medium"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Work
+                            </a>
+                            <ul class="workitems dropdown-menu text-center fs-4">
+                                <li class="activesubpage">
+                                    <a class="textberkeley navartdirection dropdown-item py-4"
+                                        href="artdirection.html">Art
+                                        Direction <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li>
+                                    <a class="textberkeley navuxdesign dropdown-item py-4" href="uxdesign.html">UX
+                                        Design <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li>
+                                    <a class="textberkeley navphotography dropdown-item py-4"
+                                        href="photography.html">Photography <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- DISPLAY ON DESKTOP ONLY (Please check Readme file for explanation)-->
+                    <ul class="navbar-nav d-none d-lg-block">
+                        <li class="navwork nav-item dropdown bg-white activepage">
+                            <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-3 p-3 px-5 fw-medium"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Work
+                            </a>
+                            <ul class="dropdown-menu fs-5 rounded-5 border-0 shadow">
+                                <li class="px-4 activesubpage">
+                                    <a class="hover-forward textberkeley navartdirection dropdown-item p-4 fw-medium"
+                                        href="artdirection.html">Art Direction <i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li class="px-4">
+                                    <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
+                                        href="uxdesign.html">UX Design <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li class="hover-forward px-4">
+                                    <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
+                                        href="photography.html">Photography <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- ABOUT -->
+                    <div class="nav-item border-2 navabout">
+                        <a class="p-3 px-5 navaboutblue nav-link fs-3 fw-medium" aria-current="page"
+                            href="about.html">About</a>
+                    </div>
+                    <!-- RESUME -->
+                    <div class="navresume border-0 nav-item my-3">
+                        <a class="navresumecolor nav-link active fs-3 p-3 px-5 fw-semibold" aria-current="page"
+                            aria-label="opens in new tab" target="_blank" href="docs/resume-rebrand.pdf">Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- DIV to give space between nav bar and the banner, so banner doesn't get covered by nav bar -->
+        <div class="py-5 my-3"></div>
+
+    </header>
+    <!-- ****************************************** NAVIGATION ENDS ****************************************** -->
+
+
+
+
+    <main role="main" class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="textberkeley d-flex fs-6 fw-semibold">
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbstyling" href="index.html">Home</a>
+                </li>
+                <li>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbstyling" href="artdirection.html">Art Direction</a>
+                </li>
+                <li>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="fastrack.html">National Arts
+                        Centre</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- TITLE & BANNER -->
+        <section role="region">
+            <div class="introhead p-4 pb-0">
+                <h1 class="textberkeley display-4 fw-bold">
+                    The National Arts Centre
+                </h1>
+                <p class="textberkeley fs-4">
+                    I was fortunate to have the opportunity to work on a campaign look for the upcoming 2024 - 2025
+                    season of the National Arts Centre of Canada, commissioned by <a
+                        class="breadcrumbstyling fw-semibold" target="_blank" href="https://banfield.agency">Banfield
+                        Agency.</a>
+                </p>
+            </div>
+            <p class="p-4 pb-0 textberkeley fs-4">
+                The look is inspired by the lively strokes of an artist's brush. When seen up close, like watching a
+                live performance, it brings a sense of excitement and connection. This reflects the campaign's creative
+                essence, bringing the energy of live art directly to the audience.
+            </p>
+
+            <!-- POSTERS FOR CAMPAIGN -->
+
+            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
+                Key Visuals:
+            </h2>
+
+            <!-- IMAGEx4 RESPONSIVE GRID-->
+            <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/nac-blue-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 1">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/nac-pink-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 pt-0">
+                <img src="images/nac-purple-poster.jpg" class="card-img-top rounded-5 my-4 outlinebutton"
+                    alt="NAC poster 3">
+                <!-- <img src="images/nac-all-poster.jpg" class="card-img-top rounded-5 my-4 outlinebutton mt-0"
+                    alt="All NAC posters"> -->
+                <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard-blue.jpg" alt="NAC subway">
+                <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard.jpg" alt="NAC subway mockup">
+            </div>
+            <!-- Social Media: -->
+            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
+                Social Media:
+            </h2>
+            <p class="p-4 pb-0 textberkeley fs-4">
+                A large part of the campaign was to be executed digitally as social media ads and posts.
+            </p>
+            <div class="hoardings p-4">
+                <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-social.jpg" alt="NAC post social media">
+                <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-website.jpg" alt="NAC website">
+            </div>
+            <p class="p-4 pb-0 textberkeley fs-4">
+                Motion was required to be an integral part of the look so that it could be extended to digital screens and get more reach on social media. Here's how I'd conceptualised the motion for the campaign:
+            </p>
+            <div class="hoardings p-4">
+                <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/nac-ig-story.mp4"
+                    alt="NAC IG story"></video>
+            </div>
+            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
+                The Kipnes Lantern:
+            </h2>
+            <p class="textberkeley fs-4 px-4">
+                The Kipnes Lantern is a 21-metre-high transparent LED screen that wraps around the National Arts Centre's glass
+                atrium. It's a unique digital canvas that can be seen from the street and is visible to the public 24/7.
+                The campaign look was also  designed to be displayed on the Lantern, bringing the energy of live art directly
+                to the audience.
+            </p>
+            <div class="hoardings p-4">
+                <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/kipnes-lantern.mp4"
+                    alt="NAC Kipnes Lantern"></video>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- THANK YOU TEXT + BUTTON -->
+
+            <div role="region" class="scroll text-center my-5">
+                <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
+                <div class="textberkeley">
+                    <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
+                            class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+                </div>
+            </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="p-5 pb-2">
+        <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-3 fw-semibold pb-3">
+            Bring your project to life, let's connect!
+        </h2>
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+            href="mailto:sunitjjo@gmail.com">
+            Email me
+        </a>
+        <hr class="my-5 border-white border-2">
+        <div class="footergrid row">
+            <div class="col-md-4 logoandmail">
+                <a href="index.html">
+                    <img class="footerlogo" src="images/logofooter.svg" alt="Logo" height="60">
+                </a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover fs-6"
+                    href="mailto:sunitjjo@gmail.com">sunitjjo@gmail.com</a>
+            </div>
+            <div class="col-md-4 sociallinks py-4 py-md-0 fs-5">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab"
+                    target="_blank">Linkedin</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank">Behance</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab"
+                    target="_blank">Instagram</a>
+            </div>
+            <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="about.html">About</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="uxdesign.html">UX Design</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="artdirection.html">Art Direction</a>
+            </div>
+        </div>
+        <p class="text-white pt-md-5">© 2023 Sunit J. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+    <!-- Make the logo wink when nav is toggled -->
+    <script>
+        const nav = document.querySelector('.javanav');
+        const logo = document.querySelector('.logo1');
+
+        nav.addEventListener('click', function () {
+            this.classList.toggle('active');
+
+            if (this.classList.contains('active')) {
+                logo.src = 'images/logo2.svg'
+            } else {
+                logo.src = 'images/logo.svg'
+            }
+        })
+    </script>
+    <!-- Making logo wink on hover for desktop -->
+    <script>
+        function hover(img) {
+            img.src = "images/logo2.svg"
+        }
+
+        function hoverOut(img) {
+            img.src = "images/logo.svg"
+        }
+    </script>
+
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

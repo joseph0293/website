@@ -15,7 +15,7 @@ I couldn't get the entire "Work" dropdown to have a single border like on mobile
 
 This also made it easier for me to add another image tag for javascript to change the logo: On 'tap' for mobile, and on 'hover' for desktop.
 
-October 11th: Added Animate On Scroll Library to make content appear on page while scrolling down to content.
+October 11th 2023: Added Animate On Scroll Library to make content appear on page while scrolling down to content.
 
 
 ## SOURCE & CREDITS
