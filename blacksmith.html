@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Museum of Nature</title>
+    <title>Blacksmith</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./images/icon.svg?">
 
     <!-- Reset CSS may not be necessary but anyway -->
     <link rel="stylesheet" href="css/reset.css">
+
 
     <!-- Bootstrap, for well... bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,6 +36,7 @@
 </head>
 
 <body>
+
     <!-- NAVIGATION -->
     <header role="banner">
         <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
@@ -72,11 +74,11 @@
                                         href="artdirection.html">Art
                                         Direction <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li>
+                                <li class="activesubpage">
                                     <a class="textberkeley navuxdesign dropdown-item py-4" href="uxweb.html">UX
                                         & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="activesubpage">
+                                <li>
                                     <a class="textberkeley navphotography dropdown-item py-4"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -96,11 +98,11 @@
                                         href="artdirection.html">Art Direction <i
                                             class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="px-4">
+                                <li class="px-4 activesubpage">
                                     <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
                                         href="uxweb.html">UX & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="hover-forward px-4 activesubpage">
+                                <li class="hover-forward px-4">
                                     <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -115,18 +117,19 @@
                     <!-- RESUME -->
                     <div class="navresume border-0 nav-item my-3">
                         <a class="navresumecolor nav-link active fs-4 p-3 px-5 fw-semibold" aria-current="page"
-                            aria-label="opens in new tab" target="_blank"
-                            href="docs/sunit-resume.pdf">Resume
+                            aria-label="opens in new tab" target="_blank" href="docs/sunit-resume.pdf">Resume
                         </a>
                     </div>
                 </div>
             </div>
         </nav>
+
         <!-- DIV to give space between nav bar and the banner, so banner doesn't get covered by nav bar -->
         <div class="py-5 my-3"></div>
 
     </header>
     <!-- ****************************************** NAVIGATION ENDS ****************************************** -->
+
 
 
     <main role="main" class="container">
@@ -141,175 +144,64 @@
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbstyling" href="photovideo.html">Photo & Video</a>
+                    <a itemprop="item" class="breadcrumbstyling" href="uxweb.html">UX & Web</a>
                 </li>
+
                 <li>
                     <i class="bi bi-arrow-right-short"></i>
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="museumofnature.html">Museum of Nature</a>
+                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="bagelsheet.html">Blacksmith</a>
                 </li>
             </ul>
         </nav>
 
-
-        <!-- LANGFORD TITLE & DESCRIPTION -->
         <section role="region">
 
-            <div class="introhead p-4">
+            <!-- PORTFOLIO WEBSITE TITLE & DESCRIPTION -->
+
+            <div class="introhead p-4 pb-0">
                 <h1 class="textberkeley display-4 fw-bold">
-                    Museum of Nature
+                    Blacksmith
                 </h1>
+                <p class="textberkeley fst-italic pb-2">The Text-based Adventure Game</p>
                 <p class="textberkeley fs-4">
-                    During my studies in Ottawa, Canada, I had the opportunity to visit the Canadian Museum of Nature with my friends.
+                    For a Web Development class, one of our assignments were to create a blacksmith game to showcase our
+                    understanding of JavaScript functions. The player uses the browser's console to input certain
+                    commands as a blacksmith, forging weapons and buying materials.
                 </p>
                 <p class="textberkeley fs-4">
-                    Among the taxidermied specimens and skeletal remains of prehistoric creatures, I was able to capture the wonder and excitement of my friends in the museum.
+                    Inspired by games like Skyrim that I would play as a kid, I wanted to bring an atmosphere of adventure into playing the game by including a story, visuals, medieval style english and music.
                 </p>
             </div>
-
-            <!-- Content -->
-
-            <!-- IMAGES x8  -->
-            <div class="px-4">
-                <img src="images/mon1.jpg" class="card-img-top rounded-5" alt="Dinosaur Skull">
+            <div class="card border-0 p-4">
+                <img src="images/bs.jpg" class="card-img-top rounded-5" alt="Game Mockup">
             </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pb-4">
+            <h2 class="textberkeley p-4 pb-0">Gameplay:</h2>
+            <!-- KVx3 -->
+            <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-4">
                 <div class="col">
                     <div class="card border-0">
-                        <img src="images/mon2.jpg" class="card-img-top rounded-5" alt="A friend looking at the prismatic light on herself">
+                        <img src="images/bs1.jpg" class="card-img-top rounded-5" alt="Key Visual">
                     </div>
                 </div>
                 <div class="col">
                     <div class="card border-0">
-                        <img src="images/mon3.jpg" class="card-img-top rounded-5" alt="Taxidermied moose">
+                        <img src="images/bs2.jpg" class="card-img-top rounded-5" alt="Key Visual">
                     </div>
                 </div>
             </div>
+            <p class="textberkeley fs-4 px-4">
+                <a class="breadcrumbstyling fw-semibold" target="_blank" href="https://joseph0293.github.io/mtm6302-blacksmith-jose0293/">Check out the full game here!</a>
+            </p>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon4.jpg" class="card-img-top rounded-5" alt="A friend excited about the displays">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon5.jpg" class="card-img-top rounded-5" alt="A friend pointing at the displays">
-                    </div>
-                </div>
-            </div>
-
-            <div class="px-4 pb-4">
-                <img src="images/mon6.jpg" class="card-img-top rounded-5" alt="A friend posing for a photograph">
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon7.jpg" class="card-img-top rounded-5" alt="Reindeer">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon8.jpg" class="card-img-top rounded-5" alt="A friend interacting with the displays">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon9.jpg" class="card-img-top rounded-5" alt="A friend looking at the displays">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon10.jpg" class="card-img-top rounded-5" alt="Friends excited about a miniature fire truck">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon11.jpg" class="card-img-top rounded-5" alt="Interacting with the displays">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon12.jpg" class="card-img-top rounded-5" alt="Prehistoric sea creature skeleton">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon16.jpg" class="card-img-top rounded-5" alt="Entering the polar exhibit">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon17.jpg" class="card-img-top rounded-5" alt="Taxidermied arctic fox">
-                    </div>
-                </div>
-            </div>
-
-            <div class="px-4 pb-4">
-                <img src="images/mon13.jpg" class="card-img-top rounded-5" alt="taxidermied Polar Bear">
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon14.jpg" class="card-img-top rounded-5" alt="Making faces at a reflection in a plaque">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon15.jpg" class="card-img-top rounded-5" alt="Taxidermied squirrel">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon19.jpg" class="card-img-top rounded-5" alt="Taxidermied wild cat">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon18.jpg" class="card-img-top rounded-5" alt="Selfie in the plaque reflection">
-                    </div>
-                </div>
-            </div>
-
-            <div class="px-4 pb-4">
-                <img src="images/mon20.jpg" class="card-img-top rounded-5" alt="taxidermied Animal">
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4 px-4 pb-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon21.jpg" class="card-img-top rounded-5" alt="Rock specimens">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="images/mon22.jpg" class="card-img-top rounded-5" alt="Rock specimen">
-                    </div>
-                </div>
-            </div>
-
-        
         </section>
 
+        
         <!-- THANK YOU TEXT + BUTTON -->
-        <div role="region" class="scroll text-center my-5">
+
+        <div role="region" class="scroll text-center my-5 pb-5">
             <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
             <div class="textberkeley">
                 <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
@@ -318,12 +210,14 @@
         </div>
 
     </main>
+
     <!-- FOOTER -->
     <footer role="contentinfo" class="p-5 pb-2">
         <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-5 fw-medium pb-3">
             Bring your project to life, let's connect!
         </h2>
-        <a data-aos="fade-up" data-aos-duration="1000" class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
             href="mailto:sunitjjo@gmail.com">
             Email me
         </a>
@@ -393,11 +287,13 @@
         }
     </script>
 
+
     <!-- Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
 </body>
 
 </html>
