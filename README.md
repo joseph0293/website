@@ -18,6 +18,9 @@ This also made it easier for me to add another image tag for javascript to chang
 October 11th 2023: Added Animate On Scroll Library to make content appear on page while scrolling down to content.
 
 
+## April 16th
+Now that I have learned javascript, I can incorporate that into my code as a separate java file instead of in each file. (For the logo wink) And now, I also understand the code that is used. Seems simple!
+
 ## SOURCE & CREDITS
 
 I've used the following sources to help with coding my website:
