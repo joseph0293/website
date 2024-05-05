@@ -26,7 +26,7 @@ Now that I have learned javascript, I can incorporate that into my code as a sep
 I've used the following sources to help with coding my website:
 
 [Banner Image](https://www.pexels.com/photo/photo-of-boy-wearing-yellow-shirt-while-using-an-imac-4144144/)
-I've used this image as a placeholder for now, but hope to replace it with an image of myyself in the future.
+I've used this image as a placeholder for now, but hope to replace it with an image of myself in the future.
 
 [Hover image javascrpt](https://linuxhint.com/change-image-on-hover-in-javascript/)
 
