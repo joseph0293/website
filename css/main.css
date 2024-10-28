@@ -56,6 +56,18 @@ body {
     background-color: var(--berkeleyblue);
 }
 
+.navcv {
+    background-color: var(--cinnabar);
+    color: white;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.navcv:hover,
+.navcv:active {
+    background-color: var(--berkeleyblue);
+}
+
 .navabout:hover,
 .navabout:active {
     border: 2px solid var(--berkeleyblue);
@@ -308,11 +320,23 @@ footer,
     text-decoration-thickness: 2px;
 }
 
-/* Set focus */
+/* SET FOCUS */
+
+
+/* Only for resume/cv */
+
+.navresumecolor:focus-visible {
+    border: none;
+    outline: 2px solid var(--berkeleyblue);
+    border-radius: 50px;
+
+}
+/* resume cv^^ */
+
+
 
 .navworkblue:focus-visible,
-.navaboutblue:focus-visible,
-.navresumecolor:focus-visible {
+.navaboutblue:focus-visible {
     border: none;
     outline: 2px solid var(--cinnabar);
     border-radius: 50px;
