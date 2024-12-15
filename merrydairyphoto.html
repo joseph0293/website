@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Amazing Greys</title>
+    <title>The Merry Dairy Photography</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./images/icon.svg?">
 
     <!-- Reset CSS may not be necessary but anyway -->
     <link rel="stylesheet" href="css/reset.css">
+
 
     <!-- Bootstrap, for well... bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -67,7 +68,7 @@
                                 Work
                             </a>
                             <ul class="workitems dropdown-menu text-center fs-5">
-                                <li class="activesubpage">
+                                <li>
                                     <a class="textberkeley navartdirection dropdown-item py-4"
                                         href="artdirection.html">Art
                                         Direction <i class="bi bi-arrow-right-short"></i></a>
@@ -76,7 +77,7 @@
                                     <a class="textberkeley navuxdesign dropdown-item py-4" href="uxweb.html">UX
                                         & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li>
+                                <li class="activesubpage">
                                     <a class="textberkeley navphotography dropdown-item py-4"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -91,7 +92,7 @@
                                 Work
                             </a>
                             <ul class="dropdown-menu fs-5 rounded-5 border-0 shadow">
-                                <li class="px-4 activesubpage">
+                                <li class="px-4">
                                     <a class="hover-forward textberkeley navartdirection dropdown-item p-4 fw-medium"
                                         href="artdirection.html">Art Direction <i
                                             class="bi bi-arrow-right-short"></i></a>
@@ -100,7 +101,7 @@
                                     <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
                                         href="uxweb.html">UX & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="hover-forward px-4">
+                                <li class="hover-forward px-4 activesubpage">
                                     <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
@@ -115,13 +116,15 @@
                     <!-- RESUME -->
                     <div class="border-0 nav-item my-3 d-flex justify-content-center">
                         <div class="flex-grow-1">
-                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-resume.pdf">Résumé
+                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-resume.pdf">Résumé
                             </a>
                         </div>
                         <div class="flex-grow-1">
-                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-cv.pdf">CV
+                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-cv.pdf">CV
                             </a>
                         </div>
                     </div>
@@ -138,6 +141,7 @@
 
 
 
+
     <main role="main" class="container">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
@@ -150,177 +154,217 @@
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbstyling" href="artdirection.html">Art Direction</a>
+                    <a itemprop="item" class="breadcrumbstyling" href="photovideo.html">Photo & Video</a>
                 </li>
                 <li>
                     <i class="bi bi-arrow-right-short"></i>
+
                 </li>
 
                 <li itemprop="itemListElement">
-                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="agartdirection.html">Amazing
-                        Greys</a>
+                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="merrydairyphoto.html">The Merry
+                        Dairy</a>
                 </li>
             </ul>
         </nav>
 
-        <!-- AMAZING GREYS TITLE & BANNER -->
+
+        <!-- MERRY DAIRY TITLE & DESCRIPTION -->
         <section role="region">
+
             <div class="introhead p-4 pb-0">
                 <h1 class="textberkeley display-4 fw-bold">
-                    Amazing Greys
+                    The Merry Dairy
                 </h1>
                 <p class="textberkeley fs-4">
-                    A collection of social media videos, static content & other video ad communication created as part
-                    of the creative team while working at Amazing Greys:
+                    Photographs and short video reels created for social media while working as Marketing Lead at The
+                    Merry Dairy, a local ice cream shop in Ottawa, Canada.
                 </p>
             </div>
 
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Social media posts and static advertisements:
+            <h2 class="textberkeley display-6 fw-semibold p-4">
+                Photographs
             </h2>
 
-            <!-- SOCIAL MEDIA POSTS -->
-            <div class="p-4 pt-0">
-                <picture>
-                    <source srcset="images/agposts1000.jpg 1x,
-                                    images/agposts2000.jpg 2x" media="(min-width: 768px)" />
-
-                    <source srcset="images/agpostsmobile500.jpg 1x,
-                                    images/agpostsmobile1000.jpg 2x" media="(max-width: 767px)" />
-
-                    <img class="outlinebutton img-fluid w-100 rounded-5 my-4" src="images/agposts1000.jpg"
-                        alt="Social media posts">
-                </picture>
-            </div>
-            <!-- PHOTOSHOOTS HEADER -->
-
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Photo shoots executed with limited resources:
-            </h2>
-            <!-- IMAGE -->
-            <div class="p-4">
-                <img src="images/agphotoshoots.png" class="card-img-top rounded-5 outlinebutton" alt="Photoshoots">
-            </div>
-            <!-- TEXT -->
-            <div class="px-4 align-items-center">
-                <p class="textberkeley fs-4">To see all the photography done for Amazing Greys, check out <a
-                        class="breadcrumbstyling fw-semibold"  target="_blank" href="amazinggreys.html">this project.</a></p>
-            </div>
-
-            <!-- VIDEOSHOOTS HEADER -->
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Videos made for social media and digital advertisements:
-            </h2>
-
-            <!-- VIMEO EMBEDDING VIDEO -->
-            <div class="vimeovideo videoborderberkeley rounded-5 px-2 py-4 m-4">
-
-                <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe
-                        src="https://player.vimeo.com/video/750096112?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video Tile">
-                    </iframe>
-                </div>
-                <script src="https://player.vimeo.com/api/player.js">
-
-                </script>
-            </div>
-
-            <div class="p-4 pb-0">
-                <p class="textberkeley fs-4 fw-bold">Grey is Sexy Campaign:</p>
-            </div>
-            <!-- VIMEO GREY SEXY EMBED VIDEO -->
-            <div class="w-100 p-4 pt-0">
-
-                <div class="videoborderberkeley rounded-5 p-4">
-
-                    <div style="padding:100% 0 0 0;position:relative;">
-                        <iframe
-                            src="https://player.vimeo.com/video/749937113?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Grey is Sexy">
-                        </iframe>
+            <!-- IMAGE x2 -->
+            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pt-2 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto1.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Blueberry Lemon">
                     </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
-                <div class="videoborderberkeley rounded-5 p-4 my-4">
-                    <div style="padding:50% 0 0 0;position:relative;">
-                        <iframe
-                            src="https://player.vimeo.com/video/749936601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GREY GIFs">
-                        </iframe>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto2.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Rum & Raisin">
                     </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
 
-            <!-- SKIN CREAM LAUNCH HEADING -->
-            <div class="p-4 pb-0">
-                <p class="textberkeley fs-4 fw-bold">Skin Cream Launches:</p>
+            <!-- IMAGE x3 -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto3.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Pumpkin Spiced Pepita">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto4.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Cotton Candy">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto5.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Roasted Banana, Brown Sugar & Cinnamon">
+                    </div>
+                </div>
             </div>
 
-            <!-- SKIN CREAM LAUNCH VIDEOS -->
-            <div class="row row-cols-1 row-cols-md-2 mt-0 m-3">
+            <!-- IMAGE x2 -->
+            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto6.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Peach Soft Serve Ice Cream">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto7.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Peach Soft Serve Ice Cream handed out from Ice Cream Truck">
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE x2 -->
+            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto8.jpg" class="card-img-top rounded-5" alt="Merry Dairy Ice Cream Pints">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto9.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Pints - Tiger Tail">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SINGLE PHOTO -->
+            <div class="card border-0 g-4 p-4 pb-0">
+                <img src="images/mdphoto10.jpg" class="card-img-top rounded-5"
+                    alt="Merry Dairy Halloween Campaign Photograph">
+            </div>
+
+            <!-- IMAGE x3 THANKSGIVING PIES -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto11.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Thanksgiving Pie">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto12.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Thanksgiving Pie">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto13.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Thanksgiving Pie">
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE x2 -->
+            <div class="row row-cols-1 row-cols-md-2 g-4 p-4 pb-0">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto14.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Scoops">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto15.jpg" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Birthday Cake">
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE x3 Holiday Portraits -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pb-4">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto16.png" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Holiday Portrait">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto17.png" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Holiday Portrait">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="images/mdphoto18.png" class="card-img-top rounded-5"
+                            alt="Merry Dairy Ice Cream Holiday Portrait">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section role="region">
+
+            <h2 class="textberkeley display-6 fw-semibold p-4">
+                Video Reels
+            </h2>
+
+            <!-- Video embed from Vimeo -->
+            <div class="row row-cols-1 row-cols-md-3 m-2">
+                <!-- Video 1 -->
                 <div class="col videoborderberkeley rounded-5 p-4">
-                    <div style="padding:100% 0 0 0;position:relative;">
-                        <iframe
-                            src="https://player.vimeo.com/video/750016053?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Neck Cream Launch">
-                        </iframe>
+                    <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/1038417395?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            title="Pumpkin Spiced Pepita"></iframe>
                     </div>
                     <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
+
+                <!-- Video 2 -->
                 <div class="col videoborderberkeley rounded-5 p-4">
-                    <div style="padding:100% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/751182071?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Body Cream Launch">
-                        </iframe>
+                    <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/1038417409?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            title="Christmas Pints Launch"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <!-- Video 3 -->
+                <div class="col videoborderberkeley rounded-5 p-4">
+                    <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/1038417402?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            title="Trash Panda Reel"></iframe>
                     </div>
                     <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
 
-            <!-- SOAP LAUNCH HEADING -->
-            <div class="p-4 pb-0">
-                <p class="textberkeley fs-4 fw-bold">Soap Launch:</p>
-            </div>
-
-            <!-- SOAP LAUNCH VIDEO -->
-            <div class="m-4">
-
-                <div class="videoborderberkeley rounded-5 p-4">
-                    <div style="padding:100% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/750103532?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soap Launch">
-                        </iframe>
-                    </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </div>
-
-            <!-- WEBSITE THUMBNAIL HEADING -->
-            <div class="p-4 pb-0">
-                <p class="textberkeley fs-4 fw-bold">Website Thumbnail videos with product benefits:</p>
-            </div>
-
-            <!-- WEBSITE THUMBNAIL VIDEO -->
-            <div class="m-4">
-
-                <div class="videoborderberkeley rounded-5 p-4">
-                    <div style="padding:34.01% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/749925817?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="WEB Thumbnail vids">
-                        </iframe>
-                    </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </div>
-            
-
-
-            
+        </section>
 
         <!-- THANK YOU TEXT + BUTTON -->
 
@@ -338,7 +382,8 @@
         <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-5 fw-medium pb-3">
             Bring your project to life, let's connect!
         </h2>
-        <a data-aos="fade-up" data-aos-duration="1000" class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
             href="mailto:sunitjjo@gmail.com">
             Email me
         </a>
@@ -355,15 +400,16 @@
             <!-- Social Links -->
             <div class="col-md-4 py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
+                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i class="fa-brands fa-behance pe-1"></i> Behance</a>
+                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-behance pe-1"></i> Behance</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-instagram pe-1"></i> Instagram</a>
+                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-instagram pe-1"></i> Instagram</a>
             </div>
             <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
@@ -378,7 +424,6 @@
         </div>
         <p class="text-white pt-md-5">© 2024 Sunit J. All rights reserved.</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>

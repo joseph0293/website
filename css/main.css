@@ -428,6 +428,10 @@ body {
     background: var(--berkeleyblue);
 }
 
+/* Style list in Open Data */
+.list-openottawa {
+    list-style-type: disc;
+}
 
 /* Remove text background colour for image overlay in main banner */
 
