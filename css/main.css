@@ -203,10 +203,34 @@ body {
     color: var(--berkeleyblue) !important;
 }
 
+/* Set colours to cinnabar (use less often) */
+/* Orange background style the social icons */
+
+.bg-cinnabar {
+    background-color: var(--cinnabar);
+}
+
+.textcinnabar {
+    color: var(--cinnabar) !important;
+}
+
+/* Set colours to california gold (USE CAREFULLY) */
+.textcalgold {
+    color: var(--californiagold) !important;
+}
+.bgcalgold {
+    background-color: var(--californiagold);
+}
+
 /* Set background colours to brand blue */
+/* Set border to berkblue */
+
+.berkeleyblueborder {
+    border: 2px solid var(--berkeleyblue);
+}
 
 footer,
-.showreel {
+.bgberkeleyblue {
     background-color: var(--berkeleyblue);
 }
 
@@ -220,11 +244,6 @@ footer,
 .inputborderberkely,
 .videoborderberkeley {
     border: 2px solid var(--berkeleyblue);
-}
-
-/* Orange background style the social icons */
-.bg-cinnabar {
-    background-color: var(--cinnabar);
 }
 
 /* Breadcrumb hover styling */
@@ -432,6 +451,10 @@ body {
 .list-openottawa {
     list-style-type: disc;
 }
+
+/*  */
+
+
 
 /* Remove text background colour for image overlay in main banner */
 
