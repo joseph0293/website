@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Dawgs</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/icon.svg?">
+
+    <!-- Reset CSS may not be necessary but anyway -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Bootstrap, for well... bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Google Fonts for Montserrat fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome & Bootstrap Icons for Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header role="banner">
+        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
+            <div class="container javanav">
+                <a class="d-lg-none navbar-brand ps-3 ps-sm-0" href="index.html">
+                    <img class="logo1" src="images/logo.svg" alt="logo" width="200" height="102">
+                </a>
+                <!-- Change span to 3 empty spans for custom hamburger to X -->
+                <button class="navbar-toggler collapsed border-0 d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navigationdrop" aria-controls="navigationdrop" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-between text-center" id="navigationdrop">
+                    <!-- Logo for desktop only (Please check Readme file)-->
+                    <div>
+                        <a class="d-none d-lg-block navbar-brand" href="index.html">
+                            <img id="logodesktop" src="images/logo.svg" alt="logo" width="200" height="102"
+                                onmouseover="hover(this);" onmouseout="hoverOut(this)">
+                        </a>
+                    </div>
+                    <!-- WORK -->
+                    <ul class="navbar-nav py-3 d-lg-none">
+                        <!-- Padding to give enough space -->
+                        <li class="navwork nav-item dropdown bg-white activepage">
+                            <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-4 p-3 px-5 fw-medium"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Work
+                            </a>
+                            <ul class="workitems dropdown-menu text-center fs-5">
+                                <li>
+                                    <a class="textberkeley navartdirection dropdown-item py-4"
+                                        href="artdirection.html">Art
+                                        Direction <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li>
+                                    <a class="textberkeley navuxdesign dropdown-item py-4" href="uxweb.html">UX
+                                        & Web <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li class="activesubpage">
+                                    <a class="textberkeley navphotography dropdown-item py-4"
+                                        href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- DISPLAY ON DESKTOP ONLY (Please check Readme file for explanation)-->
+                    <ul class="navbar-nav d-none d-lg-block">
+                        <li class="navwork nav-item dropdown bg-white activepage">
+                            <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-4 p-3 px-5 fw-medium"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Work
+                            </a>
+                            <ul class="dropdown-menu fs-5 rounded-5 border-0 shadow">
+                                <li class="px-4">
+                                    <a class="hover-forward textberkeley navartdirection dropdown-item p-4 fw-medium"
+                                        href="artdirection.html">Art Direction <i
+                                            class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li class="px-4">
+                                    <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
+                                        href="uxweb.html">UX & Web <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                                <li class="hover-forward px-4 activesubpage">
+                                    <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
+                                        href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- ABOUT -->
+                    <div class="nav-item border-2 navabout">
+                        <a class="p-3 px-5 navaboutblue nav-link fs-4 fw-medium" aria-current="page"
+                            href="about.html">About</a>
+                    </div>
+                    <!-- RESUME -->
+                    <div class="border-0 nav-item my-3 d-flex justify-content-center">
+                        <div class="flex-grow-1">
+                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-resume.pdf">Résumé
+                            </a>
+                        </div>
+                        <div class="flex-grow-1">
+                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-cv.pdf">CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- DIV to give space between nav bar and the banner, so banner doesn't get covered by nav bar -->
+        <div class="py-5 my-3"></div>
+
+    </header>
+    <!-- ****************************************** NAVIGATION ENDS ****************************************** -->
+
+
+    <main role="main" class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="textberkeley d-flex fs-6 fw-semibold">
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbstyling" href="index.html">Home</a>
+                </li>
+                <li>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbstyling" href="photovideo.html">Photo & Video</a>
+                </li>
+                <li>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+
+                <li itemprop="itemListElement">
+                    <a itemprop="item" class="breadcrumbactive breadcrumbstyling" href="bigdawgs.html">Big Dawgs</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- TITLE & DESCRIPTION -->
+        <section role="region">
+
+            <div class="introhead p-4">
+                <h1 class="textberkeley display-4 fw-bold">
+                    Big Dawgs Lyric Video
+                </h1>
+                <p class="textberkeley fs-4">
+                    Exploring typography animation in Motion Graphics class, I decided to use the song <a
+                        class="breadcrumbstyling fw-semibold" target="_blank"
+                        href="https://www.youtube.com/watch?v=hOHKltAiKXQ">Big Dawgs</a> by Hanumankind & Kalmi as
+                    inspiration to create a short lyric video for the same.
+                </p>
+            </div>
+
+            <!-- Content -->
+
+            <!-- Video embed from Vimeo -->
+            <div class="videoborderberkeley rounded-5 p-4 m-4">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                    src="https://player.vimeo.com/video/1043700436?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Big Dawgs Lyric Video"></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+                
+            </div>
+        </section>
+
+        <!-- THANK YOU TEXT + BUTTON -->
+        <div role="region" class="scroll text-center my-5">
+            <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
+            <div class="textberkeley">
+                <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
+                        class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+            </div>
+        </div>
+
+    </main>
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="p-5 pb-2">
+        <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-5 fw-medium pb-3">
+            Bring your project to life, let's connect!
+        </h2>
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+            href="mailto:sunitjjo@gmail.com">
+            Email me
+        </a>
+        <hr class="my-5 border-white border-2">
+        <div class="footergrid row">
+            <div class="col-md-4 logoandmail">
+                <a href="index.html">
+                    <img class="footerlogo" src="images/logofooter.svg" alt="Logo" height="50">
+                </a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover fs-6"
+                    href="mailto:sunitjjo@gmail.com">sunitjjo@gmail.com</a>
+            </div>
+            <!-- Social Links -->
+            <div class="col-md-4 py-4 py-md-0 fs-5">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-behance pe-1"></i> Behance</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-instagram pe-1"></i> Instagram</a>
+            </div>
+            <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="about.html">About</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="uxweb.html">UX & Web</a>
+                <br>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="artdirection.html">Art Direction</a>
+            </div>
+        </div>
+        <p class="text-white pt-md-5">© 2024 Sunit J. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+    <!-- Link to JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
