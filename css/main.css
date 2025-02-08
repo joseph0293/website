@@ -452,8 +452,11 @@ body {
     list-style-type: disc;
 }
 
-/*  */
+/* Set paragraph font size to be slightly smaller overall on website */
 
+p.fs-4 {
+    font-size: 1.4rem !important;
+}
 
 
 /* Remove text background colour for image overlay in main banner */
