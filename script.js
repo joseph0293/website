@@ -93,3 +93,8 @@ function hoverOut(img) {
 //             "body").style.visibility = "visible";
 //     }
 // };
+
+
+
+//ENTIRE WEBSITE IN DARK MODE!!!
+

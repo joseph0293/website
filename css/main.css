@@ -51,6 +51,11 @@
     letter-spacing: -2px;
 }
 
+.orlines {
+    border: 1px solid var(--cinnabar);
+    width: 100px;
+}
+
 .outlinebutton:hover,
 .outlinebutton:focus,
 .outlinebutton:active {
