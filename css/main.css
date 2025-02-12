@@ -9,6 +9,48 @@
     font-family: 'Montserrat';
 }
 
+/* Font & Background Colours */
+
+/* Set colours to cinnabar (use less often) */
+/* Orange background style the social icons */
+
+.bgcinnabar {
+    background-color: var(--cinnabar);
+}
+
+.textcinnabar {
+    color: var(--cinnabar) !important;
+}
+
+/* Set colours to california gold (USE CAREFULLY) */
+.textcalgold {
+    color: var(--californiagold) !important;
+}
+.bgcalgold {
+    background-color: var(--californiagold);
+}
+
+
+/* CTA Button in About Page */
+
+.ctabutton {
+    transition: 0.3s;
+    color: var(--cinnabar) !important;
+    border: 2px solid var(--cinnabar) !important;
+
+}
+
+.ctabutton:hover {
+    background-color: var(--cinnabar) !important;
+    color: white !important;
+}
+
+/* About Title */
+
+.about-title {
+    letter-spacing: -2px;
+}
+
 .outlinebutton:hover,
 .outlinebutton:focus,
 .outlinebutton:active {
@@ -29,13 +71,6 @@
 }
 
 
-/* Set colour to orange for category */
-h3 {
-    color: var(--cinnabar);
-}
-
-
-
 /* Set font everywhere */
 
 body {
@@ -43,6 +78,8 @@ body {
 }
 
 /* Styling nav & nav items */
+
+
 
 .navresume {
     background-color: var(--californiagold);
@@ -203,25 +240,6 @@ body {
     color: var(--berkeleyblue) !important;
 }
 
-/* Set colours to cinnabar (use less often) */
-/* Orange background style the social icons */
-
-.bg-cinnabar {
-    background-color: var(--cinnabar);
-}
-
-.textcinnabar {
-    color: var(--cinnabar) !important;
-}
-
-/* Set colours to california gold (USE CAREFULLY) */
-.textcalgold {
-    color: var(--californiagold) !important;
-}
-.bgcalgold {
-    background-color: var(--californiagold);
-}
-
 /* Set background colours to brand blue */
 /* Set border to berkblue */
 
@@ -284,19 +302,33 @@ footer,
 
 .smicons {
     transition: 0.3s;
-    padding: 10px 14px;
+    padding: 10px 15px;
+    background-color: white;
+    color: var(--cinnabar);
+    border: 2px solid var(--cinnabar);
+}
+
+.smicons:hover,
+.smicons:focus,
+.smicons:active {
     background-color: var(--cinnabar);
-    border-radius: 60px;
-    height: 20px;
-    width: 20px;
     color: white;
+}
+
+/* .smicons {
+    transition: 0.3s;
+    padding: 10px 15px;
+    background-color: white;
+    color: var(--berkeleyblue);
+    border: 2px solid var(--berkeleyblue);
 }
 
 .smicons:hover,
 .smicons:focus,
 .smicons:active {
     background-color: var(--berkeleyblue);
-}
+    color: white;
+} */
 
 
 /* Styling skiplink */
