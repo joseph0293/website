@@ -478,6 +478,24 @@ body {
     color: var(--berkeleyblue) !important;
 } 
 
+.scrolldownplease {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, -5px);
+    }
+
+    50% {
+        transform: translate(0, +5px);
+    }
+    100% {
+        transform: translate(0, -5px);
+    }
+
+    
+}
 
 /* Make text hihglight in banner to blue */
 
