@@ -400,6 +400,7 @@ footer,
 }
 
 .projectcard:focus-visible,
+.indexcarousel:focus-visible,
 .text-decoration-none:focus-visible,
 .card a:focus-visible,
 .navbar-brand:focus-visible,
