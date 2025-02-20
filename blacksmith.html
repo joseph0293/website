@@ -39,10 +39,10 @@
 
     <!-- NAVIGATION -->
     <header role="banner">
-        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
+        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2 darkbgdark">
             <div class="container javanav">
                 <a class="d-lg-none navbar-brand ps-3 ps-sm-0" href="index.html">
-                    <img class="logo1" src="images/logo.svg" alt="logo"  width="150" height="80">
+                    <img class="logo1" src="images/logo.svg" alt="logo" width="150" height="80">
                 </a>
                 <!-- Change span to 3 empty spans for custom hamburger to X -->
                 <button class="navbar-toggler collapsed border-0 d-lg-none" type="button" data-bs-toggle="collapse"
@@ -56,14 +56,14 @@
                     <!-- Logo for desktop only (Please check Readme file)-->
                     <div>
                         <a class="d-none d-lg-block navbar-brand" href="index.html">
-                            <img id="logodesktop" src="images/logo.svg" alt="logo"  width="150" height="80"
+                            <img id="logodesktop" src="images/logo.svg" alt="logo" width="150" height="80"
                                 onmouseover="hover(this);" onmouseout="hoverOut(this)">
                         </a>
                     </div>
                     <!-- WORK -->
                     <ul class="navbar-nav py-3 d-lg-none">
                         <!-- Padding to give enough space -->
-                        <li class="navwork nav-item dropdown bg-white activepage">
+                        <li class="navwork nav-item dropdown bg-white activepage darkbgdark">
                             <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-5 p-3 px-5 fw-medium"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Work
@@ -87,12 +87,12 @@
                     </ul>
                     <!-- DISPLAY ON DESKTOP ONLY (Please check Readme file for explanation)-->
                     <ul class="navbar-nav d-none d-lg-block">
-                        <li class="navwork nav-item dropdown bg-white activepage">
+                        <li class="navwork nav-item dropdown bg-white activepage darkbgdark">
                             <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-5 p-3 px-5 fw-medium"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Work
                             </a>
-                            <ul class="dropdown-menu fs-6 rounded-5 border-0 shadow">
+                            <ul class="dropdown-menu fs-6 rounded-5 border-0 shadow darkbgmid">
                                 <li class="px-4">
                                     <a class="hover-forward textberkeley navartdirection dropdown-item p-4 fw-medium"
                                         href="artdirection.html">Art Direction <i
@@ -102,8 +102,8 @@
                                     <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
                                         href="uxweb.html">UX & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="hover-forward px-4">
-                                    <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
+                                <li class="px-4">
+                                    <a class="hover-forward navphotography textberkeley dropdown-item p-4 fw-medium"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
                             </ul>
@@ -117,13 +117,15 @@
                     <!-- RESUME -->
                     <div class="border-0 nav-item my-3 d-flex justify-content-center">
                         <div class="flex-grow-1">
-                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-resume.pdf">Résumé
+                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-resume.pdf">Résumé
                             </a>
                         </div>
                         <div class="flex-grow-1">
-                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-cv.pdf">CV
+                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-cv.pdf">CV
                             </a>
                         </div>
                     </div>
@@ -171,42 +173,73 @@
             <div class="introhead p-4 pb-0">
                 <!-- <p class="text-secondary fst-italic">February, 2024</p> -->
                 <h1 class="textberkeley display-4 fw-bold">
-                    Blacksmith
+                    Blacksmith (JavaScript Game)
                 </h1>
                 <!-- <p class="textberkeley fst-italic pb-2">A Text-based Adventure Game</p> -->
                 <p class="textberkeley fs-4">
                     For a Web Development class, one of our assignments were to create a blacksmith game to showcase our
-                    understanding of JavaScript functions. The player uses the browser's console to input certain
-                    commands as a blacksmith, forging weapons and buying materials.
+                    understanding of JavaScript functions. The player uses the browser's console to call certain javascript functions to play the game, such as:
+                </p>
+                <div class="row g-3 py-4 textberkeley">
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="bg-light p-4 darkbgmid rounded-4">
+                            <h4 class="darktextlightest fs-3 fw-bold">buy(wood)</h4>
+                            <p class="darktextlight fs-4"> to buy wood from the marketplace.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="bg-light p-4 darkbgmid rounded-4">
+                            <h4 class="darktextlightest fs-3 fw-bold">buy(ore)</h4>
+                            <p class="darktextlight fs-4">to buy iron ore from the marketplace.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="bg-light p-4 darkbgmid rounded-4">
+                            <h4 class="darktextlightest fs-3 fw-bold">fire()</h4>
+                            <p class="darktextlight fs-4">to start a fire in the forge.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="bg-light p-4 darkbgmid rounded-4">
+                            <h4 class="darktextlightest fs-3 fw-bold">make(axe)</h4>
+                            <p class="darktextlight fs-4">to forge an axe with raw material.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="textberkeley fs-4">
+                    The goal of the game was to reach 50 gold coins by selling the items you make. I'd also added a secret item that was enabled once a certain amount of gold coins were reached.
                 </p>
                 <p class="textberkeley fs-4">
-                    Inspired by games like Skyrim that I would play as a kid, I wanted to bring an atmosphere of adventure into playing the game by including a story, visuals, medieval style english and music.
+                    Inspired by games like Skyrim that I would play as a kid, I wanted to bring an atmosphere of
+                    adventure into playing the game by including a story, visuals, medieval style english and music.
                 </p>
             </div>
-            <div class="card border-0 p-4">
+            <div class="border-0 p-4">
                 <img src="images/bs.jpg" class="card-img-top rounded-5" alt="Game Mockup">
             </div>
             <h2 class="textberkeley fw-semibold p-4 pb-0">Gameplay:</h2>
             <!-- KVx3 -->
             <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-4">
                 <div class="col">
-                    <div class="card border-0">
+                    <div class="border-0">
                         <img src="images/bs1.jpg" class="card-img-top rounded-5" alt="Key Visual">
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card border-0">
+                    <div class="border-0">
                         <img src="images/bs2.jpg" class="card-img-top rounded-5" alt="Key Visual">
                     </div>
                 </div>
             </div>
             <p class="textberkeley text-center fs-4 px-4">
-                <a class="breadcrumbstyling fw-semibold" target="_blank" href="https://joseph0293.github.io/mtm6302-blacksmith-jose0293/">↓↓↓<br>Check out the full game here!<br>↑↑↑</a>
+                <a class="breadcrumbstyling fw-semibold" target="_blank"
+                    href="https://joseph0293.github.io/mtm6302-blacksmith-jose0293/">↓↓↓<br>Check out the full game
+                    here!<br>↑↑↑</a>
             </p>
 
         </section>
 
-        
+
         <!-- THANK YOU TEXT + BUTTON -->
 
         <div role="region" class="scroll text-center my-5 pb-5">
@@ -242,15 +275,16 @@
             <!-- Social Links -->
             <div class="col-md-4 py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
+                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i class="fa-brands fa-behance pe-1"></i> Behance</a>
+                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-behance pe-1"></i> Behance</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-instagram pe-1"></i> Instagram</a>
+                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-instagram pe-1"></i> Instagram</a>
             </div>
             <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"

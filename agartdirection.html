@@ -37,10 +37,10 @@
 <body>
     <!-- NAVIGATION -->
     <header role="banner">
-        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2">
+        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2 darkbgdark">
             <div class="container javanav">
                 <a class="d-lg-none navbar-brand ps-3 ps-sm-0" href="index.html">
-                    <img class="logo1" src="images/logo.svg" alt="logo"  width="150" height="80">
+                    <img class="logo1" src="images/logo.svg" alt="logo" width="150" height="80">
                 </a>
                 <!-- Change span to 3 empty spans for custom hamburger to X -->
                 <button class="navbar-toggler collapsed border-0 d-lg-none" type="button" data-bs-toggle="collapse"
@@ -54,14 +54,14 @@
                     <!-- Logo for desktop only (Please check Readme file)-->
                     <div>
                         <a class="d-none d-lg-block navbar-brand" href="index.html">
-                            <img id="logodesktop" src="images/logo.svg" alt="logo"  width="150" height="80"
+                            <img id="logodesktop" src="images/logo.svg" alt="logo" width="150" height="80"
                                 onmouseover="hover(this);" onmouseout="hoverOut(this)">
                         </a>
                     </div>
                     <!-- WORK -->
                     <ul class="navbar-nav py-3 d-lg-none">
                         <!-- Padding to give enough space -->
-                        <li class="navwork nav-item dropdown bg-white activepage">
+                        <li class="navwork nav-item dropdown bg-white activepage darkbgdark">
                             <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-5 p-3 px-5 fw-medium"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Work
@@ -85,12 +85,12 @@
                     </ul>
                     <!-- DISPLAY ON DESKTOP ONLY (Please check Readme file for explanation)-->
                     <ul class="navbar-nav d-none d-lg-block">
-                        <li class="navwork nav-item dropdown bg-white activepage">
+                        <li class="navwork nav-item dropdown bg-white activepage darkbgdark">
                             <a aria-haspopup="true" class="navworkblue nav-link dropdown-toggle fs-5 p-3 px-5 fw-medium"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Work
                             </a>
-                            <ul class="dropdown-menu fs-6 rounded-5 border-0 shadow">
+                            <ul class="dropdown-menu fs-6 rounded-5 border-0 shadow darkbgmid">
                                 <li class="px-4 activesubpage">
                                     <a class="hover-forward textberkeley navartdirection dropdown-item p-4 fw-medium"
                                         href="artdirection.html">Art Direction <i
@@ -100,8 +100,8 @@
                                     <a class="hover-forward textberkeley navuxdesign dropdown-item p-4 fw-medium"
                                         href="uxweb.html">UX & Web <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
-                                <li class="hover-forward px-4">
-                                    <a class="navphotography textberkeley dropdown-item p-4 fw-medium"
+                                <li class="px-4">
+                                    <a class="hover-forward navphotography textberkeley dropdown-item p-4 fw-medium"
                                         href="photovideo.html">Photo & Video <i class="bi bi-arrow-right-short"></i></a>
                                 </li>
                             </ul>
@@ -115,13 +115,15 @@
                     <!-- RESUME -->
                     <div class="border-0 nav-item my-3 d-flex justify-content-center">
                         <div class="flex-grow-1">
-                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-resume.pdf">Résumé
+                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-resume.pdf">Résumé
                             </a>
                         </div>
                         <div class="flex-grow-1">
-                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-cv.pdf">CV
+                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-cv.pdf">CV
                             </a>
                         </div>
                     </div>
@@ -188,8 +190,7 @@
                     <source srcset="images/agpostsmobile500.jpg 1x,
                                     images/agpostsmobile1000.jpg 2x" media="(max-width: 767px)" />
 
-                    <img class="outlinebutton img-fluid w-100 rounded-5 my-4" src="images/agposts1000.jpg"
-                        alt="Social media posts">
+                    <img class="img-fluid w-100 rounded-5 my-4" src="images/agposts1000.jpg" alt="Social media posts">
                 </picture>
             </div>
             <!-- PHOTOSHOOTS HEADER -->
@@ -199,12 +200,13 @@
             </h2>
             <!-- IMAGE -->
             <div class="p-4">
-                <img src="images/agphotoshoots.png" class="card-img-top rounded-5 outlinebutton" alt="Photoshoots">
+                <img src="images/agphotoshoots.png" class="card-img-top rounded-5" alt="Photoshoots">
             </div>
             <!-- TEXT -->
             <div class="px-4 align-items-center">
                 <p class="textberkeley fs-4">To see all the photography done for Amazing Greys, check out <a
-                        class="breadcrumbstyling fw-semibold"  target="_blank" href="amazinggreys.html">this project.</a></p>
+                        class="breadcrumbstyling fw-semibold" target="_blank" href="amazinggreys.html">this project.</a>
+                </p>
             </div>
 
             <!-- VIDEOSHOOTS HEADER -->
@@ -213,7 +215,7 @@
             </h2>
 
             <!-- VIMEO EMBEDDING VIDEO -->
-            <div class="vimeovideo videoborderberkeley rounded-5 px-2 py-4 m-4">
+            <div class="vimeovideo videoborderberkeley rounded-5 px-4 py-4 m-4">
 
                 <div style="padding:56.25% 0 0 0;position:relative;">
                     <iframe
@@ -262,25 +264,31 @@
             </div>
 
             <!-- SKIN CREAM LAUNCH VIDEOS -->
-            <div class="row row-cols-1 row-cols-md-2 mt-0 m-3">
-                <div class="col videoborderberkeley rounded-5 p-4">
-                    <div style="padding:100% 0 0 0;position:relative;">
-                        <iframe
-                            src="https://player.vimeo.com/video/750016053?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Neck Cream Launch">
-                        </iframe>
+            <div class="row row-cols-1 row-cols-md-2 mt-0 p-4">
+                <div class="col">
+                    <div class="videoborderberkeley rounded-5 p-4">
+                        <div style="padding:100% 0 0 0;position:relative;">
+                            <iframe
+                                src="https://player.vimeo.com/video/750016053?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Neck Cream Launch">
+                            </iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
-                <div class="col videoborderberkeley rounded-5 p-4">
-                    <div style="padding:100% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/751182071?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Body Cream Launch">
-                        </iframe>
+                <div class="col">
+                    <div class="videoborderberkeley rounded-5 p-4">
+                        <div style="padding:100% 0 0 0;position:relative;"><iframe
+                                src="https://player.vimeo.com/video/751182071?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Body Cream Launch">
+                            </iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
 
@@ -294,7 +302,10 @@
 
                 <div class="videoborderberkeley rounded-5 p-4">
                     <div style="padding:100% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/750103532?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soap Launch">
+                        <iframe
+                            src="https://player.vimeo.com/video/750103532?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soap Launch">
                         </iframe>
                     </div>
                     <script src="https://player.vimeo.com/api/player.js"></script>
@@ -311,26 +322,29 @@
 
                 <div class="videoborderberkeley rounded-5 p-4">
                     <div style="padding:34.01% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/749925817?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="WEB Thumbnail vids">
+                        <iframe
+                            src="https://player.vimeo.com/video/749925817?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="WEB Thumbnail vids">
                         </iframe>
                     </div>
                     <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
-            
 
 
-            
 
-        <!-- THANK YOU TEXT + BUTTON -->
 
-        <div role="region" class="scroll text-center my-5">
-            <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
-            <div class="textberkeley">
-                <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
-                        class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+
+            <!-- THANK YOU TEXT + BUTTON -->
+
+            <div role="region" class="scroll text-center my-5">
+                <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
+                <div class="textberkeley">
+                    <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
+                            class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+                </div>
             </div>
-        </div>
     </main>
 
     <!-- FOOTER -->
@@ -338,7 +352,8 @@
         <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-5 fw-medium pb-3">
             Bring your project to life, let's connect!
         </h2>
-        <a data-aos="fade-up" data-aos-duration="1000" class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
+        <a data-aos="fade-up" data-aos-duration="1000"
+            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
             href="mailto:sunitjjo@gmail.com">
             Email me
         </a>
@@ -355,15 +370,16 @@
             <!-- Social Links -->
             <div class="col-md-4 py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
+                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-linkedin-in pe-1"></i> Linkedin</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i class="fa-brands fa-behance pe-1"></i> Behance</a>
+                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-behance pe-1"></i> Behance</a>
                 <br>
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab"
-                    target="_blank"><i class="fa-brands fa-instagram pe-1"></i> Instagram</a>
+                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab" target="_blank"><i
+                        class="fa-brands fa-instagram pe-1"></i> Instagram</a>
             </div>
             <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
                 <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"

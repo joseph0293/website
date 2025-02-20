@@ -98,3 +98,20 @@ function hoverOut(img) {
 
 //ENTIRE WEBSITE IN DARK MODE!!!
 
+// 1. Check for the dark mode state in local storage
+// 2. If dark mode state is Yes: a) Set the css file to dark mode, b) Set the logo to dark mode version, c) Switch button to dark mode, d) Set the dark mode state to local storage
+// 3. If dark mode state is No: a) Set the css file to regular, b) Set the logo to light mode version, c) Switch button to light mode, d) Set the dark mode state to local storage 
+
+// const darkbutton = document.querySelector('.darkmode');
+// darkbutton.addEventListener('click', function () {
+//     document.body.classList.toggle('dark')
+//     if (document.body.classList.contains('dark')) {
+//         darkbutton.src = 'images/sun.svg'
+//         // Add the dark mode state to local storage
+//         localStorage.setItem('darkmode', 'enabled')
+//     } else {
+//         darkbutton.src = 'images/moon.svg'
+//         // Remove the dark mode state from local storage
+//         localStorage.setItem('darkmode', 'disabled')
+//     }
+// })

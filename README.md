@@ -18,8 +18,23 @@ This also made it easier for me to add another image tag for javascript to chang
 October 11th 2023: Added Animate On Scroll Library to make content appear on page while scrolling down to content.
 
 
-## April 16th
+### April 16th 2024
 Now that I have learned javascript, I can incorporate that into my code as a separate java file instead of in each file. (For the logo wink) And now, I also understand the code that is used. Seems simple!
+
+### Feb 19th 2025
+I'm adding dark mode to the website:
+
+To add dark mode classes to each page from javascript is impossible since each page is different and I hadn't coded the website with the intention of adding dark mode.
+
+An easier workaround for me was to design a stylesheet for the dark mode version (based on existing stylesheet) and then add these classes to the html for dark mode classes. The rest was just adjusted accordingly in the dark mode stylesheet. Some places in the website required adding extra classes here and there, but overall it was quite straightforward.
+
+These new classes I've added are redundant to main.css, but will be activated once darkmode.css is used instead.
+
+- - - - - - - - - - - - - - - - - - - - -
+
+I will later design a dark mode floating button and when the user clicks on it, I will use Javascript to switch the main.css stylesheet to the darkmode.cc stylesheet, along with logo. That should work fine.
+
+
 
 ## SOURCE & CREDITS
 

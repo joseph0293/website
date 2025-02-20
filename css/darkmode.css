@@ -1,8 +1,52 @@
 :root {
+    /* Dark, mid light */
+    --darkmode1: #222222;
+    --darkmode2: #333333;
+    --darkmode3: #888888;
+    --darkmode4: #bbbbbb;
+    --darkmode5: #eeeeee;
+    --backgroundlightmode: #ffffff;
+    --textlightmode: #003262;
     --californiagold: #FDB515;
     --cinnabar: #E94F37;
     --berkeleyblue: #003262;
 }
+
+
+/* Set body & classes to darkmode */
+
+body {
+    background-color: var(--darkmode1);
+    color: var(--textdarkmode);
+}
+
+.darkbgdark {
+    background-color: var(--darkmode1) !important;
+}
+
+.darkbgmid {
+    background-color: var(--darkmode2) !important;
+}
+
+.darkbglight {
+    background-color: var(--darkmode3) !important;
+}
+
+/* Text */
+
+.darktextmid {
+    color: var(--darkmode3) !important;
+}
+
+.darktextlight {
+    color: var(--darkmode4) !important;
+}
+
+.darktextlightest {
+    color: var(--darkmode5) !important;
+}
+
+
 
 
 * {
@@ -26,6 +70,7 @@
 .textcalgold {
     color: var(--californiagold) !important;
 }
+
 .bgcalgold {
     background-color: var(--californiagold);
 }
@@ -42,7 +87,7 @@
 
 .ctabutton:hover {
     background-color: var(--cinnabar) !important;
-    color: white !important;
+    color: var(--darkmode5) !important;
 }
 
 /* About Title */
@@ -59,9 +104,9 @@
 .outlinebutton:hover,
 .outlinebutton:focus,
 .outlinebutton:active {
-    background-color: var(--berkeleyblue) !important;
-    border: 2px solid var(--berkeleyblue) !important;
-    color: white !important;
+    background-color: var(--darkmode5) !important;
+    border: 2px solid var(--darkmode5) !important;
+    color: var(--darkmode2) !important;
 }
 
 .outlinebuttonfooter {
@@ -93,6 +138,7 @@ body {
     transition: 0.3s;
 }
 
+
 .navresume:hover,
 .navresume:active {
     background-color: var(--berkeleyblue);
@@ -112,13 +158,13 @@ body {
 
 .navabout:hover,
 .navabout:active {
-    border: 2px solid var(--berkeleyblue);
+    border: 2px solid var(--darkmode4);
 }
 
 .navwork,
 .navabout {
     transition: 0.3s;
-    border: 2px solid white;
+    border: 2px solid var(--darkmode1);
     border-radius: 40px;
 }
 
@@ -141,7 +187,7 @@ body {
     opacity: 1;
     transition: all 0.3s ease-out;
     transform-origin: center left;
-    background-color: var(--berkeleyblue);
+    background-color: var(--darkmode3);
 }
 
 /* padding for top line */
@@ -174,7 +220,7 @@ body {
 /* top line moves back to first positionwith blue */
 .navbar-toggler span:nth-child(1) {
     transform: translate(0%, 0%) rotate(0deg);
-    background-color: var(--berkeleyblue);
+    background-color: var(--);
 }
 
 /* middle line goes back to opacity 100% */
@@ -185,7 +231,7 @@ body {
 /* bottom line goes back to first position with blue */
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg);
-    background-color: var(--berkeleyblue);
+    background-color: var(--darkmode3);
 }
 
 /* Removing the border and outline for hamburger */
@@ -206,6 +252,7 @@ body {
 }
 
 .hover-forward:hover {
+    color: var(--darkmode5) !important;
     transform: translateX(8px);
 }
 
@@ -222,7 +269,7 @@ body {
 .navartdirection:hover,
 .navartdirection:active,
 .navartdirection:focus {
-    background: white;
+    background: none;
     text-decoration: underline;
     text-underline-offset: 10px;
 
@@ -242,14 +289,14 @@ body {
 .navaboutblue,
 .navaboutblue:hover,
 .textberkeley {
-    color: var(--berkeleyblue) !important;
+    color: var(--darkmode3) !important;
 }
 
 /* Set background colours to brand blue */
 /* Set border to berkblue */
 
 .berkeleyblueborder {
-    border: 2px solid var(--berkeleyblue);
+    border: 2px solid var(--darkmode3);
 }
 
 footer,
@@ -259,26 +306,30 @@ footer,
 
 /* Set border to blue */
 
-.outlinebutton,
+/* Set video border to darker grey */
+
+.videoborderberkeley {
+    border: 2px solid var(--darkmode2);
+    background-color: var(--darkmode2);
+}
+
+.outlinebutton {
+    border: 2px solid var(--darkmode3) !important;
+}
+
+
 .outlinebutton:focus,
 .outlinebutton:active,
 .navwork:hover,
 .navwork:active,
 .inputborderberkely {
-    border: 2px solid var(--berkeleyblue);
-}
-
-/* Video Border */
-
-.videoborderberkeley {
-    border: 2px solid var(--berkeleyblue);
-    background-color: var(--berkeleyblue);
+    border: 2px solid var(--darkmode4) !important;
 }
 
 /* Breadcrumb hover styling */
 .breadcrumbstyling {
     text-decoration: none;
-    color: var(--berkeleyblue);
+    color: var(--darkmode4);
 }
 
 .breadcrumbstyling:hover {
@@ -314,7 +365,6 @@ footer,
 .smicons {
     transition: 0.3s;
     padding: 10px 15px;
-    background-color: white;
     color: var(--cinnabar);
     border: 2px solid var(--cinnabar);
 }
@@ -323,24 +373,8 @@ footer,
 .smicons:focus,
 .smicons:active {
     background-color: var(--cinnabar);
-    color: white;
+    color: var(--darkmode5);
 }
-
-/* .smicons {
-    transition: 0.3s;
-    padding: 10px 15px;
-    background-color: white;
-    color: var(--berkeleyblue);
-    border: 2px solid var(--berkeleyblue);
-}
-
-.smicons:hover,
-.smicons:focus,
-.smicons:active {
-    background-color: var(--berkeleyblue);
-    color: white;
-} */
-
 
 /* Styling skiplink */
 
@@ -372,7 +406,7 @@ footer,
 /* Active States */
 .activepage {
     border: dashed;
-    border: 2px dashed var(--berkeleyblue) !important;
+    border: 2px dashed var(--darkmode3) !important;
 }
 
 .activesubpage {
@@ -380,6 +414,11 @@ footer,
     text-decoration-style: dashed;
     text-underline-offset: 10px;
     text-decoration-thickness: 2px;
+    color: var(--darkmode3);
+}
+
+.activesubpage:hover {
+    text-decoration: none;
 }
 
 /* SET FOCUS */
@@ -389,10 +428,11 @@ footer,
 
 .navresumecolor:focus-visible {
     border: none;
-    outline: 2px solid var(--berkeleyblue);
+    outline: 2px solid var(--darkmode5);
     border-radius: 50px;
 
 }
+
 /* resume cv^^ */
 
 
@@ -481,8 +521,8 @@ body {
 .outlinebuttonwhite:active {
     background-color: white !important;
     border: 2px solid white !important;
-    color: var(--berkeleyblue) !important;
-} 
+    color: var(--darkmode2) !important;
+}
 
 .scrolldownplease {
     animation: bounce 1s ease infinite;
@@ -496,11 +536,12 @@ body {
     50% {
         transform: translateY(5px);
     }
+
     100% {
         transform: translateY(-5px);
     }
 
-    
+
 }
 
 /* Make text hihglight in banner to blue */
@@ -509,10 +550,37 @@ body {
     background: var(--berkeleyblue);
 }
 
+/* Darken banner image? */
+.bannerimg {
+    transition: 3s;
+    background: none;
+}
+
+
+.bannerimg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
 /* Style list in Open Ottawa project */
 .list-openottawa {
-    list-style-type:disc;
+    list-style-type: disc;
 }
+
+.dangerdarkbg {
+    background-color: #842029 !important;
+}
+
+.successdarkbg {
+    background-color: #0f5132 !important;
+}
+
 
 /* Visitor Counter Float */
 
@@ -534,9 +602,3 @@ p.fs-4 {
 }
 
 /* Remove text background colour for image overlay in main banner */
-
-/* .remove-text-bg {
-    background-color: transparent !important;
-    color: white !important;
-    background: none !important;
-} */
