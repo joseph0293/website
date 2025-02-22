@@ -35,7 +35,7 @@
         (function () {
             const storedTheme = localStorage.getItem("theme");
             const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
-            
+
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
             } else {
@@ -154,7 +154,7 @@
 
 
 
-    <main role="main" class="container">
+    <main role="main" class="container mb-5">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
             <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="textberkeley d-flex fs-6 fw-semibold">
@@ -332,7 +332,7 @@
 
             <!-- Video Full Width -->
 
-            <div data-aos="fade-up" data-aos-duration="700" class="col p-4 pb-5">
+            <div data-aos="fade-up" data-aos-duration="700" class="col p-4">
                 <div class="card projectcard border-0 rounded-5 darkbgdark">
                     <a class="text-decoration-none rounded-5 shadow" href="shutter.html">
                         <picture>
@@ -352,18 +352,10 @@
                     </a>
                 </div>
             </div>
-
-
-            <!-- PHOTO TILE GRID HERE  -->
-
-            <!-- Tile grid ends -->
-
-            <!-- Tile grid ends -->
-
         </section>
     </main>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer role="contentinfo" class="py-5">
         <!-- Logo -->
         <div class="logofooter text-center py-5">

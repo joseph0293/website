@@ -35,7 +35,7 @@
         (function () {
             const storedTheme = localStorage.getItem("theme");
             const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
-            
+
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
             } else {
@@ -156,7 +156,7 @@
 
 
 
-    <main role="main" class="container">
+    <main role="main" class="container mb-5">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
             <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="textberkeley d-flex fs-6 fw-semibold">
@@ -253,7 +253,7 @@
 
 
             <!-- PROJECT TILES SQUARES 2 -->
-            <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-5">
+            <div class="row row-cols-1 row-cols-lg-2 g-4 p-4">
                 <div data-aos="fade-up" data-aos-duration="700" class="col">
                     <div class="card projectcard border-0 rounded-5 darkbgdark">
                         <a class="text-decoration-none rounded-5 shadow" href="breadytogo.html">
@@ -288,10 +288,9 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer role="contentinfo" class="py-5">
         <!-- Logo -->
         <div class="logofooter text-center py-5">

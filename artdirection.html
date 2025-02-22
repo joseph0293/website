@@ -36,7 +36,7 @@
         (function () {
             const storedTheme = localStorage.getItem("theme");
             const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
-            
+
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
             } else {
@@ -55,7 +55,7 @@
         <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white darkbgdark shadow py-lg-2">
             <div class="container javanav">
                 <a class="d-lg-none navbar-brand ps-3 ps-sm-0" href="index.html">
-                    <img class="logo1" src="images/logo.svg" alt="logo"  width="150" height="80">
+                    <img class="logo1" src="images/logo.svg" alt="logo" width="150" height="80">
                 </a>
                 <!-- Change span to 3 empty spans for custom hamburger to X -->
                 <button class="navbar-toggler collapsed border-0 d-lg-none" type="button" data-bs-toggle="collapse"
@@ -69,7 +69,7 @@
                     <!-- Logo for desktop only (Please check Readme file)-->
                     <div>
                         <a class="d-none d-lg-block navbar-brand" href="index.html">
-                            <img id="logodesktop" src="images/logo.svg" alt="logo"  width="150" height="80"
+                            <img id="logodesktop" src="images/logo.svg" alt="logo" width="150" height="80"
                                 onmouseover="hover(this);" onmouseout="hoverOut(this)">
                         </a>
                     </div>
@@ -130,13 +130,15 @@
                     <!-- RESUME -->
                     <div class="border-0 nav-item my-3 d-flex justify-content-center">
                         <div class="flex-grow-1">
-                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-resume.pdf">Résumé
+                            <a class="navresume text-white rounded-end-0 navresumecolor nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-resume.pdf">Résumé
                             </a>
                         </div>
                         <div class="flex-grow-1">
-                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium" aria-current="page"
-                                aria-label="opens in new tab" target="_blank" href="docs/sunit-cv.pdf">CV
+                            <a class=" navcv text-white navresumecolor rounded-start-0 nav-link active fs-6 py-4 px-5 fw-medium"
+                                aria-current="page" aria-label="opens in new tab" target="_blank"
+                                href="docs/sunit-cv.pdf">CV
                             </a>
                         </div>
                     </div>
@@ -152,7 +154,7 @@
 
 
 
-    <main class="container">
+    <main class="container mb-5">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="breadcrumbs my-5">
             <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="textberkeley d-flex fs-6 fw-semibold">
@@ -177,7 +179,8 @@
                 Art Direction
             </h1>
             <p class="fs-5">
-                Advertising projects created while working at multiple advertising agencies in India or on project basis in Canada. Created using
+                Advertising projects created while working at multiple advertising agencies in India or on project basis
+                in Canada. Created using
                 multiple tools including Adobe Creative Suite.
             </p>
         </div>
@@ -196,19 +199,20 @@
 
                         <source srcset="images/nac-square.jpg 1x" media="(max-width: 992px)" />
 
-                        <img class="img-fluid w-100 rounded-5" src="images/nac-wide.jpg"
-                            alt="Project thumbnail">
+                        <img class="img-fluid w-100 rounded-5" src="images/nac-wide.jpg" alt="Project thumbnail">
                     </picture>
-                    <div class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
+                    <div
+                        class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
                         <h5 class="card-title text-white fs-2 fw-semibold lh-1">National Arts Centre</h5>
                         <div class="outlinebuttonwhite btn rounded-5 fs-6 fw-semibold">View Project
-                            <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                            <i class="fa-solid fa-play fs-6 ps-1"></i>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
 
-        
+
 
         <!-- Grid tiles -->
         <div class="row row-cols-1 row-cols-lg-2 g-4 p-4">
@@ -217,10 +221,12 @@
                     <a class="text-decoration-none rounded-5 shadow" href="britannia.html">
                         <img src="images/brit100thumbnail.jpg" class="card-img-top rounded-5  "
                             alt="Britannia Annual Report Project Thumbnail">
-                        <div class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0  m-2 p-4">
+                        <div
+                            class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0  m-2 p-4">
                             <h5 class="card-title text-white fs-2 fw-semibold lh-1">Britannia Annual Report</h5>
                             <div class="outlinebuttonwhite btn btn-white rounded-5 fs-6 fw-semibold">View Project
-                                <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                                <i class="fa-solid fa-play fs-6 ps-1"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -231,16 +237,18 @@
                     <a class="text-decoration-none rounded-5 shadow" href="ntorq.html">
                         <img src="images/marvelthumbnail.jpg" class="card-img-top rounded-5  "
                             alt="TVS Ntorq X MARVEL Project Thumbnail">
-                        <div class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
+                        <div
+                            class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
                             <h5 class="card-title text-white fs-2 fw-semibold lh-1">TVS Ntorq X MARVEL</h5>
                             <div class="outlinebuttonwhite btn btn-white rounded-5 fs-6 fw-semibold">View Project
-                                <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                                <i class="fa-solid fa-play fs-6 ps-1"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-            <!-- Full width tile -->
+        <!-- Full width tile -->
 
         <div data-aos="fade-up" data-aos-duration="700" class="col px-4">
             <div class="card projectcard border-0 rounded-5 darkbgdark">
@@ -250,32 +258,35 @@
 
                         <source srcset="images/toyota-square.jpg 1x" media="(max-width: 992px)" />
 
-                        <img class="img-fluid w-100 rounded-5" src="images/toyota-wide.jpg"
-                            alt="Man riding a scooter">
+                        <img class="img-fluid w-100 rounded-5" src="images/toyota-wide.jpg" alt="Man riding a scooter">
                     </picture>
-                    <div class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
+                    <div
+                        class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
                         <h5 class="card-title text-white fs-2 fw-semibold lh-1">Toyota Work</h5>
                         <div class="outlinebuttonwhite btn rounded-5 fs-6 fw-semibold">View Project
-                            <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                            <i class="fa-solid fa-play fs-6 ps-1"></i>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
 
         <!-- Remaining Grid Tiles -->
-        
+
         <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-0">
             <div data-aos="fade-up" data-aos-duration="700" class="col">
                 <div class="card projectcard border-0 rounded-5 darkbgdark">
                     <a class="text-decoration-none rounded-5 shadow" href="agartdirection.html">
                         <img src="images/agadthumbnail.jpg" class="card-img-top rounded-5  "
                             alt="Amazing Greys Project THumbnail">
-                        <div class="d-flex flex-column justify-content-end align-items-start card-img-overlay card-body rounded-bottom-5 border-top-0 m-2 p-4">
+                        <div
+                            class="d-flex flex-column justify-content-end align-items-start card-img-overlay card-body rounded-bottom-5 border-top-0 m-2 p-4">
                             <h5 class="card-title text-white fs-2 fw-semibold lh-1">
                                 Amazing Greys
                             </h5>
                             <div class="outlinebuttonwhite btn btn-white rounded-5 fs-6 fw-semibold">View Project
-                                <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                                <i class="fa-solid fa-play fs-6 ps-1"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -286,11 +297,13 @@
                     <a class="text-decoration-none rounded-5 shadow" href="fastrack.html">
                         <img src="images/ftadthumbnail.jpg" class="card-img-top rounded-5  "
                             alt="Fastrack Work Project Thumbnail">
-                        <div class="d-flex flex-column justify-content-end align-items-start card-img-overlay card-body rounded-bottom-5 border-top-0 m-2 p-4">
+                        <div
+                            class="d-flex flex-column justify-content-end align-items-start card-img-overlay card-body rounded-bottom-5 border-top-0 m-2 p-4">
                             <h5 class="card-title text-white fs-2 fw-semibold lh-1">Fastrack Work
                             </h5>
                             <div class="outlinebuttonwhite btn btn-white rounded-5 fs-6 fw-semibold">View Project
-                                <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                                <i class="fa-solid fa-play fs-6 ps-1"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -299,7 +312,7 @@
 
         <!-- Full width tile -->
 
-        <div data-aos="fade-up" data-aos-duration="700" class="col p-4 mb-lg-5">
+        <div data-aos="fade-up" data-aos-duration="700" class="col p-4">
             <div class="card projectcard border-0 rounded-5 darkbgdark">
                 <a class="text-decoration-none rounded-5 shadow" href="tvsracexp.html">
                     <picture>
@@ -307,94 +320,94 @@
 
                         <source srcset="images/tvsrace-square.jpg 1x" media="(max-width: 992px)" />
 
-                        <img class="img-fluid w-100 rounded-5" src="images/tvsrace-wide.jpg"
-                            alt="Man riding a scooter">
+                        <img class="img-fluid w-100 rounded-5" src="images/tvsrace-wide.jpg" alt="Man riding a scooter">
                     </picture>
-                    <div class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
+                    <div
+                        class="d-flex flex-column justify-content-end align-items-start card-body card-img-overlay rounded-bottom-5 border-top-0 m-2 p-4">
                         <h5 class="card-title text-white fs-2 fw-semibold lh-1">TVS Ntorq RaceXP</h5>
                         <div class="outlinebuttonwhite btn rounded-5 fs-6 fw-semibold">View Project
-                            <i class="fa-solid fa-play fs-6 ps-1"></i></div>
+                            <i class="fa-solid fa-play fs-6 ps-1"></i>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
-
     </main>
 
 
-   <!-- FOOTER -->
-   <footer role="contentinfo" class="py-5">
-    <!-- Logo -->
-    <div class="logofooter text-center py-5">
-        <a href="index.html">
-            <img class="footerlogo" src="images/logo-anim-footer.gif" alt="Logo" height="70">
-        </a>
-    </div>
-    <div class="ctafooter container-xxl p-4 pb-2 text-center">
-        <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-6 pb-4">
-            Have a project in mind? Let's Talk!
-        </h2>
-        <div data-aos="fade-up" data-aos-duration="1100"
-            class="d-flex justify-content-center flex-column flex-md-row align-items-center">
-            <a target="_blank" class="text-decoration-none" href="https://calendly.com/sunitjjo/30min">
-                <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
-                    Schedule a call <i class="fa-solid fa-play fs-6 ps-1"></i>
-                </div>
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="py-5">
+        <!-- Logo -->
+        <div class="logofooter text-center py-5">
+            <a href="index.html">
+                <img class="footerlogo" src="images/logo-anim-footer.gif" alt="Logo" height="70">
             </a>
-            <div class="or d-flex justify-content-around align-items-center">
-                <div class="dash d-md-none bgcinnabar orlinesfooter rounded-pill"></div>
-                <p class="or p-4 mb-0 fs-4 fst-italic fw-semibold text-white">or</p>
-                <div class="dash d-md-none bg-white orlinesfooter rounded-pill"></div>
+        </div>
+        <div class="ctafooter container-xxl p-4 pb-2 text-center">
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-6 pb-4">
+                Have a project in mind? Let's Talk!
+            </h2>
+            <div data-aos="fade-up" data-aos-duration="1100"
+                class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                <a target="_blank" class="text-decoration-none" href="https://calendly.com/sunitjjo/30min">
+                    <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
+                        Schedule a call <i class="fa-solid fa-play fs-6 ps-1"></i>
+                    </div>
+                </a>
+                <div class="or d-flex justify-content-around align-items-center">
+                    <div class="dash d-md-none bgcinnabar orlinesfooter rounded-pill"></div>
+                    <p class="or p-4 mb-0 fs-4 fst-italic fw-semibold text-white">or</p>
+                    <div class="dash d-md-none bg-white orlinesfooter rounded-pill"></div>
+                </div>
+                <a target="_blank" class="text-decoration-none" href="mailto:sunitjjo@gmail.com">
+                    <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
+                        Just email me <i class="fa-solid fa-play fs-6 ps-1"></i>
+                    </div>
+                </a>
             </div>
-            <a target="_blank" class="text-decoration-none" href="mailto:sunitjjo@gmail.com">
-                <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
-                    Just email me <i class="fa-solid fa-play fs-6 ps-1"></i>
-                </div>
-            </a>
         </div>
-    </div>
-    <!-- Line -->
-    <div class="container-xxl p-4 py-2">
-        <hr class="border-light-subtle border-1">
-    </div>
-
-    <!-- Quick Links -->
-    <div class="quicklinkscontainer p-4 py-2">
-        <div class="fs-6 d-flex justify-content-between text-center">
-            <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
-                href="about.html">About</a>
-
-            <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
-                href="artdirection.html">Art Direction</a>
-
-            <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
-                href="uxweb.html">UX & Web</a>
-
-            <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
-                href="photovideo.html">Photo & Video</a>
+        <!-- Line -->
+        <div class="container-xxl p-4 py-2">
+            <hr class="border-light-subtle border-1">
         </div>
-    </div>
 
+        <!-- Quick Links -->
+        <div class="quicklinkscontainer p-4 py-2">
+            <div class="fs-6 d-flex justify-content-between text-center">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
+                    href="about.html">About</a>
 
-    <!-- Social Media Icons -->
-    <div class="container pt-4">
-        <div class="fs-5 d-flex justify-content-center">
-            <a target="_blank" class="me-3 footersmicons bi-linkedin rounded-circle"
-                href="https://www.linkedin.com/in/sunitjj/"></a>
-            <a target="_blank" class="me-3 footersmicons bi-instagram rounded-circle"
-                href="https://www.instagram.com/crispypoppadom/"></a>
-            <a target="_blank" class="me-3 footersmicons bi-behance rounded-circle"
-                href="https://www.behance.net/sunitj"></a>
-            <a target="_blank" class="me-3 footersmicons bi-spotify rounded-circle"
-                href="https://open.spotify.com/user/21uwgnh7hsqugnt3oi43yyiva?si=2399e0fd2db247fb"></a>
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
+                    href="artdirection.html">Art Direction</a>
+
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
+                    href="uxweb.html">UX & Web</a>
+
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover px-2"
+                    href="photovideo.html">Photo & Video</a>
+            </div>
         </div>
-    </div>
 
-    <p class="text-white pt-4 text-center">© 2025 Sunit J. All rights reserved.</p>
-</footer>
+
+        <!-- Social Media Icons -->
+        <div class="container pt-4">
+            <div class="fs-5 d-flex justify-content-center">
+                <a target="_blank" class="me-3 footersmicons bi-linkedin rounded-circle"
+                    href="https://www.linkedin.com/in/sunitjj/"></a>
+                <a target="_blank" class="me-3 footersmicons bi-instagram rounded-circle"
+                    href="https://www.instagram.com/crispypoppadom/"></a>
+                <a target="_blank" class="me-3 footersmicons bi-behance rounded-circle"
+                    href="https://www.behance.net/sunitj"></a>
+                <a target="_blank" class="me-3 footersmicons bi-spotify rounded-circle"
+                    href="https://open.spotify.com/user/21uwgnh7hsqugnt3oi43yyiva?si=2399e0fd2db247fb"></a>
+            </div>
+        </div>
+
+        <p class="text-white pt-4 text-center">© 2025 Sunit J. All rights reserved.</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- Link to JAVASCRIPT FILE -->
     <script src="script.js"></script>
