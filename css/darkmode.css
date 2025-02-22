@@ -609,17 +609,6 @@ body {
 }
 
 
-/* Visitor Counter Float */
-
-.sitecounter {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 30px;
-    transition: 0.3s;
-    z-index: 999;
-}
-
 
 
 /* Set paragraph font size to be slightly smaller overall on website */
@@ -627,5 +616,3 @@ body {
 p.fs-4 {
     font-size: 1.4rem !important;
 }
-
-/* Remove text background colour for image overlay in main banner */
