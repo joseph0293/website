@@ -30,9 +30,13 @@ An easier workaround for me was to design a stylesheet for the dark mode version
 
 These new classes I've added are redundant to main.css, but will be activated once darkmode.css is used instead.
 
-- - - - - - - - - - - - - - - - - - - - -
+### Feb 20th &21st 2025
+Checking for dark mode state and switching the css file caused the website to flicker as the main.css was loading first. I made darkmode.css as default and used a visibility:hidden inline style in the html until the entire code loads, then the js removes that inline style once page loads, revealing the webpage with the correct stylesheet.
 
-I will later design a dark mode floating button and when the user clicks on it, I will use Javascript to switch the main.css stylesheet to the darkmode.cc stylesheet, along with logo. That should work fine.
+The button & the logo was a bit of a headache, but it was just about local and global variables.
+
+### Feb 20th &21st 2025
+Redesigned the footer to be more modern. I don't like that everything is centre aligned, but I'll fix that later.
 
 
 
