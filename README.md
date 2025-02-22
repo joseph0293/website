@@ -55,6 +55,8 @@ I've used this image as a placeholder for now, but hope to replace it with an im
 
 [Beautiful mockups to make portfolio much better, thanks to Mockups-Design](https://mockups-design.com/)
 
+[Dark Mode Button from Oslo 418 on codepen](https://codepen.io/Oslonline/pen/VYwwdop)
+
 ## Libraries used:
 
 1. Bootstrap Icons & Font Awesome for Icons

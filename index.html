@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="visibility: hidden;">
 
 <head>
     <meta charset="utf-8">
@@ -33,8 +33,22 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Script to change stylesheet according to local storage value -->
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem("theme");
+            const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
+
+            if (storedTheme === "dark") {
+                themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
+            } else {
+                themeStylesheet.href = "css/main.css"; // Apply light theme as default if no theme is set
+            }
+        })();
+    </script>
+
     <!-- Main CSS file -->
-    <link rel="stylesheet" href="css/main.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
 </head>
 
 <body>
@@ -189,9 +203,9 @@
 
                     <!-- Arrow to Scroll -->
 
-                    <div class="d-md-none scrolldownplease pt-5 text-white">
+                    <div class="d-md-none pt-4">
                         <a href="#skipcontent">
-                            <p class="text-center fs-4 darktextlight"><i class="fa-solid fa-arrow-down"></i></p>
+                            <p class="text-center scrolldownplease  fs-4"><i class="fa-solid fa-arrow-down"></i></p>
                         </a>
                     </div>
                     <!-- <small class="text-white fw-medium">Sorry, this website is still a work in progress. For my full
@@ -433,7 +447,8 @@
                         </div>
                         <div class="col-12">
                             <div class="card-body px-0 pe-xl-4">
-                                <h2 class="card-title display-6 fw-semibold darktextlight">Photography and Video Production</h2>
+                                <h2 class="card-title display-6 fw-semibold darktextlight">Photography and Video
+                                    Production</h2>
                                 <p class="d-none d-md-block fs-5">
                                     What started as a passion, I offer photography services for small-scale shoots.
                                     Drawing inspiration from popular filmmakers & content creators, I can also bring
@@ -450,67 +465,83 @@
         </div>
     </main>
 
+    <!-- Dark mode button -->
+
 
     <!-- FOOTER -->
-    <footer role="contentinfo" class="p-5 pb-2">
-        <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-5 fw-medium pb-3">
-            Bring your project to life, let's connect!
-        </h2>
-        <a data-aos="fade-up" data-aos-duration="1000"
-            class="outlinebuttonfooter btn btn-white text-white border-white fs-4 py-3 px-5 fw-semibold"
-            href="mailto:sunitjjo@gmail.com">
-            Email me
-        </a>
-        <hr class="my-5 border-white border-2">
-        <div class="footergrid row">
-            <div class="col-md-4 logoandmail d-flex flex-column justify-content-between">
-                <a href="index.html">
-                    <img class="footerlogo" src="images/logofooter.svg" alt="Logo" height="40">
+    <footer role="contentinfo" class="py-5">
+        <!-- Logo -->
+        <div class="logofooter text-center py-5">
+            <a href="index.html">
+                <img class="footerlogo" src="images/logo-anim-footer.gif" alt="Logo" height="70">
+            </a>
+        </div>
+        <div class="ctafooter container-xxl p-4 pb-2 text-center">
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="text-white display-6 pb-4">
+                Have a project in mind? Let's Talk!
+            </h2>
+            <div data-aos="fade-up" data-aos-duration="1100"
+                class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                <a target="_blank" class="text-decoration-none" href="https://calendly.com/sunitjjo/30min">
+                    <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
+                        Schedule a call <i class="fa-solid fa-play fs-6 ps-1"></i>
+                    </div>
                 </a>
-                <br>
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover fs-6"
-                    href="mailto:sunitjjo@gmail.com">sunitjjo@gmail.com
+                <div class="or d-flex justify-content-around align-items-center">
+                    <div class="dash d-md-none bgcinnabar orlinesfooter rounded-pill"></div>
+                    <p class="or p-4 mb-0 fs-4 fst-italic fw-semibold text-white">or</p>
+                    <div class="dash d-md-none bg-white orlinesfooter rounded-pill"></div>
+                </div>
+                <a target="_blank" class="text-decoration-none" href="mailto:sunitjjo@gmail.com">
+                    <div class="outlinebuttonfooter text-white px-4 py-3 btn btn-white rounded-pill fs-5 fw-semibold">
+                        Just email me <i class="fa-solid fa-play fs-6 ps-1"></i>
+                    </div>
                 </a>
-            </div>
-
-            <!-- Social Links -->
-            <div class="col-md-4 py-4 py-md-0 fs-5">
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.linkedin.com/in/sunitjj/" aria-label="opens in new tab" target="_blank"><i
-                        class="fa-brands fa-linkedin-in pe-1"></i> Linkedin
-                </a>
-
-                <br>
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.behance.net/sunitj" aria-label="opens in new tab" target="_blank"> <i
-                        class="fa-brands fa-behance pe-1"></i> Behance
-                </a>
-                <br>
-
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="https://www.instagram.com/crispypoppadom/" aria-label="opens in new tab" target="_blank"><i
-                        class="fa-brands fa-instagram pe-1"></i> Instagram
-                </a>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-md-4 quicklinks py-4 py-md-0 fs-5">
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="about.html">About</a>
-                <br>
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="uxweb.html">UX & Web</a>
-                <br>
-                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="artdirection.html">Art Direction</a>
             </div>
         </div>
-        <p class="text-white pt-md-5">© 2025 Sunit J. All rights reserved.</p>
+        <!-- Line -->
+        <div class="container-xxl p-4 py-2">
+            <hr class="border-light-subtle border-1">
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quicklinks container p-4 py-2">
+            <div class="fs-6 d-flex justify-content-between">
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="about.html"> About </a>
+
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="uxweb.html"> UX & Web </a>
+
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="photovideo.html"> Photo & Video </a>
+
+                <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="artdirection.html"> Art Direction </a>
+            </div>
+        </div>
+
+
+        <!-- Social Media Icons -->
+        <div class="container pt-4">
+            <div class="fs-5 d-flex justify-content-center">
+                <a target="_blank" class="me-3 footersmicons bi-linkedin rounded-circle"
+                    href="https://www.linkedin.com/in/sunitjj/"></a>
+                <a target="_blank" class="me-3 footersmicons bi-instagram rounded-circle"
+                    href="https://www.instagram.com/crispypoppadom/"></a>
+                <a target="_blank" class="me-3 footersmicons bi-behance rounded-circle"
+                    href="https://www.behance.net/sunitj"></a>
+                <a target="_blank" class="me-3 footersmicons bi-spotify rounded-circle"
+                    href="https://open.spotify.com/user/21uwgnh7hsqugnt3oi43yyiva?si=2399e0fd2db247fb"></a>
+            </div>
+        </div>
+
+        <p class="text-white pt-4 text-center">© 2025 Sunit J. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- Link to JAVASCRIPT FILE -->
     <script src="script.js"></script>

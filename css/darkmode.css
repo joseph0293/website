@@ -12,6 +12,11 @@
     --berkeleyblue: #003262;
 }
 
+/* Hide content until everything loads */
+
+.js body{
+    visibility: visible; 
+}
 
 /* Set body & classes to darkmode */
 
@@ -109,8 +114,10 @@ body {
     color: var(--darkmode2) !important;
 }
 
+/* Footer */
 .outlinebuttonfooter {
-    border-radius: 100px;
+    border: 1px solid white;
+    text-decoration: none;
 }
 
 .outlinebuttonfooter:hover,
@@ -118,6 +125,25 @@ body {
 .outlinebuttonfooter:focus {
     background-color: white;
     color: var(--berkeleyblue) !important;
+}
+
+.footersmicons {
+    transition: 0.3s;
+    padding: 10px 15px;
+    color: white;
+    border: 1px solid white;
+}
+
+.footersmicons:hover,
+.footersmicons:focus,
+.footersmicons:active {
+    background-color: white;
+    color: var(--berkeleyblue);
+}
+
+.orlinesfooter {
+    border: 1px solid white;
+    width: 100px;
 }
 
 
@@ -526,6 +552,7 @@ body {
 
 .scrolldownplease {
     animation: bounce 1s ease infinite;
+    color: var(--darkmode4);
 }
 
 @keyframes bounce {

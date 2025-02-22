@@ -4,6 +4,12 @@
     --berkeleyblue: #003262;
 }
 
+/* Hide content until everything loads */
+
+.js body{
+    visibility: visible; 
+}
+
 
 * {
     font-family: 'Montserrat';
@@ -26,6 +32,7 @@
 .textcalgold {
     color: var(--californiagold) !important;
 }
+
 .bgcalgold {
     background-color: var(--californiagold);
 }
@@ -56,6 +63,7 @@
     width: 100px;
 }
 
+/* Footer */
 .outlinebutton:hover,
 .outlinebutton:focus,
 .outlinebutton:active {
@@ -65,7 +73,22 @@
 }
 
 .outlinebuttonfooter {
-    border-radius: 100px;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.footersmicons {
+    transition: 0.3s;
+    padding: 10px 15px;
+    color: white;
+    border: 1px solid white;
+}
+
+.footersmicons:hover,
+.footersmicons:focus,
+.footersmicons:active {
+    background-color: white;
+    color: var(--berkeleyblue);
 }
 
 .outlinebuttonfooter:hover,
@@ -73,6 +96,11 @@
 .outlinebuttonfooter:focus {
     background-color: white;
     color: var(--berkeleyblue) !important;
+}
+
+.orlinesfooter {
+    border: 1px solid white;
+    width: 100px;
 }
 
 
@@ -271,8 +299,8 @@ footer,
 /* Video Border */
 
 .videoborderberkeley {
-    border: 2px solid var(--berkeleyblue);
-    background-color: var(--berkeleyblue);
+    border: 2px solid #eeeeee;
+    background-color: #eeeeee;
 }
 
 /* Breadcrumb hover styling */
@@ -393,6 +421,7 @@ footer,
     border-radius: 50px;
 
 }
+
 /* resume cv^^ */
 
 
@@ -482,10 +511,11 @@ body {
     background-color: white !important;
     border: 2px solid white !important;
     color: var(--berkeleyblue) !important;
-} 
+}
 
 .scrolldownplease {
     animation: bounce 1s ease infinite;
+    color: white;
 }
 
 @keyframes bounce {
@@ -496,11 +526,12 @@ body {
     50% {
         transform: translateY(5px);
     }
+
     100% {
         transform: translateY(-5px);
     }
 
-    
+
 }
 
 /* Make text hihglight in banner to blue */
@@ -511,7 +542,7 @@ body {
 
 /* Style list in Open Ottawa project */
 .list-openottawa {
-    list-style-type:disc;
+    list-style-type: disc;
 }
 
 /* Visitor Counter Float */
@@ -540,3 +571,9 @@ p.fs-4 {
     color: white !important;
     background: none !important;
 } */
+
+
+
+/* DARK MODE BUTTON */
+
+
