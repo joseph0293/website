@@ -126,7 +126,7 @@ function darkmodebutton() {
     darkdiv.className = 'darkmodebutton';
 
     darkdiv.innerHTML = `
-    <div class="darkmodebutton">
+    <div class="darkmodebutton" title="Toggle Dark Mode">
     <div class="container">
         <input type="checkbox" id="theme-toggle" class="hidden-checkbox">
         <label for="theme-toggle" class="toggle-button">
