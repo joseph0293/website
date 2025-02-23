@@ -116,7 +116,7 @@ body {
 
 .navresume {
     background-color: var(--californiagold);
-    color: white;
+    color: var(--berkeleyblue);
     border-radius: 40px;
     transition: 0.3s;
 }
@@ -124,11 +124,12 @@ body {
 .navresume:hover,
 .navresume:active {
     background-color: var(--berkeleyblue);
+    color: white;
 }
 
 .navcv {
     background-color: var(--cinnabar);
-    color: white;
+    color: var(--berkeleyblue);
     border-radius: 40px;
     transition: 0.3s;
 }
@@ -136,6 +137,7 @@ body {
 .navcv:hover,
 .navcv:active {
     background-color: var(--berkeleyblue);
+    color: white;
 }
 
 .navabout:hover,

@@ -38,6 +38,9 @@ body {
 }
 
 /* Text */
+.darktextdark {
+    color: var(--darkmode1) !important;
+}
 
 .darktextmid {
     color: var(--darkmode3) !important;
@@ -578,19 +581,23 @@ body {
 }
 
 /* Darken banner image? */
-.bannerimg {
+/* .bannerimg {
     transition: 3s;
     background: none;
-}
+} */
 
 
-.bannerimg:after {
+.bannerdarken:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.spacebelowbanner {
     background: rgba(0, 0, 0, 0.5);
 }
 
