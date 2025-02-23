@@ -33,11 +33,14 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Main CSS file -->
+    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
+    
     <!-- Script to change stylesheet according to local storage value -->
     <script>
         (function () {
             const storedTheme = localStorage.getItem("theme");
-            const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
+            const themeStylesheet = document.getElementById("theme-stylesheet");
 
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
@@ -46,9 +49,6 @@
             }
         })();
     </script>
-
-    <!-- Main CSS file -->
-    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
 </head>
 
 <body>

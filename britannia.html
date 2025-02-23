@@ -32,6 +32,20 @@
 
     <!-- Main CSS file -->
     <link rel="stylesheet" href="css/darkmode.css">
+
+    <!-- Script to change stylesheet according to local storage value -->
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem("theme");
+            const themeStylesheet = document.getElementById("theme-stylesheet");
+
+            if (storedTheme === "dark") {
+                themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
+            } else {
+                themeStylesheet.href = "css/main.css"; // Apply light theme as default if no theme is set
+            }
+        })();
+    </script>
 </head>
 
 <body>

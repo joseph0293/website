@@ -30,11 +30,14 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Main CSS file -->
+    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
+
     <!-- Script to change stylesheet according to local storage value -->
     <script>
         (function () {
             const storedTheme = localStorage.getItem("theme");
-            const themeStylesheet = document.querySelector('link[rel="stylesheet"][id="theme-stylesheet"]');
+            const themeStylesheet = document.getElementById("theme-stylesheet");
 
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
@@ -44,8 +47,7 @@
         })();
     </script>
 
-    <!-- Main CSS file -->
-    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
+    
 </head>
 
 <body>
@@ -181,11 +183,11 @@
                             class="about-title card-title display-2 lh-1 fw-bolder darktextlight">Enth undu vishesham?
                         </h1>
                         <p data-aos="fade-up" data-aos-duration="1000">
-                            <small class="textcinnabar py-5 fs-5 fw-semibold fst-italic">('How's it going?' in
+                            <small class="textcinnabar py-5 fs-6 fw-semibold fst-italic">('How's it going?' in
                                 malayalam)</small>
                         </p>
                         <p data-aos="fade-up" data-aos-duration="1000" class="card-text fs-5 lh-base">
-                            Hey there! I'm Sunit Joseph, a creative thinker with a passion for advertising, motion
+                            Hey there! I'm <strong class="fw-semibold textcinnabar">Sunit Joseph</strong>, a creative thinker with a passion for advertising, motion
                             design and creative problem-solving.
                         </p>
                         <p data-aos="fade-up" data-aos-duration="1000" class="card-text fs-5 lh-base">
@@ -239,123 +241,6 @@
 
             </div>
         </div>
-
-
-        <!-- EMBED JOTFORM CONTACT FORM -->
-
-        <!-- 
-
-        <iframe data-aos="fade-up" data-aos-duration="1000" id="JotFormIFrame-232357362839060" title="Get in touch!"
-            onload="window.parent.scrollTo(0,0)" src="https://form.jotform.com/232357362839060"
-            style="min-width:100%;max-width:100%;height:539px;border:none;">
-        </iframe>
-        <script type="text/javascript">
-            var ifr = document.getElementById("JotFormIFrame-232357362839060");
-            if (ifr) {
-                var src = ifr.src;
-                var iframeParams = [];
-                if (window.location.href && window.location.href.indexOf("?") > -1) {
-                    iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") +
-                        1).split('&'));
-                }
-                if (src && src.indexOf("?") > -1) {
-                    iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-                    src = src.substr(0, src.indexOf("?"))
-                }
-                iframeParams.push("isIframeEmbed=1");
-                ifr.src = src + "?" + iframeParams.join('&');
-            }
-            window.handleIFrameMessage = function (e) {
-                if (typeof e.data === 'object') {
-                    return;
-                }
-                var args = e.data.split(":");
-                if (args.length > 2) {
-                    iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]);
-                } else {
-                    iframe = document.getElementById("JotFormIFrame");
-                }
-                if (!iframe) {
-                    return;
-                }
-                switch (args[0]) {
-                    case "scrollIntoView":
-                        iframe.scrollIntoView();
-                        break;
-                    case "setHeight":
-                        iframe.style.height = args[1] + "px";
-                        if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
-                            iframe.style.minHeight = args[1] + "px";
-                        }
-                        break;
-                    case "collapseErrorPage":
-                        if (iframe.clientHeight > window.innerHeight) {
-                            iframe.style.height = window.innerHeight + "px";
-                        }
-                        break;
-                    case "reloadPage":
-                        window.location.reload();
-                        break;
-                    case "loadScript":
-                        if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) {
-                            break;
-                        }
-                        var src = args[1];
-                        if (args.length > 3) {
-                            src = args[1] + ':' + args[2];
-                        }
-                        var script = document.createElement('script');
-                        script.src = src;
-                        script.type = 'text/javascript';
-                        document.body.appendChild(script);
-                        break;
-                    case "exitFullscreen":
-                        if (window.document.exitFullscreen) window.document.exitFullscreen();
-                        else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
-                        else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
-                        else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
-                        else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
-                        break;
-                }
-                var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-                if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-                    var urls = {
-                        "docurl": encodeURIComponent(document.URL),
-                        "referrer": encodeURIComponent(document.referrer)
-                    };
-                    iframe.contentWindow.postMessage(JSON.stringify({
-                        "type": "urls",
-                        "value": urls
-                    }), "*");
-                }
-            };
-            window.isPermitted = function (originUrl, whitelisted_domains) {
-                var url = document.createElement('a');
-                url.href = originUrl;
-                var hostname = url.hostname;
-                var result = false;
-                if (typeof hostname !== 'undefined') {
-                    whitelisted_domains.forEach(function (element) {
-                        if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||
-                            hostname === element) {
-                            result = true;
-                        }
-                    });
-                    return result;
-                }
-            };
-            if (window.addEventListener) {
-                window.addEventListener("message", handleIFrameMessage, false);
-            } else if (window.attachEvent) {
-                window.attachEvent("onmessage", handleIFrameMessage);
-            }
-        </script> -->
-
-        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-
-        <!-- Contact Form -->
-
     </main>
 
 
