@@ -119,6 +119,7 @@ body {
     color: var(--berkeleyblue);
     border-radius: 40px;
     transition: 0.3s;
+    font-weight: bold !important;
 }
 
 .navresume:hover,
@@ -128,6 +129,7 @@ body {
 }
 
 .navcv {
+    font-weight: bold !important;
     background-color: var(--cinnabar);
     color: var(--berkeleyblue);
     border-radius: 40px;
@@ -344,7 +346,6 @@ footer,
 .smicons {
     transition: 0.3s;
     padding: 10px 15px;
-    background-color: white;
     color: var(--cinnabar);
     border: 2px solid var(--cinnabar);
 }
@@ -538,8 +539,12 @@ body {
 
 /* Make text hihglight in banner to blue */
 
-.select-blue::selection {
-    background: var(--berkeleyblue);
+.textblueberkeleyonly {
+    color: var(--berkeleyblue);
+}
+
+.textcinnabar-intro {
+    color: var(--cinnabar);
 }
 
 /* Style list in Open Ottawa project */

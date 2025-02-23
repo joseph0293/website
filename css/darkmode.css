@@ -163,6 +163,7 @@ body {
 .navresume {
     background-color: var(--californiagold);
     color: white;
+    font-weight: bold !important;
     border-radius: 40px;
     transition: 0.3s;
 }
@@ -174,6 +175,7 @@ body {
 }
 
 .navcv {
+    font-weight: bold !important;
     background-color: var(--cinnabar);
     color: white;
     border-radius: 40px;
@@ -574,10 +576,14 @@ body {
 
 }
 
-/* Make text hihglight in banner to blue */
+/* Text colours in banner */
 
-.select-blue::selection {
-    background: var(--berkeleyblue);
+.textblueberkeley-intro {
+    color:white;
+}
+
+.textcinnabar-intro {
+    color: white;
 }
 
 /* Darken banner image? */
@@ -594,7 +600,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .spacebelowbanner {
