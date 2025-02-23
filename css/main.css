@@ -552,9 +552,8 @@ p.fs-4 {
     font-size: 1.4rem !important;
 }
 
+/* Navbar scroll transition */
 
-
-
-/* DARK MODE BUTTON */
-
-
+.navscroll {
+    transition: 0.5s;
+}

@@ -616,3 +616,10 @@ body {
 p.fs-4 {
     font-size: 1.4rem !important;
 }
+
+
+/* Navbar scroll transition */
+
+.navscroll {
+    transition: 0.5s;
+}

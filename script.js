@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const storedTheme = localStorage.getItem("theme");
     const nav = document.querySelector('.javanav');
     const logo = document.querySelector('.logo1');
-    
+
 
     nav.addEventListener('click', function () {
         this.classList.toggle('active');
@@ -361,3 +361,23 @@ darkmodebutton()
 
 // Making the content visible after page load
 document.documentElement.classList.add('js');
+
+
+// Hiding the navbar on scroll down and showing it on scroll up
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navscroll');
+const scrollThreshold = 70; // Only hide after 50px
+
+window.addEventListener('scroll', function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+        // Hide the navbar when scrolled more than 50px down
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Show the navbar when scrolling up
+        navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = scrollTop;
+});
