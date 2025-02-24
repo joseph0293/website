@@ -559,12 +559,12 @@ body {
     font-weight: 800;
 }
 
-.adtitle {
+.artdtitle {
     font-weight: 800;
     transition: 0.3s;
 }
 
-.adtitle:hover {
+.artdtitle:hover {
     letter-spacing: -1px;
     font-weight: 100;
 } */
