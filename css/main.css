@@ -548,9 +548,13 @@ body {
     list-style-type: disc;
 }
 
+.textcinnabar-intro {
+    color: var(--cinnabar);
+}
+
 /* Title Animations */
 
-.banner-title {
+/* .banner-title {
     letter-spacing: -2px;
     font-weight: 800;
 }
@@ -562,9 +566,8 @@ body {
 
 .adtitle:hover {
     letter-spacing: -1px;
-    /* font-family: "Abril Fatface", serif; */
     font-weight: 100;
-}
+} */
 /* 
 .ddtitle {
     font-weight: 800;
