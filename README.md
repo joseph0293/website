@@ -30,14 +30,14 @@ An easier workaround for me was to design a stylesheet for the dark mode version
 
 These new classes I've added are redundant to main.css, but will be activated once darkmode.css is used instead.
 
-### Feb 20th &21st 2025
+### Feb 20th & 21st 2025
 Checking for dark mode state and switching the css file caused the website to flicker as the main.css was loading first. I made darkmode.css as default and used a visibility:hidden inline style in the html until the entire code loads, then the js removes that inline style once page loads, revealing the webpage with the correct stylesheet.
 
 The button & the logo was a bit of a headache, but it was just about local and global variables.
+Redesigned the footer to be more modern.
 
-### Feb 20th &21st 2025
-Redesigned the footer to be more modern. I don't like that everything is centre aligned, but I'll fix that later.
-
+### Feb 24th
+Adds hover animations for Banner text
 
 
 ## SOURCE & CREDITS
@@ -60,6 +60,8 @@ I've used this image as a placeholder for now, but hope to replace it with an im
 [Beautiful mockups to make portfolio much better, thanks to Mockups-Design](https://mockups-design.com/)
 
 [Dark Mode Button from Oslo 418 on codepen](https://codepen.io/Oslonline/pen/VYwwdop)
+
+[Daniel Reimer - Animated Text Fill](https://www.sliderrevolution.com/resources/css-text-animation/)
 
 ## Libraries used:
 

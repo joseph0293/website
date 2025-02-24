@@ -6,8 +6,8 @@
 
 /* Hide content until everything loads */
 
-.js body{
-    visibility: visible; 
+.js body {
+    visibility: visible;
 }
 
 
@@ -543,17 +543,60 @@ body {
     color: var(--berkeleyblue);
 }
 
-.textcinnabar-intro {
-    color: var(--cinnabar);
-}
-
 /* Style list in Open Ottawa project */
 .list-openottawa {
     list-style-type: disc;
 }
 
+/* Title Animations */
 
-/* Set paragraph font size to be slightly smaller overall on website */
+.banner-title {
+    letter-spacing: -3px;
+}
+
+.adtitle {
+    transition: 0.3s;
+}
+
+.adtitle:hover {
+    letter-spacing: -1px;
+    /* font-family: "Abril Fatface", serif; */
+    font-weight: 100;
+}
+
+.ddtitle {
+    transition: 1s;
+}
+
+.ddtitle:hover {
+    filter: blur(10px)
+}
+
+/* Animation on Motion Designer */
+.mdtitle {
+    color: transparent;
+    background: var(--cinnabar);
+    background-clip: text;
+}
+
+
+.mdtitle:hover {
+    background: url(../images/seatext-animation.png) repeat-y;
+    background-clip: text;
+    animation: textanim 80s linear infinite;
+}
+
+
+@keyframes textanim {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
 
 p.fs-4 {
     font-size: 1.4rem !important;
