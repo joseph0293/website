@@ -580,6 +580,7 @@ body {
 .banner-title {
     color: white;
     letter-spacing: -2px;
+    font-weight: 800;
 }
 
 /* Darken banner image? */
