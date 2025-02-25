@@ -577,13 +577,9 @@ body {
 }
 
 /* Text colours in banner */
-
-.textblueberkeley-intro {
-    color:white;
-}
-
-.textcinnabar-intro {
+.banner-title {
     color: white;
+    letter-spacing: -2px;
 }
 
 /* Darken banner image? */

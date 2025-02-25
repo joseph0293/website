@@ -553,41 +553,36 @@ body {
 }
 
 /* Title Animations */
-
-/* .banner-title {
+    
+.banner-title {
     letter-spacing: -2px;
-    font-weight: 800;
 }
 
 .artdtitle {
-    font-weight: 800;
     transition: 0.3s;
 }
 
 .artdtitle:hover {
-    letter-spacing: -1px;
-    font-weight: 100;
-} */
-/* 
+    font-weight: 200;
+}
+
 .ddtitle {
-    font-weight: 800;
+    color: white !important;
     transition: 1s;
 }
 
 .ddtitle:hover {
-    filter: blur(10px)
-} */
+    filter: blur(10px);
+}
 
 /* Animation on Motion Designer */
-/* .mdtitle {
-    color: transparent;
-    font-weight: 800;
-    background: var(--cinnabar);
-    background-clip: text;
+.mdtitle {
+    color: var(--cinnabar);
 }
 
 
 .mdtitle:hover {
+    color: transparent;
     background: url(../images/seatext-animation.png) repeat-y;
     background-clip: text;
     animation: textanim 80s linear infinite;
@@ -602,7 +597,7 @@ body {
     100% {
         background-position: 100% 0;
     }
-} */
+}
 
 
 p.fs-4 {
