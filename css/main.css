@@ -537,12 +537,6 @@ body {
 
 }
 
-/* Make text hihglight in banner to blue */
-
-.textblueberkeleyonly {
-    color: var(--berkeleyblue);
-}
-
 /* Style list in Open Ottawa project */
 .list-openottawa {
     list-style-type: disc;
@@ -584,9 +578,9 @@ body {
 
 .mdtitle:hover {
     color: transparent;
-    background: url(../images/seatext-animation.png) repeat-y;
+    background: url(../images/seatext-animation.jpg) repeat-y;
     background-clip: text;
-    animation: textanim 80s linear infinite;
+    animation: textanim 150s linear infinite;
 }
 
 

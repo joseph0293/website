@@ -34,7 +34,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Main CSS file -->
-    <link id="theme-stylesheet" rel="stylesheet" href="css/darkmode.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="css/main.css">
 
     <!-- Script to change stylesheet according to local storage value -->
     <script>
@@ -43,7 +43,7 @@
             const themeStylesheet = document.getElementById("theme-stylesheet");
 
             if (storedTheme === "dark") {
-                themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
+                themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage 
             } else {
                 themeStylesheet.href = "css/main.css"; // Apply light theme as default if no theme is set
             }
@@ -184,15 +184,15 @@
                 class="card-img-overlay pt-5 pt-xxl-5 pt-lg-5 mt-lg-2 pt-md-5 d-flex flex-column flex-md-row pt-4 justify-content-end">
                 <div data-aos="fade-up" data-aos-duration="1000" class="pt-4">
 
-                    <div class="col-md-7 col-xl-8 textblueberkeley text-md-end">
+                    <div class="col-md-7 col-xl-8 text-md-end">
                         <div class="d-md-none d-lg-block d-xl-none d-xxl-block space py-4"></div>
                         <!-- Two headings to disable animation on phone -->
                         <h1 role="heading" aria-level="1"
-                            class="d-md-none textblueberkeley-intro card-title display-2 about-title lh-1 banner-title">Art
+                            class="d-md-none card-title display-2 about-title lh-1 banner-title">Art
                             Director, <span class="textcinnabar-intro">Motion Designer,</span>
                             <span class="text-white">Day Dreamer!</span> 
                         </h1>
-                        <h1 role="heading" aria-level="1" class="d-none d-md-block textblueberkeley-intro about-title display-2 banner-title lh-1">
+                        <h1 role="heading" aria-level="1" class="d-none d-md-block about-title display-2 banner-title lh-1">
                             <span class="ps-2 artdtitle">Art Director,</span>
                             <span class="mdtitle">Motion Designer,</span>
                             <span class="ddtitle">Day Dreamer!</span>
