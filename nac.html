@@ -38,7 +38,7 @@
         (function () {
             const storedTheme = localStorage.getItem("theme");
             const themeStylesheet = document.getElementById("theme-stylesheet");
-            
+
             if (storedTheme === "dark") {
                 themeStylesheet.href = "css/darkmode.css"; // Apply dark theme if saved in localStorage
             } else {
@@ -192,8 +192,63 @@
                         Agency.</a>
                 </p>
             </div>
+
+            <!-- Creative Brief -->
+            <div class="row row-cols-1 row-cols-lg-2 p-4 g-3 pb-3 textberkeley">
+                <div class="col">
+                    <div class="bg-warning-subtle warningdarkbg rounded-4 p-4">
+                        <h3 class="fw-bold darktextlightest">
+                            Creative Brief:
+                        </h3>
+                        <p class="darktextlight fs-5">
+                            An extendable creative look & visual language to celebrate the NAC’s New Season by
+                            showcasing its diverse programming and reinforcing its role as a vibrant cultural hub for
+                            all audiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-success-subtle successdarkbg rounded-4 p-4">
+                        <h3 class="darktextlightest fw-bold">
+                            Target Audience:
+                        </h3>
+                        <ul class="darktextlight list-openottawa fs-5">
+                            <li><strong>Primary: </strong> Loyal NAC patrons, including subscribers & single-ticket
+                                buyers.</li>
+                            <li><strong>Secondary: </strong>Younger audiences & potential attendees seeking meaningful
+                                arts experiences</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-primary-subtle primarydarkbg rounded-4 p-4">
+                        <h3 class="darktextlightest fw-bold">
+                            Key Message:
+                        </h3>
+                        <p class="darktextlight fs-5">
+                            The NAC is where Canadians come together to experience the best in performing arts, from
+                            music and theatre to dance, in a welcoming and inspiring space.
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-danger-subtle dangerdarkbg rounded-4 p-4">
+                        <h3 class=" darktextlightest fw-bold">
+                            Tone of Voice:
+                        </h3>
+                        <p class="darktextlight fs-5">
+                            Fun, humble, inclusive, creative, engaging, celebratory and emotionally resonant.
+                            Warm and inviting, while reinforcing the NAC’s national significance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Inspiration -->
-            <div class="row p-4">
+            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
+                Inspiration & Concept:
+            </h2>
+            <div class="row p-4 pt-2">
                 <div class="col col-lg-4 order-0 order-lg-1">
                     <div class="">
                         <a href="https://dominikgehl.com/ottawa-national-arts-center" target="_blank"
@@ -210,95 +265,199 @@
                 </div>
                 <div class="col col-lg-8">
                     <p class="py-4 textberkeley fs-4">
-                        Given the task of crafting a unique versatile look suitable for a range of artist and performer
-                        images,
-                        I drew inspiration from both traditional art and the hexagonal interiors of the NAC. <br><br>
-                        One particular set of stairs at the NAC had an almost hypnotic effect when viewed from the top.
-                        <br><br>Inspired by these hexagonal spiral staircases, I arranged brush strokes in concentric
-                        hexagonal circles to
-                        create an immersive visual effect surrounding the artists, to draw people in.
+                        <strong>The Brush Stroke: </strong> Artistic brush strokes like live performances, are best
+                        experienced in person. Just as standing in front of a painting allows you to see and feel each
+                        stroke up close, live shows bring an energy that can only be fully appreciated in the moment.
+                    </p>
+                    <p class="textberkeley fs-4">
+                        Drawing inspiration from both <strong class="fw-semibold fst-italic">traditional art and the NAC’s hexagonal architecture</strong> , I combined the
+                        two ideas and arranged brushstrokes in concentric hexagons to create a visually striking
+                        composition that surrounds the artists, making them stand out.
                     </p>
                 </div>
             </div>
 
-
-            <!-- POSTERS FOR CAMPAIGN -->
-
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Key Visuals:
+            <!-- Visual Language -->
+            <h2 class="textberkeley display-6 fw-semibold pb-0 p-4">
+                Visual Treatment:
             </h2>
+            <div class="textberkeley p-4">
+                <!-- Main Grid -->
+                <div class="row pt-2 textberkeley g-4">
+                    <div class="col-12 col-lg-5">
+                        <img class="rounded-5 card-img" src="images/nac-imagetreatment.jpg" alt="Imagery treatment">
+                        </img>
+                    </div>
 
-            <div class="p-4 pt-0">
-                <img src="images/nac-purple-poster.jpg" class="card-img-top rounded-5 my-4" alt="NAC poster 3">
-                <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard-blue.jpg" alt="NAC subway">
-                <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard.jpg" alt="NAC subway mockup">
-            </div>
-            <!-- IMAGEx4 RESPONSIVE GRID-->
-            <div class="row row-cols-1 row-cols-lg-2 g-4 p-4 pb-0">
-                <div class="col">
-                    <div class="border-0">
-                        <img src="images/nac-blue-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 1">
+                    <div class="col-12 col-lg-7">
+                        <h3 class="fw-bold fs-3">Imagery:</h3>
+                        <p class="textberkeley fs-4">
+                            I adjusted the artist/performer images to create a darker
+                            background and setting while keeping the subject naturally integrated, creating a
+                            spotlight effect on the artist/performer.
+                        </p>
+
+                        <!-- Second Grid -->
+                        <div class="row g-4">
+                            <div class="col-12 col-lg-5">
+                                <img class="rounded-5 card-img" src="images/nac-imagetreatment-colourspill.jpg"
+                                    alt="Imagery treatment">
+                                </img>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <p class="textberkeley fs-5 fst-italic">
+                                    Later, I also added subtle light spills from the brushstroke-textured hexagons to
+                                    smoothly integrate the artist into the scene, making the composition feel unified.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="border-0">
-                        <img src="images/nac-pink-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 2">
+
+                <!-- Colours -->
+                <div class="row pt-4 textberkeley g-4">
+                    <div class="col-12 col-lg-5 order-1">
+                        <img class="rounded-5 card-img" src="images/nac-colourtreatment.jpg" alt="Imagery treatment">
+                        </img>
+                    </div>
+
+                    <div class="pt-4 col-12 col-lg-7 order-0">
+                        <h3 class="fw-bold fs-3">Colours:</h3>
+                        <p class="textberkeley fs-4">
+                            With the Season Campaign being the NAC's opportunity to start anew, the chosen colors were
+                            selected to
+                            showcase:
+                        </p>
+                        <ul class="list-openottawa textberkeley fs-5">
+                            <li><strong>Rebirth & renewal: </strong> as this is the NAC’s second full season
+                                post-pandemic.</li>
+                            <li><strong>NAC's role: </strong> as a vibrant cultural hub, celebrating diverse
+                                artistic expressions.</li>
+                            <li><strong>Inclusivity: </strong> Embracing a modern, youthful, and an inclusive aesthetic.
+                            </li>
+                            <li><strong>Spotlight: </strong> The bold pairings of colors create striking contrasts
+                                that draw attention against the darker backdrop, like spotlights on stage. </li>
+                        </ul>
+                        <p class="textberkeley fs-4">
+                            Reflecting the evolving cultural landscape of Canada & inviting audiences of all
+                            backgrounds to engage with the arts.
+                        </p>
                     </div>
                 </div>
-            </div>
 
+                <!-- Typography -->
+                <div class="row py-4 textberkeley g-4">
+                    <div class="col-12 col-lg-5 order-1 order-lg-0">
+                        <img class="rounded-5 card-img" src="images/nac-typetreatment.jpg" alt="Imagery treatment">
+                        </img>
+                    </div>
 
-            <!-- Social Media: -->
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                Social Media:
-            </h2>
-            <p class="p-4 pb-0 textberkeley fs-4">
-                A large part of the campaign was to be executed digitally as social media ads and posts.
-            </p>
-            <div class="hoardings p-4">
-                <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-social.jpg" alt="NAC post social media">
-                <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-website.jpg" alt="NAC website">
-            </div>
-            <p class="p-4 pb-0 textberkeley fs-4">
-                Motion was required to be an integral part of the look so that it could be extended to digital screens
-                and get more reach on social media. Here's how I'd conceptualised the motion for the campaign:
-            </p>
-            <div class="hoardings p-4">
-                <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/nac-ig-story.mp4"
-                    alt="NAC IG story"></video>
-            </div>
-            <h2 class="textberkeley display-6 fw-semibold p-4 pb-0">
-                The Kipnes Lantern:
-            </h2>
-            <p class="textberkeley fs-4 px-4">
-                The Kipnes Lantern is a 21-metre-high transparent LED screen that wraps around the National Arts
-                Centre's glass
-                atrium. It's a unique digital canvas that can be seen from the street and is visible to the public 24/7.
-                The campaign look was also designed to be displayed on the Lantern, bringing the energy of live art
-                directly
-                to the audience.
-            </p>
-            <div class="d-none d-md-block p-4">
-                <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/kipnes-lantern.mp4"
-                    alt="NAC Kipnes Lantern"></video>
-            </div>
-            <div class="d-md-none p-4">
-                <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/kipnes-mobile.mp4"
-                    alt="NAC Kipnes Lantern"></video>
-            </div>
-
-            <!-- THANK YOU TEXT + BUTTON -->
-
-            <div role="region" class="scroll text-center my-5">
-                <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
-                <div class="textberkeley">
-                    <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
-                            class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+                    <div class="pt- col-12 col-lg-7 order-0 order-lg-1">
+                        <h3 class="fw-bold fs-3">Typography:</h3>
+                        <p class="textberkeley fs-4">
+                            Benton Sans was the primary typeface, chosen for it's modern and clean look. The thick,
+                            blocky strokes & stems of this typeface grabs attention and announces the message in a bold
+                            way.
+                        </p>
+                        <p class="textberkeley fs-4">
+                            Taking into account the brushstroke concept, I chose a brush typeface, Better Fonts,
+                            to
+                            visually contrast the blocky Benton Sans and create an aesthetic typographic combination.
+                        </p>
+                        <p class="textberkeley fs-4">
+                            To complement the typefaces, smaller brushstroke design elements were created to keep a cohesive visual language in the campaign look.
+                        </p>
+                    </div>
                 </div>
-            </div>
+
+
+                <!-- POSTERS FOR CAMPAIGN -->
+
+                <h2 class="textberkeley display-6 fw-semibold py-4 pb-0">
+                    Key Visuals:
+                </h2>
+
+                <div class="py-4 pt-0">
+                    <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard-blue.jpg" alt="NAC subway">
+                    <img class="w-100 rounded-5 my-3" src="images/nac-subway-billboard.jpg" alt="NAC subway mockup">
+                    <img src="images/nac-purple-poster.jpg" class="card-img-top rounded-5 my-4" alt="NAC poster 3">
+                </div>
+                <!-- IMAGEx4 RESPONSIVE GRID-->
+                <div class="row row-cols-1 row-cols-lg-2 g-4 py-4 pb-0">
+                    <div class="col">
+                        <div class="border-0">
+                            <img src="images/nac-blue-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 1">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border-0">
+                            <img src="images/nac-pink-poster.jpg" class="card-img-top rounded-5" alt="NAC poster 2">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Social Media: -->
+                <h2 class="textberkeley display-6 fw-semibold py-4 pb-0">
+                    Social Media:
+                </h2>
+                <p class="py-4 pb-0 textberkeley fs-4">
+                    A large part of the campaign was to be executed digitally as social media ads and posts.
+                </p>
+                <div class="hoardings py-4">
+                    <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-social.jpg" alt="NAC post social media">
+                    <img class="w-100 rounded-5 my-3 mt-0" src="images/nac-website.jpg" alt="NAC website">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <p class="py-4 pb-0 textberkeley fs-4">
+                            <strong class="fw-semibold fst-italic">Motion</strong> was required to be an integral part of the look so that it could be extended to
+                            digital
+                            screens
+                            and garner more reach on social media. <br><br> Here's how I'd conceptualised the motion for the
+                            campaign:
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-8 py-4">
+                        <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/nac-ig-story.mp4"
+                            alt="NAC IG story"></video>
+                    </div>
+
+                </div>
+
+
+                <h2 class="textberkeley display-6 fw-semibold py-4 pb-0">
+                    The Kipnes Lantern:
+                </h2>
+                <p class="textberkeley fs-4 py-4">
+                    The Kipnes Lantern is a 21-metre-high transparent LED screen that wraps around the National Arts
+                    Centre's glass
+                    atrium. It's a unique digital canvas that can be seen from the street and is visible to the public
+                    24/7.
+                    The campaign look was also designed to be displayed on the Lantern, bringing the energy of the Season Campaign
+                    directly to the audience.
+                </p>
+                <div class="d-none d-md-block py-4">
+                    <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/kipnes-lantern.mp4"
+                        alt="NAC Kipnes Lantern"></video>
+                </div>
+                <div class="d-md-none py-4">
+                    <video autoplay loop class="w-100 rounded-5 my-3 mt-0" src="videos/kipnes-mobile.mp4"
+                        alt="NAC Kipnes Lantern"></video>
+                </div>
+
+                <!-- THANK YOU TEXT + BUTTON -->
+
+                <div role="region" class="scroll text-center my-5">
+                    <p class="textberkeley fs-4"><strong>Thank you</strong> for scrolling till the end.</p>
+                    <div class="textberkeley">
+                        <a class="text-decoration-none outlinebutton btn rounded-5 fs-4 fw-semibold" href="#"><i
+                                class="bi bi-arrow-up-short"></i> Go back up <i class="bi bi-arrow-up-short"></i></a>
+                    </div>
+                </div>
     </main>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer role="contentinfo" class="py-5">
         <!-- Logo -->
         <div class="logofooter text-center py-5">
