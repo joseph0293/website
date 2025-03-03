@@ -15,7 +15,7 @@
 /* Hide content until everything loads */
 
 .js body{
-    visibility: visible; 
+    visibility: visible !important; 
 }
 
 /* Set body & classes to darkmode */
@@ -396,6 +396,23 @@ footer,
     transform: translateY(-15px);
 }
 
+/* Suggested projects */
+.projectcardsuggest {
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 960px) {
+    .projectcardsuggest {
+        opacity: 40%;
+    }
+    
+}
+
+.projectcardsuggest:hover {
+    opacity: 1;
+    scale: 1.05;
+}
+
 /* Style icons for uneven icon dimensions on About Page */
 
 .smicons {
@@ -528,7 +545,7 @@ input:invalid {
 
 
 body {
-    animation: fadeInAnimation ease 1.5s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

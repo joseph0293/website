@@ -7,7 +7,7 @@
 /* Hide content until everything loads */
 
 .js body {
-    visibility: visible;
+    visibility: visible !important;
 }
 
 
@@ -326,6 +326,7 @@ footer,
     text-decoration-style: dashed;
     text-decoration-thickness: 2px;
 }
+
 /* Set font size of breadcrumbs nav */
 .breadcrumbs {
     font-size: 0.8rem;
@@ -345,6 +346,23 @@ footer,
     transform: translateY(-15px);
 }
 
+/* Suggested projects */
+.projectcardsuggest {
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 960px) {
+    .projectcardsuggest {
+        opacity: 40%;
+    }
+    
+}
+
+.projectcardsuggest:hover {
+    opacity: 1;
+    scale: 1.05;
+}
+
 /* Style icons for uneven icon dimensions on About Page */
 
 .smicons {
@@ -360,22 +378,6 @@ footer,
     background-color: var(--cinnabar);
     color: white;
 }
-
-/* .smicons {
-    transition: 0.3s;
-    padding: 10px 15px;
-    background-color: white;
-    color: var(--berkeleyblue);
-    border: 2px solid var(--berkeleyblue);
-}
-
-.smicons:hover,
-.smicons:focus,
-.smicons:active {
-    background-color: var(--berkeleyblue);
-    color: white;
-} */
-
 
 /* Styling skiplink */
 
@@ -488,7 +490,7 @@ input:invalid {
 
 
 body {
-    animation: fadeInAnimation ease 1.5s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -551,7 +553,7 @@ body {
 }
 
 /* Title Animations */
-    
+
 .banner-title {
     letter-spacing: -2px;
     font-weight: 800;
@@ -603,3 +605,5 @@ body {
 .navscroll {
     transition: 0.5s;
 }
+
+/* Recommended projects */
