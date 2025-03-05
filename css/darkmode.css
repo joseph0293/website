@@ -195,7 +195,7 @@ body {
 .navwork,
 .navabout {
     transition: 0.3s;
-    border: 2px solid var(--darkmode1);
+    border: 2px solid var(--darkmode2);
     border-radius: 40px;
 }
 
@@ -624,7 +624,17 @@ body {
 }
 
 .spacebelowbanner {
-    background: rgba(0, 0, 0, 0.5);
+    background-color: var(--californiagold);
+}
+
+.spacebelowbanner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 

@@ -373,7 +373,7 @@ window.addEventListener('scroll', function () {
 
     if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
         // Hide the navbar when scrolled more than 50px down
-        navbar.style.transform = 'translateY(-100%)';
+        navbar.style.transform = 'translateY(-120%)';
     } else {
         // Show the navbar when scrolling up
         navbar.style.transform = 'translateY(0)';
