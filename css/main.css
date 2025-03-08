@@ -459,7 +459,7 @@ footer a:focus-visible,
 .navbar-toggler:focus-visible {
     border: none;
     outline: 2px solid var(--cinnabar);
-    border-radius: 32px;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px rgb(180, 180, 180);
 }
 
