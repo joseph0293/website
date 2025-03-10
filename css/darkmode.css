@@ -162,29 +162,34 @@ body {
 
 .navresume {
     background-color: var(--californiagold);
-    color: white;
-    font-weight: bold !important;
+    color: var(--berkeleyblue) !important;
     border-radius: 40px;
+    border: 2px solid var(--berkeleyblue);
     transition: 0.3s;
+    font-weight: bold !important;
 }
 
 
 .navresume:hover,
 .navresume:active {
     background-color: var(--berkeleyblue);
+    color: white !important;
 }
 
 .navcv {
     font-weight: bold !important;
     background-color: var(--cinnabar);
-    color: white;
+    color: var(--berkeleyblue)!important;
+    border: 2px solid var(--berkeleyblue);
     border-radius: 40px;
+    border-left: none;
     transition: 0.3s;
 }
 
 .navcv:hover,
 .navcv:active {
     background-color: var(--berkeleyblue);
+    color: white!important;
 }
 
 .navabout:hover,
