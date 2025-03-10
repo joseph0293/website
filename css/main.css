@@ -114,10 +114,19 @@ body {
 
 
 
-.navresume {
+/* .navresume {
     background-color: var(--californiagold);
     color: var(--berkeleyblue);
     border-radius: 40px;
+    transition: 0.3s;
+    font-weight: bold !important;
+} */
+
+.navresume {
+    background-color: var(--californiagold);
+    color: var(--berkeleyblue) !important;
+    border-radius: 40px;
+    border: 2px solid var(--berkeleyblue);
     transition: 0.3s;
     font-weight: bold !important;
 }
@@ -125,21 +134,31 @@ body {
 .navresume:hover,
 .navresume:active {
     background-color: var(--berkeleyblue);
-    color: white;
+    color: white !important
 }
 
-.navcv {
+/* .navcv {
     font-weight: bold !important;
     background-color: var(--cinnabar);
     color: var(--berkeleyblue);
     border-radius: 40px;
+    transition: 0.3s;
+} */
+
+.navcv {
+    font-weight: bold !important;
+    background-color: var(--cinnabar);
+    color: var(--berkeleyblue)!important;
+    border: 2px solid var(--berkeleyblue);
+    border-radius: 40px;
+    border-left: none;
     transition: 0.3s;
 }
 
 .navcv:hover,
 .navcv:active {
     background-color: var(--berkeleyblue);
-    color: white;
+    color: white!important;
 }
 
 .navabout:hover,
@@ -254,7 +273,7 @@ body {
 .navartdirection:hover,
 .navartdirection:active,
 .navartdirection:focus {
-    background: white;
+    background: none;
     text-decoration: underline;
     text-underline-offset: 10px;
 
