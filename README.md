@@ -39,6 +39,10 @@ Redesigned the footer to be more modern.
 ### Feb 24th
 Adds hover animations for Banner text
 
+### Mar 11 2025
+Makes Resume/CV button more visible with contrast. Now fits at least AA contrast guidelines.
+Also adds rotation animations on about image in layers: BG, stars, cutout, stars. Uses Chat GPT to clean up/ simplify code.
+
 
 ## SOURCE & CREDITS
 
