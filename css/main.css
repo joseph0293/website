@@ -666,9 +666,9 @@ body {
     animation-duration: 3s;
 }
 
-.starblue1 { left: 20%; top: 15%; }
-.starblue2 { left: 80%; top: 35%; }
-.starblue3 { left: 9%; top: 86%; }
+.starblue1 { left: 20%; top: 15%; animation-direction: reverse; }
+.starblue2 { left: 80%; top: 35%; animation-direction: reverse; }
+.starblue3 { left: 9%; top: 86%; animation-direction: reverse; }
 
 /* Orange stars */
 .starorange1, .starorange2 {
@@ -677,7 +677,7 @@ body {
     animation-duration: 10s;
 }
 
-.starorange1 { z-index: 4; }
+.starorange1 { z-index: 4; animation-direction: reverse; }
 .starorange2 { z-index: 2; animation-direction: reverse; }
 
 /* Yellow stars */
