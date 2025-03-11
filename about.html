@@ -47,13 +47,14 @@
         })();
     </script>
 
-    
+
 </head>
 
 <body>
     <!-- NAVIGATION -->
     <header role="banner">
-        <nav role="navigation" class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2 darkbgmid navscroll rounded-4 m-2">
+        <nav role="navigation"
+            class="fixed-top navbar navbar-expand-lg bg-white shadow py-lg-2 darkbgmid navscroll rounded-4 m-2">
             <div class="container javanav">
                 <a class="d-lg-none navbar-brand ps-2" href="index.html">
                     <img class="logo1" src="images/logo.svg" alt="logo" width="150" height="80">
@@ -172,11 +173,29 @@
             <div class="row g-4 g-lg-5">
                 <!-- Responsive image so that the best image shows up at any breakpoint -->
                 <div class="col-12 col-xl-6 col-xxl-5">
-                    <img data-aos="fade-up" data-aos-duration="1000" src="images/self.jpg" class="rounded-4 card-img">
-                    <!-- <img data-aos="fade-up" data-aos-duration="1000" src="images/self.jpg" srcset="images/self-500.jpg 500w,
+                    <!-- Placing images in container to align stars -->
+                    <div class="image-container">
+                        <img src="images/self.png"
+                            class="rounded-4 card-img self-image">
+
+                        <!-- Cutout -->
+                        <img src="images/self-top.png"
+                        class="rounded-4 card-img self-top-image">
+
+
+                        <!-- SVG stars -->
+                        <img src="images/blue-star.svg" alt="hover star" class="starblue1" title="hover">
+                        <img src="images/blue-star.svg" alt="hover star" class="starblue2" title="hover">
+                        <img src="images/blue-star.svg" alt="hover star" class="starblue3" title="hover">
+                        <img src="images/orange-star.svg" alt="hover star" class="starorange1" title="hover">
+                        <img src="images/orange-star.svg" alt="hover star" class="starorange2" title="hover">
+                        <img src="images/yellow-star.svg" alt="hover star" class="staryellow1" title="hover">
+                        <img src="images/yellow-star.svg" alt="hover star" class="staryellow2" title="hover">
+                        <!-- <img data-aos="fade-up" data-aos-duration="1000" src="images/self.jpg" srcset="images/self-500.jpg 500w,
                                 images/self-1000.jpg 1000w,
                                 images/self-1500.jpg 1500w" sizes="(min-width: 960px) 50vw, 100vw" 
                         class="rounded-4 img-fluid p-2 w-100" alt="Photo of myself"> -->
+                    </div>
                 </div>
                 <div class="col-12 col-xl-6 col-xxl-7 textberkeley">
                     <div class="">
@@ -188,12 +207,14 @@
                                 malayalam)</small>
                         </p>
                         <p data-aos="fade-up" data-aos-duration="1000" class="card-text fs-5 lh-base">
-                            Hey there! I'm Sunit Joseph, a Canada-based creative, passionate about advertising, motion design, and creative problem-solving.
+                            Hey there! I'm Sunit Joseph, a Canada-based creative, passionate about advertising, motion
+                            design, and creative problem-solving.
                         </p>
                         <p data-aos="fade-up" data-aos-duration="1000" class="card-text fs-5 lh-base">
                             Originally from South India, I built my creative foundation as an art director in
                             Bangalore’s
-                            fast-paced advertising industry before expanding my expertise in UX design, motion graphics, and web
+                            fast-paced advertising industry before expanding my expertise in UX design, motion graphics,
+                            and web
                             development at Algonquin College in Ottawa.
                         </p>
                         <div data-aos="fade-up" data-aos-duration="1000"

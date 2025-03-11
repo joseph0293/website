@@ -679,3 +679,93 @@ p.fs-4 {
 .navscroll {
     transition: 0.5s;
 }
+
+
+
+/* STAR ON IMAGE & CUT-OUT */
+/* Removed redudancy and made things shorter */
+
+
+/* Images */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.self-top-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.self-image {
+    z-index: 1;
+}
+
+/* Common Star Styles */
+.starblue1, .starblue2, .starblue3, 
+.starorange1, .starorange2, 
+.staryellow1, .staryellow2 {
+    position: absolute;
+    animation: rotatingStar linear infinite;
+}
+
+/* Blue stars */
+.starblue1, .starblue2, .starblue3 {
+    height: 1em;
+    width: 1em;
+    z-index: 4;
+    animation-duration: 3s;
+}
+
+.starblue1 { left: 20%; top: 15%; }
+.starblue2 { left: 80%; top: 35%; }
+.starblue3 { left: 9%; top: 86%; }
+
+/* Orange stars */
+.starorange1, .starorange2 {
+    height: 3em;
+    width: 3em;
+    animation-duration: 10s;
+}
+
+.starorange1 { z-index: 4; }
+.starorange2 { z-index: 2; animation-direction: reverse; }
+
+/* Yellow stars */
+.staryellow1, .staryellow2 {
+    height: 7em;
+    width: 7em;
+    z-index: 2;
+    animation-duration: 40s;
+}
+
+/* Rotating animation */
+@keyframes rotatingStar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .staryellow1 { left: 22%; top: 15%; }
+    .staryellow2 { left: 55%; top: 65%; }
+    .starorange1 { left: 8%; top: 55%; }
+    .starorange2 { left: 58%; top: 12%; }
+}
+
+@media screen and (min-width: 769px) {
+    .staryellow1, .staryellow2 { height: 12em; width: 12em; }
+    .staryellow1 { left: 28%; top: 15%; }
+    .staryellow2 { left: 60%; top: 65%; }
+    .starorange1 { left: 11%; top: 55%; }
+    .starorange2 { left: 63%; top: 12%; }
+}
+
+@media screen and (min-width: 1200px) {
+    .staryellow1 { left: 20%; top: 15%; }
+    .staryellow2 { left: 52%; top: 62%; }
+    .starorange1 { left: 9%; top: 60%; }
+    .starorange2 { left: 61%; top: 12%; }
+}
