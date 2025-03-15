@@ -697,9 +697,9 @@ body {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .staryellow1 { left: 22%; top: 15%; }
-    .staryellow2 { left: 55%; top: 65%; }
+    .staryellow2 { left: 57%; top: 65%; }
     .starorange1 { left: 8%; top: 55%; }
-    .starorange2 { left: 58%; top: 12%; }
+    .starorange2 { left: 59%; top: 12%; }
 }
 
 @media screen and (min-width: 769px) {

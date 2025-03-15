@@ -312,9 +312,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the button and theme & logo switching
 
+    const selfimg = document.querySelector('.self-image');
+    const selftop = document.querySelector('.self-top-image');
 
     function updateTheme(theme) {
         if (theme === "dark") {
+            if (selfimg && selftop) {
+                selfimg.src = 'images/self-dark.png';
+                selftop.src = 'images/self-top-dark.png';
+            }
             themeStylesheet.href = "css/darkmode.css"; // Switch to dark mode
             themeToggle.checked = true; // Show sun icon
             localStorage.setItem("theme", "dark"); // Save to local storage
@@ -326,6 +332,10 @@ document.addEventListener("DOMContentLoaded", function () {
             logodesktop.src = 'images/logo-dark.svg' // Dark mode logo
 
         } else if (theme === "light") {
+            if (selfimg) {
+                selfimg.src = 'images/self.png';
+                selftop.src = 'images/self-top.png';
+            }
             themeStylesheet.href = "css/main.css"; // Switch to light mode
             themeToggle.checked = false; // Show moon icon
             localStorage.setItem("theme", "light"); // Save to local storage
@@ -366,13 +376,13 @@ document.documentElement.classList.add('js');
 // Hiding the navbar on scroll down and showing it on scroll up
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navscroll');
-const scrollThreshold = 70; // Only hide after 50px
+const scrollThreshold = 70; // Only hide after 70px (because I added margin to nav bar)
 
 window.addEventListener('scroll', function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-        // Hide the navbar when scrolled more than 50px down
+        // Hide the navbar when scrolled more than 70px down (because I added margin to nav bar)
         navbar.style.transform = 'translateY(-120%)';
     } else {
         // Show the navbar when scrolling up
