@@ -212,7 +212,7 @@ body {
 
 /* Default state (arrow pointing down) */
 .dropdown-toggle::after {
-    border-radius: 5px;
+    border-radius: 5px; /* To make the arrow less pointy */
     transition: transform 0.3s ease-in-out;
 }
 
