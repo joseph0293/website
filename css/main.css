@@ -727,3 +727,26 @@ body {
     .starorange1 { left: 9%; top: 60%; }
     .starorange2 { left: 61%; top: 12%; }
 }
+
+/* Adds a 'click to view project' highlight on images to tell the user that clicking on carousel images will lead them to the project */
+
+
+.clicktoviewproject {
+    position: relative;
+}
+
+.clicktoviewproject:hover::after {
+    content: "Click to view project";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: center;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5em;
+
+}
