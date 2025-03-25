@@ -662,37 +662,66 @@ body {
 }
 
 /* Common Star Styles */
-.starblue1, .starblue2, .starblue3, 
-.starorange1, .starorange2, 
-.staryellow1, .staryellow2 {
+.starblue1,
+.starblue2,
+.starblue3,
+.starorange1,
+.starorange2,
+.staryellow1,
+.staryellow2 {
     position: absolute;
     animation: rotatingStar linear infinite;
 }
 
 /* Blue stars */
-.starblue1, .starblue2, .starblue3 {
+.starblue1,
+.starblue2,
+.starblue3 {
     height: 1em;
     width: 1em;
     z-index: 4;
     animation-duration: 3s;
 }
 
-.starblue1 { left: 20%; top: 15%; animation-direction: reverse; }
-.starblue2 { left: 80%; top: 35%; animation-direction: reverse; }
-.starblue3 { left: 9%; top: 86%; animation-direction: reverse; }
+.starblue1 {
+    left: 20%;
+    top: 15%;
+    animation-direction: reverse;
+}
+
+.starblue2 {
+    left: 80%;
+    top: 35%;
+    animation-direction: reverse;
+}
+
+.starblue3 {
+    left: 9%;
+    top: 86%;
+    animation-direction: reverse;
+}
 
 /* Orange stars */
-.starorange1, .starorange2 {
+.starorange1,
+.starorange2 {
     height: 3em;
     width: 3em;
     animation-duration: 10s;
 }
 
-.starorange1 { z-index: 4; animation-direction: reverse; }
-.starorange2 { z-index: 2; animation-direction: reverse; }
+.starorange1 {
+    z-index: 4;
+    animation-direction: reverse;
+}
+
+.starorange2 {
+    z-index: 2;
+    animation-direction: reverse;
+}
 
 /* Yellow stars */
-.staryellow1, .staryellow2 {
+.staryellow1,
+.staryellow2 {
     height: 7em;
     width: 7em;
     z-index: 2;
@@ -701,31 +730,87 @@ body {
 
 /* Rotating animation */
 @keyframes rotatingStar {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    .staryellow1 { left: 22%; top: 15%; }
-    .staryellow2 { left: 57%; top: 65%; }
-    .starorange1 { left: 8%; top: 55%; }
-    .starorange2 { left: 59%; top: 12%; }
+    .staryellow1 {
+        left: 22%;
+        top: 15%;
+    }
+
+    .staryellow2 {
+        left: 57%;
+        top: 65%;
+    }
+
+    .starorange1 {
+        left: 8%;
+        top: 55%;
+    }
+
+    .starorange2 {
+        left: 59%;
+        top: 12%;
+    }
 }
 
 @media screen and (min-width: 769px) {
-    .staryellow1, .staryellow2 { height: 12em; width: 12em; }
-    .staryellow1 { left: 28%; top: 15%; }
-    .staryellow2 { left: 60%; top: 65%; }
-    .starorange1 { left: 11%; top: 55%; }
-    .starorange2 { left: 63%; top: 12%; }
+
+    .staryellow1,
+    .staryellow2 {
+        height: 12em;
+        width: 12em;
+    }
+
+    .staryellow1 {
+        left: 28%;
+        top: 15%;
+    }
+
+    .staryellow2 {
+        left: 60%;
+        top: 65%;
+    }
+
+    .starorange1 {
+        left: 11%;
+        top: 55%;
+    }
+
+    .starorange2 {
+        left: 63%;
+        top: 12%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    .staryellow1 { left: 20%; top: 15%; }
-    .staryellow2 { left: 52%; top: 62%; }
-    .starorange1 { left: 9%; top: 60%; }
-    .starorange2 { left: 61%; top: 12%; }
+    .staryellow1 {
+        left: 20%;
+        top: 15%;
+    }
+
+    .staryellow2 {
+        left: 52%;
+        top: 62%;
+    }
+
+    .starorange1 {
+        left: 9%;
+        top: 60%;
+    }
+
+    .starorange2 {
+        left: 61%;
+        top: 12%;
+    }
 }
 
 /* Adds a 'click to view project' highlight on images to tell the user that clicking on carousel images will lead them to the project */
@@ -749,4 +834,41 @@ body {
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5em;
 
+}
+
+/* Highlights location on hover */
+.opentorelocate {
+    transition: 0.3s;
+}
+
+.opentorelocate:hover {
+    color: var(--berkeleyblue) !important;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-4px);
+    }
+
+    40% {
+        transform: translateY(3px);
+    }
+
+    60% {
+        transform: translateY(-2px);
+    }
+
+    80% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+    
 }

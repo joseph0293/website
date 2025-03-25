@@ -678,8 +678,6 @@ body {
 }
 
 
-
-
 /* Set paragraph font size to be slightly smaller overall on website */
 
 p.fs-4 {
@@ -805,4 +803,41 @@ p.fs-4 {
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5em;
 
+}
+
+
+/* Highlights location on hover */
+.opentorelocate {
+    transition: 0.3s;
+}
+
+.opentorelocate:hover {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-4px);
+    }
+
+    40% {
+        transform: translateY(3px);
+    }
+
+    60% {
+        transform: translateY(-2px);
+    }
+
+    80% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+    
 }
