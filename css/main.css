@@ -821,7 +821,8 @@ body {
 }
 
 .clicktoviewproject:hover::after {
-    content: "Click to view project";
+    content: "VIEW THIS PROJECT";
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     right: 0;
