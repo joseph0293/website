@@ -790,7 +790,7 @@ p.fs-4 {
 }
 
 .clicktoviewproject:hover::after {
-    content: "VIEW THIS PROJECT";
+    content: "VIEW PROJECT";
     pointer-events: none;
     position: absolute;
     bottom: 0;
@@ -798,7 +798,7 @@ p.fs-4 {
     left: 0;
     color: white;
     font-size: 0.8em;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
     transition: 0.3s;
     background: rgba(0, 0, 0, 0.6);

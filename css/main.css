@@ -821,7 +821,7 @@ body {
 }
 
 .clicktoviewproject:hover::after {
-    content: "VIEW THIS PROJECT";
+    content: "VIEW PROJECT";
     pointer-events: none;
     position: absolute;
     bottom: 0;
@@ -829,12 +829,11 @@ body {
     left: 0;
     color: white;
     font-size: 0.8em;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
     transition: 0.3s;
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5em;
-
 }
 
 /* Highlights location on hover */
