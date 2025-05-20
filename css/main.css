@@ -4,6 +4,13 @@
     --berkeleyblue: #003262;
 }
 
+
+/* Set font everywhere */
+
+* {
+    font-family: 'Montserrat';
+}
+
 /* Hide body except loader until everything loads */
 
 body {
@@ -12,11 +19,7 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Set font everywhere */
 
-* {
-    font-family: 'Montserrat';
-}
 
 #loader {
     visibility: visible;
@@ -603,6 +606,7 @@ input:invalid {
     letter-spacing: -2px;
     font-weight: 800;
     line-height: 0.9em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .artdtitle {

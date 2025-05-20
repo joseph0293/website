@@ -14,9 +14,36 @@
 
 /* Hide content until everything loads */
 
-.js body{
-    visibility: visible !important; 
+/* Set font everywhere */
+
+* {
+    font-family: 'Montserrat';
 }
+
+/* Hide body except loader until everything loads */
+
+body {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#loader {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background-color: var(--darkmode1);
+}
+
+.loading-img{
+    width: 75px;
+    height: 75px;
+}
+
 
 /* Set body & classes to darkmode */
 
@@ -150,11 +177,6 @@ body {
 }
 
 
-/* Set font everywhere */
-
-body {
-    font-family: "Montserrat";
-}
 
 /* Styling nav & nav items */
 
@@ -621,6 +643,7 @@ body {
     letter-spacing: -2px;
     font-weight: 800;
     line-height: 0.9em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Darken banner image? */
