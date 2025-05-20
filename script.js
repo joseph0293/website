@@ -1,39 +1,40 @@
 
+// Making the content visible after FULL page load
 
-// const nav = document.querySelector('.javanav');
-// const logo = document.querySelector('.logo1');
+window.addEventListener('load', function () {
+    // Hide loader
+    const loader = document.getElementById('loader');
+    loader.style.visibility = 'hidden';
+    loader.style.opacity = '0';
+    loader.style.transition = 'opacity 0.5s ease-in-out';
 
-// nav.addEventListener('click', function () {
-//     this.classList.toggle('active');
-//     if (storedTheme === 'dark') {
-//         if (this.classList.contains('active')) {
-//             logo.src = 'images/logo-dark2.svg'
-//         } else {
-//             logo.src = 'images/logo-dark.svg'
-//         }
-//     } else {
-//         if (storedTheme === 'light') {
-//             if (this.classList.contains('active')) {
-//                 logo.src = 'images/logo2.svg'
-//             } else {
-//                 logo.src = 'images/logo.svg'
-//             }
-//         }
-//     }
+    // Show and fade in page content
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = '1';
+    document.body.style.transition = 'opacity 0.5s ease-in-out';
+});
+
+
+// Using Lottie for the loader animation - Lottie animation loads a little too late, so I commented it out for now
+
+// document.body.style.visibility = 'hidden';
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Inject Lottie animation
+//     lottie.loadAnimation({
+//         container: document.getElementById('lottie-animation'), // The div to render the animation
+//         renderer: 'svg',
+//         loop: true,
+//         autoplay: true,
+//         path: 'images/loading.json' // Update path if needed
+//     });
 // });
 
-
-// Making logo wink on hover for desktop
-
-
-// set initial state of logo based on theme (for desktop)
-// const logo = document.querySelector('.logo1');
-// if (storedTheme === 'dark') {
-//     logo.src = 'images/logo-dark.svg'
-// } else if (storedTheme === 'light') {
-//     logo.src = 'images/logo.svg'
-// }
-
+// window.addEventListener('load', () => {
+//     const loader = document.getElementById('loader');
+//     loader.style.display = 'none';
+//     document.body.style.visibility = 'visible';
+// });
 
 
 // Typewriter. In case needed:
@@ -368,9 +369,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // CALL THE FUNCTION:
 
 darkmodebutton()
-
-// Making the content visible after page load
-document.documentElement.classList.add('js');
 
 
 // Hiding the navbar on scroll down and showing it on scroll up

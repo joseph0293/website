@@ -46,11 +46,16 @@
             }
         })();
     </script>
-
-
 </head>
 
 <body>
+
+    <!-- Page Loader -->
+    <div id="loader" class="d-flex justify-content-center align-items-center flex-column">
+        <img class="loading-img" src="images/loading.gif" alt="Loading..." />
+        <p class="textberkeley fw-bold fst-italic">Loading...</p>
+    </div>
+
     <!-- NAVIGATION -->
     <header role="banner">
         <nav role="navigation"
@@ -72,7 +77,7 @@
                     <div>
                         <a class="d-none d-lg-block navbar-brand ps-2" href="index.html">
                             <img id="logodesktop" src="images/logo.svg" alt="logo" width="150" height="80"
-                                onmouseover="hover(this);" onmouseout="hoverOut(this)"> 
+                                onmouseover="hover(this);" onmouseout="hoverOut(this)">
                         </a>
                     </div>
                     <!-- WORK -->
@@ -175,20 +180,22 @@
                 <div class="col-12 col-xl-6 col-xxl-5">
                     <!-- Placing images in container to align stars -->
                     <div class="image-container">
-                        <img src="images/self.png"
-                            class="rounded-4 card-img self-image">
+                        <img src="images/self.png" class="rounded-4 card-img self-image">
 
                         <!-- Cutout -->
-                        <img src="images/self-top.png"
-                        class="rounded-4 card-img self-top-image">
+                        <img src="images/self-top.png" class="rounded-4 card-img self-top-image">
 
 
                         <!-- SVG stars -->
-                        <img src="images/blue-star.svg" alt="hover star" class="starblue1" title="Do what you don't to get what others don't">
-                        <img src="images/blue-star.svg" alt="hover star" class="starblue2" title="Never let them know your next move">
+                        <img src="images/blue-star.svg" alt="hover star" class="starblue1"
+                            title="Do what you don't to get what others don't">
+                        <img src="images/blue-star.svg" alt="hover star" class="starblue2"
+                            title="Never let them know your next move">
                         <img src="images/blue-star.svg" alt="hover star" class="starblue3" title="Who better than you?">
-                        <img src="images/orange-star.svg" alt="hover star" class="starorange1" title="I teach you the Overman! Man is something that should be overcome.">
-                        <img src="images/orange-star.svg" alt="hover star" class="starorange2" title="Self, we're really good. Now how can we be great?">
+                        <img src="images/orange-star.svg" alt="hover star" class="starorange1"
+                            title="I teach you the Overman! Man is something that should be overcome.">
+                        <img src="images/orange-star.svg" alt="hover star" class="starorange2"
+                            title="Self, we're really good. Now how can we be great?">
                         <img src="images/yellow-star.svg" alt="hover star" class="staryellow1" title="staryellow1">
                         <img src="images/yellow-star.svg" alt="hover star" class="staryellow2" title="staryellow2">
                         <!-- <img data-aos="fade-up" data-aos-duration="1000" src="images/self.jpg" srcset="images/self-500.jpg 500w,

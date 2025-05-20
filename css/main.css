@@ -4,15 +4,51 @@
     --berkeleyblue: #003262;
 }
 
-/* Hide content until everything loads */
+/* Hide body except loader until everything loads */
 
-.js body {
-    visibility: visible !important;
+body {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
+/* Set font everywhere */
 
 * {
     font-family: 'Montserrat';
+}
+
+#loader {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+}
+
+.loading-img{
+    width: 75px;
+    height: 75px;
+}
+
+/* PAGE ANIMATE */
+
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Font & Background Colours */
@@ -104,11 +140,7 @@
 }
 
 
-/* Set font everywhere */
 
-body {
-    font-family: "Montserrat";
-}
 
 /* Styling nav & nav items */
 
@@ -516,24 +548,7 @@ input:invalid {
 
 
 
-/* PAGE ANIMATE */
 
-
-body {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 
 /* Style project buttons image overlay */
@@ -870,5 +885,5 @@ body {
     100% {
         transform: translateY(0px);
     }
-    
+
 }

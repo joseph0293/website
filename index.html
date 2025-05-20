@@ -49,12 +49,25 @@
             }
         })();
     </script>
+
+<!-- Lottie loads a little too late to be used as a loader so having a gif is better -->
+    <!-- Adding Lottie Script for Loading -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script> -->
+    <!-- Preloading it -->
+    <!-- <link rel="preload" href="images/loading.json" as="fetch" type="application/json" crossorigin="anonymous"> -->
+
 </head>
 
 <body>
 
-    <header role="banner">
+    <!-- Page Loader -->
+    <div id="loader" class="d-flex justify-content-center align-items-center flex-column">
+        <!-- <div id="lottie-animation" style="width: 80px; height: 80px;"></div> -->
+        <img class="loading-img" src="images/loading.gif" alt=""/>
+        <p class="textberkeley fs-6 fw-bold fst-italic">Loading...</p>
+    </div>
 
+    <header role="banner">
         <!-- Skip link for screen readers for accessibility -->
         <div class="skipbutton">
             <a class="skiplink" href="#skipcontent">Skip To Content</a>
@@ -194,7 +207,7 @@
                             <span class="text-white">Day Dreamer!</span>
                         </h1>
                         <h1 role="heading" aria-level="1" class="d-none d-md-block about-title display-1 banner-title">
-                            <span class="ps-2 artdtitle">Art Director,</span>
+                            <span class="ps-2 artdtitle">  Art Director,</span>
                             <span class="mdtitle">Motion Designer,</span>
                             <span class="ddtitle">Day Dreamer!</span>
                         </h1>
@@ -318,7 +331,8 @@
                         <div class="card-body p-0">
                             <h2 class="display-6 fw-semibold darktextlight">Advertising & Creative Direction</h2>
                             <p class="d-none d-md-block fs-6">Working in the advertising industry for
-                                more than 8 years has allowed me to hone my craft, create compelling ad communication &
+                                more than 8 years has allowed me to hone my craft, create compelling ad
+                                communication &
                                 solve creative briefs with fresh perspectives that drive results.
                             </p>
                             <a href="artdirection.html" class="outlinebutton btn btn-white rounded-pill fs-5">All
@@ -541,7 +555,6 @@
 
         <p class="text-white pt-4 text-center">© 2025 Designed & Developed by Sunit J. All rights reserved.</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
@@ -555,4 +568,5 @@
         AOS.init();
     </script>
 </body>
+
 </html>
