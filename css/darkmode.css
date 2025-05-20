@@ -16,7 +16,8 @@
 
 /* Set font everywhere */
 
-* {
+*,
+body {
     font-family: 'Montserrat';
 }
 
