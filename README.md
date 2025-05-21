@@ -36,12 +36,17 @@ Checking for dark mode state and switching the css file caused the website to fl
 The button & the logo was a bit of a headache, but it was just about local and global variables.
 Redesigned the footer to be more modern.
 
-### Feb 24th
+### Feb 24th 2025
 Adds hover animations for Banner text
 
 ### Mar 11 2025
 Makes Resume/CV button more visible with contrast. Now fits at least AA contrast guidelines.
 Also adds rotation animations on about image in layers: BG, stars, cutout, stars. Uses Chat GPT to clean up/ simplify code.
+
+### May 20th 2025
+Added a loading animation to the website after noticing it takes a while to load on mobile, even on 4G. This delay is mostly due to the images. I’ve optimized some image sizes, and the site performs well on desktop or a good Wi-Fi connection.
+
+To show the loader while the page loads, I used CSS to hide the main content (body) and only display the loader. Once the page finishes loading, JavaScript hides the loader and reveals the main content.
 
 
 ## SOURCE & CREDITS
