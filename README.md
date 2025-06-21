@@ -52,7 +52,7 @@ To show the loader while the page loads, I used CSS to hide the main content (bo
 I've figured out a way to load my site from https://sunitj.com using github's Enforce HTTPS and Custom Site through my domain in GoDaddy. Had to change A records & CNAME in Godaddy and add a CNAME file in the root folder of my site with sunitj.com in it.
 
 ### June 12st 2025
-Testing Open Graph Meta Tags with a custom thumbnail.
+Testing Open Graph Meta Tags with a custom thumbnail. Things are working as expected. Used open graph meta tags for Home, About & Open Ottawa page. More info at the url ogp.me
 
 
 ## SOURCE & CREDITS
