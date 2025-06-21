@@ -48,6 +48,12 @@ Added a loading animation to the website after noticing it takes a while to load
 
 To show the loader while the page loads, I used CSS to hide the main content (body) and only display the loader. Once the page finishes loading, JavaScript hides the loader and reveals the main content.
 
+### June 15-20th 2025
+I've figured out a way to load my site from https://sunitj.com using github's Enforce HTTPS and Custom Site through my domain in GoDaddy. Had to change A records & CNAME in Godaddy and add a CNAME file in the root folder of my site with sunitj.com in it.
+
+### June 12st 2025
+Testing Open Graph Meta Tags with a custom thumbnail.
+
 
 ## SOURCE & CREDITS
 
