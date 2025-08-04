@@ -183,7 +183,7 @@ body {
 
 .navcv {
     font-weight: bold !important;
-    background-color: var(--cinnabar);
+    background-color: white;
     color: var(--berkeleyblue) !important;
     border: 2px solid var(--berkeleyblue);
     border-radius: 40px;
@@ -491,8 +491,7 @@ footer,
 /* Only for resume/cv */
 
 .navresumecolor:focus-visible {
-    border: none;
-    outline: 2px solid var(--berkeleyblue);
+    border: 2px solid var(--cinnabar);
     border-radius: 50px;
 
 }

@@ -187,7 +187,7 @@ body {
     background-color: var(--californiagold);
     color: var(--berkeleyblue) !important;
     border-radius: 40px;
-    border: 2px solid var(--berkeleyblue);
+    border: 2px solid var(--darkmode1);
     transition: 0.3s;
     font-weight: bold !important;
 }
@@ -201,9 +201,9 @@ body {
 
 .navcv {
     font-weight: bold !important;
-    background-color: var(--cinnabar);
+    background-color: var(--darkmode5);
     color: var(--berkeleyblue)!important;
-    border: 2px solid var(--berkeleyblue);
+    border: 2px solid var(--darkmode1);
     border-radius: 40px;
     border-left: none;
     transition: 0.3s;
@@ -355,12 +355,18 @@ body {
 
 .card,
 .outlinebutton,
+.textberkeley {
+    color: var(--darkmode4) !important;
+}
+
+/* Make nav items more visible */
+
+
 .navworkblue,
 .navworkblue:hover,
 .navaboutblue,
-.navaboutblue:hover,
-.textberkeley {
-    color: var(--darkmode3) !important;
+.navaboutblue:hover {
+    color: var(--darkmode4) !important;
 }
 
 /* Set background colours to brand blue */
@@ -520,8 +526,7 @@ footer,
 /* Only for resume/cv */
 
 .navresumecolor:focus-visible {
-    border: none;
-    outline: 2px solid var(--darkmode5);
+    border: 2px solid var(--cinnabar);
     border-radius: 50px;
 
 }
