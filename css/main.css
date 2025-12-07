@@ -197,6 +197,12 @@ body {
     color: white !important;
 }
 
+/* Not latest indicator */
+.navcv:hover::after {
+    content: "not latest";
+    border-left: 2px solid var(--berkeleyblue);
+}
+
 .navabout:hover,
 .navabout:active {
     border: 2px solid var(--berkeleyblue);
@@ -855,15 +861,16 @@ input:invalid {
     padding: 0.5em;
 }
 
-/* Highlights location on hover */
-.opentorelocate {
+/* Highlights location on hover */ 
+/* Removing temporarily */
+/* .opentorelocate {
     transition: 0.3s;
 }
 
 .opentorelocate:hover {
     color: var(--berkeleyblue) !important;
     animation: bounce 1s ease infinite;
-}
+} */
 
 @keyframes bounce {
     0% {
