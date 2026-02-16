@@ -198,10 +198,10 @@ body {
 }
 
 /* Not latest indicator */
-.navcv:hover::after {
-    content: "not latest";
+/* .navcv:hover::after {
+    content: "2025";
     border-left: 2px solid var(--berkeleyblue);
-}
+} */
 
 .navabout:hover,
 .navabout:active {
