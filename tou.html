@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Hydro TOU Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        
+        /* Explicit Apple Golden Gate Frosted Glass Styles for Light and Dark modes */
+        .glass-hero-light {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(229, 231, 235, 0.9);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        }
+        .glass-hero-dark {
+            background: rgba(30, 30, 32, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+        (function() {
+            // Check saved theme or system preference, default to dark
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-slate-100 dark:bg-[#0a0a0c] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col justify-between transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-black/60 border-b border-slate-200 dark:border-white/10 transition-colors duration-300">
+        <div class="max-w-xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <div class="flex items-center space-x-2.5">
+                <!-- Toronto Hydro Brand Colors (Green & Yellow Gradient) -->
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-yellow-400 flex items-center justify-center text-slate-900 shadow-md shadow-emerald-500/20">
+                    <svg class="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-base font-semibold tracking-tight">TOU Tracker</h1>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Toronto Hydro / OEB</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <!-- Season Switcher -->
+                <button onclick="toggleSeason()" id="seasonBtn" class="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-200/70 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 transition flex items-center gap-1.5">
+                    <span id="seasonIcon">☀️</span> <span id="seasonText">Summer</span>
+                </button>
+
+                <!-- Light/Dark Theme Toggle -->
+                <button onclick="toggleTheme()" class="w-9 h-9 rounded-full bg-slate-200/70 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 transition flex items-center justify-center text-slate-700 dark:text-amber-300" aria-label="Toggle Theme">
+                    <svg id="themeIconDark" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="themeIconLight" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-xl mx-auto px-4 py-6 w-full flex-grow space-y-5">
+        
+        <!-- Live Status Card (Golden Gate Apple Style with dynamic class assignment) -->
+        <div id="heroCard" class="relative overflow-hidden rounded-3xl p-6 transition-all duration-300 border">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <span id="statusBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span id="statusText">Off-Peak</span>
+                    </span>
+                </div>
+                <div id="liveDateTime" class="text-xs font-medium text-slate-500 dark:text-slate-400">
+                    Mon, Sep 21 · 7:46 PM
+                </div>
+            </div>
+
+            <div class="my-4">
+                <div class="text-5xl font-bold tracking-tight mb-1 text-slate-900 dark:text-white">
+                    <span id="currentRateVal">9.8</span><span class="text-2xl font-semibold text-slate-500 dark:text-slate-400">¢/kWh</span>
+                </div>
+                <p id="rateDescription" class="text-xs text-slate-600 dark:text-slate-400">
+                    Lowest demand period. Ideal for heavy appliance use.
+                </p>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-200/80 dark:border-white/15 flex justify-between items-center text-xs">
+                <div class="text-slate-500 dark:text-slate-400">Next Rate Change</div>
+                <div class="font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                    <span id="countdownTimer" class="font-mono bg-slate-200/80 dark:bg-white/10 px-2 py-0.5 rounded text-xs">00:00:00</span>
+                    <span id="nextRateLabel" class="text-emerald-600 dark:text-emerald-400">Mid-Peak at 7:00 AM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seasonal Schedule Indicator -->
+        <div class="px-4 py-3 rounded-2xl bg-white/70 dark:bg-[#161618]/70 border border-slate-200/80 dark:border-white/10 text-xs text-slate-600 dark:text-slate-400 flex items-center justify-between">
+            <span class="flex items-center gap-2">
+                <span class="text-base">📅</span>
+                <span id="seasonInfoText">Summer Rates active (May 1 – Oct 31)</span>
+            </span>
+            <span class="text-[10px] text-slate-400 font-medium">Auto-switches Nov 1</span>
+        </div>
+
+        <div class="rounded-3xl p-6 bg-white dark:bg-[#161618] border border-slate-200/80 dark:border-white/10 shadow-sm">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-sm font-semibold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    Appliance Cost Estimator
+                </h3>
+                <span class="text-xs font-medium text-slate-400" id="hoursBadge">1 hour</span>
+            </div>
+
+            <!-- Appliance Selection Grid (6 specified items) -->
+            <div class="grid grid-cols-3 gap-2.5 mb-5">
+                <button onclick="selectAppliance(200, 'Desktop PC', this)" class="appliance-btn p-3 rounded-2xl border border-emerald-500 bg-emerald-500/10 text-left transition group">
+                    <div class="text-lg mb-1">💻</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">Desktop PC</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">200W</div>
+                </button>
+                <button onclick="selectAppliance(500, 'Laundry machine', this)" class="appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group">
+                    <div class="text-lg mb-1">🧺</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">Laundry</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">500W</div>
+                </button>
+                <button onclick="selectAppliance(4000, 'Dryer', this)" class="appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group">
+                    <div class="text-lg mb-1">🔥</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">Dryer</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">4,000W</div>
+                </button>
+                <button onclick="selectAppliance(1500, 'Room heater', this)" class="appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group">
+                    <div class="text-lg mb-1">♨️</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">Heater</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">1,500W</div>
+                </button>
+                <button onclick="selectAppliance(50, 'Room fan', this)" class="appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group">
+                    <div class="text-lg mb-1">🌀</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">Fan</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">50W</div>
+                </button>
+                <button onclick="selectAppliance(150, 'TV', this)" class="appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group">
+                    <div class="text-lg mb-1">📺</div>
+                    <div class="text-xs font-semibold text-slate-900 dark:text-white truncate">TV</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400">150W</div>
+                </button>
+            </div>
+
+            <!-- Time Slider (1 to 5 hours) -->
+            <div class="space-y-2 mb-5">
+                <div class="flex justify-between text-xs font-medium text-slate-600 dark:text-slate-400">
+                    <span>Duration: <strong id="sliderValueText" class="text-emerald-600 dark:text-emerald-400">1 hour</strong></span>
+                    <span>5 hours max</span>
+                </div>
+                <input type="range" id="durationSlider" min="1" max="5" value="1" step="1" oninput="onDurationChange(this.value)" class="w-full h-2 bg-slate-200 dark:bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                <div class="flex justify-between text-[10px] text-slate-400 font-mono">
+                    <span>1h</span><span>2h</span><span>3h</span><span>4h</span><span>5h</span>
+                </div>
+            </div>
+
+            <!-- Calculation Output Box -->
+            <div class="bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                    <div id="calcAppTitle" class="text-xs font-semibold text-slate-800 dark:text-slate-200">Desktop PC (0.2 kW)</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">For <span id="hoursLabelSub">1 hour</span> at <span id="calcRateText">9.8¢</span> rate</div>
+                </div>
+                <div class="text-right">
+                    <div class="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 tracking-wider">Estimated Cost</div>
+                    <div id="calcCostResult" class="text-lg font-bold text-slate-900 dark:text-white">0.20¢</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-4 text-center text-xs text-slate-400 dark:text-slate-500 border-t border-slate-200 dark:border-white/5">
+        Toronto Hydro / Ontario Energy Board TOU Schedule
+    </footer>
+
+    <script>
+        // State Management
+        let currentSeason = 'summer'; // 'summer' or 'winter'
+        let selectedWatts = 200;
+        let selectedAppName = 'Desktop PC';
+        let selectedHours = 1;
+
+        // Apply correct Golden Gate hero card styling immediately based on theme
+        function updateHeroCardStyling() {
+            const heroCard = document.getElementById('heroCard');
+            const isDark = document.documentElement.classList.contains('dark');
+            if (isDark) {
+                heroCard.className = "relative overflow-hidden rounded-3xl p-6 transition-all duration-300 glass-hero-dark";
+            } else {
+                heroCard.className = "relative overflow-hidden rounded-3xl p-6 transition-all duration-300 glass-hero-light";
+            }
+        }
+
+        // Theme Toggle with Card Class Switching
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateHeroCardStyling();
+            updateTracker();
+        }
+
+        // Season Toggle
+        function toggleSeason() {
+            currentSeason = currentSeason === 'summer' ? 'winter' : 'summer';
+            const icon = document.getElementById('seasonIcon');
+            const text = document.getElementById('seasonText');
+            const seasonInfo = document.getElementById('seasonInfoText');
+            
+            if (currentSeason === 'summer') {
+                icon.textContent = '☀️';
+                text.textContent = 'Summer';
+                seasonInfo.textContent = 'Summer Rates active (May 1 – Oct 31)';
+            } else {
+                icon.textContent = '❄️';
+                text.textContent = 'Winter';
+                seasonInfo.textContent = 'Winter Rates active (Nov 1 – Apr 30)';
+            }
+            updateTracker();
+        }
+
+        // Appliance selection
+        function selectAppliance(watts, name, btnElement) {
+            selectedWatts = watts;
+            selectedAppName = name;
+
+            // Update button styles
+            document.querySelectorAll('.appliance-btn').forEach(btn => {
+                btn.className = "appliance-btn p-3 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 bg-slate-50 dark:bg-white/5 text-left transition group";
+            });
+            btnElement.className = "appliance-btn p-3 rounded-2xl border border-emerald-500 bg-emerald-500/10 text-left transition group";
+
+            updateCalculator();
+        }
+
+        function onDurationChange(val) {
+            selectedHours = parseInt(val);
+            document.getElementById('sliderValueText').textContent = `${selectedHours} hour${selectedHours > 1 ? 's' : ''}`;
+            document.getElementById('hoursBadge').textContent = `${selectedHours}h`;
+            document.getElementById('hoursLabelSub').textContent = `${selectedHours} hour${selectedHours > 1 ? 's' : ''}`;
+            updateCalculator();
+        }
+
+        // Ontario Holiday check (simplified placeholder)
+        function isOntarioHoliday(date) {
+            const m = date.getMonth();
+            const d = date.getDate();
+            const y = date.getFullYear();
+            const dateStr = `${y}-${String(m+1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+            const fixedHolidays = [`${y}-01-01`, `${y}-07-01`, `${y}-09-07`, `${y}-12-25`, `${y}-12-26`];
+            return fixedHolidays.includes(dateStr);
+        }
+
+        // Rate tier determination
+        function getRateTier(dateObj) {
+            const dayOfWeek = dateObj.getDay();
+            const hour = dateObj.getHours();
+
+            if (dayOfWeek === 0 || dayOfWeek === 6 || isOntarioHoliday(dateObj)) {
+                return { tier: 'off-peak', name: 'Off-Peak', rate: 9.8, desc: 'Weekends & holidays are all-day Off-Peak.' };
+            }
+
+            if (currentSeason === 'summer') {
+                if (hour >= 19 || hour < 7) {
+                    return { tier: 'off-peak', name: 'Off-Peak', rate: 9.8, desc: 'Evening off-peak hours (7 PM to 7 AM).' };
+                } else if ((hour >= 7 && hour < 11) || (hour >= 17 && hour < 19)) {
+                    return { tier: 'mid-peak', name: 'Mid-Peak', rate: 15.7, desc: 'Summer mid-peak hours (7am-11am & 5pm-7pm).' };
+                } else {
+                    return { tier: 'on-peak', name: 'On-Peak', rate: 20.3, desc: 'Summer on-peak hours (11am-5pm).' };
+                }
+            } else {
+                if (hour >= 19 || hour < 7) {
+                    return { tier: 'off-peak', name: 'Off-Peak', rate: 9.8, desc: 'Evening off-peak hours (7 PM to 7 AM).' };
+                } else if (hour >= 11 && hour < 17) {
+                    return { tier: 'mid-peak', name: 'Mid-Peak', rate: 15.7, desc: 'Winter mid-peak hours (11am-5pm).' };
+                } else {
+                    return { tier: 'on-peak', name: 'On-Peak', rate: 20.3, desc: 'Winter on-peak hours (7am-11am & 5pm-7pm).' };
+                }
+            }
+        }
+
+        // Countdown to next change
+        function getNextTransition(dateObj) {
+            const currentHour = dateObj.getHours();
+            const currentMinute = dateObj.getMinutes();
+            const currentSecond = dateObj.getSeconds();
+            const dayOfWeek = dateObj.getDay();
+            const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6 || isOntarioHoliday(dateObj));
+
+            if (isWeekend) {
+                return { text: 'Off-Peak All Day (Next: Mon 7:00 AM)', secondsLeft: (24 - currentHour) * 3600 - currentMinute * 60 - currentSecond + (7 * 3600) };
+            }
+
+            const transitions = [7, 11, 17, 19];
+            let nextHour = transitions.find(h => h > currentHour);
+            let targetDate = new Date(dateObj);
+
+            if (nextHour === undefined) {
+                targetDate.setDate(targetDate.getDate() + 1);
+                targetDate.setHours(7, 0, 0, 0);
+            } else {
+                targetDate.setHours(nextHour, 0, 0, 0);
+            }
+
+            const diffSec = Math.floor((targetDate - dateObj) / 1000);
+            const nextTier = getRateTier(targetDate);
+
+            return {
+                text: `${nextTier.name} at ${targetDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`,
+                secondsLeft: diffSec > 0 ? diffSec : 0
+            };
+        }
+
+        function formatCountdown(totalSec) {
+            const hrs = Math.floor(totalSec / 3600);
+            const mins = Math.floor((totalSec % 3600) / 60);
+            const secs = totalSec % 60;
+            return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function updateCalculator() {
+            const now = new Date();
+            const tier = getRateTier(now);
+            const totalKw = selectedWatts / 1000;
+            const cost = totalKw * tier.rate * selectedHours; // in cents
+
+            document.getElementById('calcAppTitle').textContent = `${selectedAppName} (${selectedWatts >= 1000 ? (selectedWatts/1000) + ' kW' : selectedWatts + 'W'})`;
+            document.getElementById('calcRateText').textContent = `${tier.rate.toFixed(1)}¢`;
+            
+            if (cost >= 100) {
+                document.getElementById('calcCostResult').textContent = `$${(cost / 100).toFixed(2)}`;
+            } else {
+                document.getElementById('calcCostResult').textContent = `${cost.toFixed(2)}¢`;
+            }
+        }
+
+        function updateTracker() {
+            const now = new Date();
+            
+            // Concise Date & Time format without year: "Mon, Sep 21 · 7:46 PM"
+            const options = { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' };
+            document.getElementById('liveDateTime').textContent = now.toLocaleDateString('en-US', options).replace(',', ' ·');
+
+            const tier = getRateTier(now);
+            document.getElementById('currentRateVal').textContent = tier.rate.toFixed(1);
+            document.getElementById('statusText').textContent = tier.name;
+            document.getElementById('rateDescription').textContent = tier.desc;
+
+            const badge = document.getElementById('statusBadge');
+            const nextRateLabel = document.getElementById('nextRateLabel');
+
+            if (tier.tier === 'off-peak') {
+                badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-500/15 text-emerald-700 dark:text-emerald-400";
+                nextRateLabel.className = "text-emerald-600 dark:text-emerald-400";
+            } else if (tier.tier === 'mid-peak') {
+                badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-500/15 text-amber-700 dark:text-amber-400";
+                nextRateLabel.className = "text-amber-600 dark:text-amber-400";
+            } else {
+                badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-rose-500/15 text-rose-700 dark:text-rose-400";
+                nextRateLabel.className = "text-rose-600 dark:text-rose-400";
+            }
+
+            const transition = getNextTransition(now);
+            document.getElementById('countdownTimer').textContent = formatCountdown(transition.secondsLeft);
+            document.getElementById('nextRateLabel').textContent = transition.text;
+
+            updateCalculator();
+        }
+
+        window.onload = function() {
+            updateHeroCardStyling();
+            updateTracker();
+            setInterval(updateTracker, 1000);
+        };
+    </script>
+</body>
+</html>
